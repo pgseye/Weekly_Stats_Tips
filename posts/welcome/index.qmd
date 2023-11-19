@@ -1,0 +1,9 @@
+---
+title: "Stats Tips - Welcome"
+date: today
+categories: [news]
+---
+
+Hi Everyone,
+
+I'm not sure how much everyone's getting out of the stats tips that I put on WhatsApp on Fridays, but maybe some of it is helpful. For those of you who are interested, I thought that if I was going to do this on a regular basis, I might as well turn it into a resource. So I am having a go at a blog-style format of weekly tips. It also means I can more easily illustrate concepts where needed with code, etc. And it also helps to not overload your WhatsApp with a bunch of text. Some posts will be short and some will be longer and I may miss some weeks depending on workload, but will do my best.
