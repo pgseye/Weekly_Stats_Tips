@@ -6,7 +6,7 @@ website:
   navbar:
     right:
       - text: All Posts
-        href: blog.qmd
+        href: index.qmd
       - icon: github
         href: https://github.com/
 format:
