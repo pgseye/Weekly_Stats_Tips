@@ -4,10 +4,8 @@ date: 2023-11-24
 categories: [code, analysis, modelling]
 format:
   html:
-    self-contained: true
     code-fold: true
     code-tools: true
-    theme: cerulean
     fontsize: 1.1em
     fig-height: 9
     fig-width: 12
@@ -235,5 +233,3 @@ contrast(emm, custom) |>
 Note, that these match the manual calculations pretty well.
 
 Please take some time to learn about `emmeans` (or `margins` in `Stata`). It will make your life so much easier if you plan to have a career in research (and don't always have access to a statistician.)
-
-

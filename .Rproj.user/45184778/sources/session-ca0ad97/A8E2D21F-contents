@@ -14,7 +14,9 @@ format:
     theme:
       light: united
       dark: darkly
-    highlight-style: dracula
+    highlight-style: kate
+    code-block-bg: "white"
+    code-block-border-left: "#31BAE9"
     css: styles.css
 
 editor: visual
