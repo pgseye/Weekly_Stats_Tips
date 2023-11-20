@@ -2,6 +2,7 @@
 title: "Effect Modification"
 date: 2023-11-24
 categories: [code, analysis, modelling]
+image: interact_plot.jpg
 ---
 
 ```{r}
@@ -177,7 +178,14 @@ emmeans(mod_interact, ~ sex + age, type = "response") |>
   theme_vanilla()
 ```
 
-Specifying `type = "response"` in the `emmeans` call indicates that we want to calculate the outcome on the probability (i.e. risk) scale. To get the risk ratios we have been working with until now, we simply add the `pairs(rev = T)` function to the call:
+Specifying `type = "response"` in the `emmeans` call indicates that we want to calculate the outcome on the probability (i.e. risk) scale. It is simple enough to plot these predicted probabilities using the `emmip` function in `emmeans`.
+
+```{r}
+#| label: plot_risk_ratios
+emmip(mod_interact, sex ~ age, type = "response")
+```
+
+To get the risk ratios we have been working with until now, we simply add the `pairs(rev = T)` function to the call:
 
 ```{r}
 #| label: risk_ratios

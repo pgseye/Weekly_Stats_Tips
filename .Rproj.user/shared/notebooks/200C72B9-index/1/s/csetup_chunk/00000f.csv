@@ -2,21 +2,11 @@
 "0","library(knitr)"
 "0","library(quarto)"
 "0","library(emmeans)"
-"0","library(gtsummary)"
-"2","
-Attaching package: ‘gtsummary’
-
-"
-"2","The following objects are masked from ‘package:flextable’:
-
-    as_flextable, continuous_summary
-
-"
 "0","library(flextable)"
+"0","suppressPackageStartupMessages(library(gtsummary))"
 "0","opts_chunk$set(echo = T,"
 "0","               cache = F,"
 "0","               prompt = F,"
 "0","               tidy = F,"
-"0","               comment = NA,"
 "0","               message = F,"
 "0","               warning = F)"
