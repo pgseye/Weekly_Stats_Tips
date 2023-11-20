@@ -15,5 +15,7 @@ page-layout: article
 
 # Comments
 comments: 
-  utterances: 
-    repo:  pgseye/weekly_stats_tips
+  giscus: 
+    repo:  pgseye/Weekly_Stats_Tips
+
+

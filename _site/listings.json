@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/24Nov2023/index.html",
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/001_24Nov2023/index.html",

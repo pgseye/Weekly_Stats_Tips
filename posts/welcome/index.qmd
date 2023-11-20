@@ -1,6 +1,6 @@
 ---
 title: "Stats Tips - Welcome"
-date: today
+date: 2023-11-22
 categories: [news]
 ---
 
@@ -10,6 +10,11 @@ I'm not sure how much everyone's getting out of the stats tips that I put on Wha
 
 Some general housekeeping:
 
+-   You can view and copy the code as section blocks just before each set of output or by clicking the `</> Code` button at the top right, then `View Source` and copying the entire block.
+
+```{=html}
+<!-- -->
+```
 -   There is a light/dark mode toggle on the top right of the page.
 
 -   Feel free to add any comments to a post.

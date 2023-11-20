@@ -1,13 +1,12 @@
 ---
 title: "Effect Modification"
-date: today
+date: 2023-11-24
 categories: [code, analysis, modelling]
 format:
   html:
     self-contained: true
     code-fold: true
     code-tools: true
-    #code-overflow: wrap
     theme: cerulean
     fontsize: 1.1em
     fig-height: 9
@@ -22,12 +21,12 @@ format:
 library(knitr)
 library(quarto)
 library(emmeans)
-library(gtsummary)
+library(flextable)
+suppressPackageStartupMessages(library(gtsummary))
 opts_chunk$set(echo = T,
                cache = F,
                prompt = F,
                tidy = F,
-               comment = NA,
                message = F,
                warning = F)
 ```
@@ -77,7 +76,7 @@ Equivalence of model-derived crude estimate
 Recall that the aggregated data that the crude estimate is calculated from is:
 
 ```{r}
-#| label: aggregated data
+#| label: aggregated_data
 dat_agg <- data.frame(sex = c("Male", "Female"),
                       hospitalised = as.numeric(c(1330, 798)), 
                       not_hospitalised = as.numeric(c(7018,6400)))
@@ -98,7 +97,7 @@ tbl_regression(mod_crude,
 ## Let's introduce age (\<40 vs ≥ 40) as a third variable
 
 ```{r}
-#| label: disaggregated data
+#| label: disaggregated_data
 dat_disagg <- data.frame(sex = c("Male", "Female", "Male", "Female"),
                          age = c("< 40", "< 40", "≥ 40", "≥ 40"),
                          hospitalised = as.numeric(c(966, 460, 364, 348)), 
@@ -134,7 +133,7 @@ Now, let's correctly model age as an effect modifier in the association between 
 and the risk ratios we get are:
 
 ```{r}
-#| label: adjusted model effect modification
+#| label: adjusted_model_effect_modification
 mod_interact <- glm(cbind(hospitalised, not_hospitalised) ~ sex * age, data = dat_disagg, family = binomial(link = "log"))
 tbl_regression(mod_interact,
                exp = T)
@@ -180,29 +179,61 @@ Perhaps I am preaching to the converted, but if you don't know what the `emmeans
 
 ```{r}
 #| label: emmeans
-emmeans(mod_interact, ~ sex + age, type = "response")
+#| tbl-cap: Predicted Probabilities of Hospitalisation
+emmeans(mod_interact, ~ sex + age, type = "response") |> 
+  data.frame() |> 
+  flextable() |> 
+  colformat_double(digits = 3, na_str = "N/A") |>
+  set_table_properties(layout = "autofit") |> 
+  height(height = 1, unit = "cm") |> 
+  hrule(rule = "atleast", part = "header") |> 
+  align(align = "center", part = "body") |>
+  flextable::font(fontname = "Consolas", part = "all") |>
+  theme_vanilla()
 ```
 
 Specifying `type = "response"` in the `emmeans` call indicates that we want to calculate the outcome on the probability (i.e. risk) scale. To get the risk ratios we have been working with until now, we simply add the `pairs(rev = T)` function to the call:
 
 ```{r}
-#| label: risk ratios
-emmeans(mod_interact, ~ sex + age, type = "response") |> pairs(rev = T)
+#| label: risk_ratios
+#| tbl-cap: All Pairwise Risk Ratios
+emmeans(mod_interact, ~ sex + age, type = "response") |> pairs(rev = T) |> 
+  data.frame() |> 
+  flextable() |> 
+  colformat_double(digits = 3, na_str = "N/A") |>
+  set_table_properties(layout = "autofit") |> 
+  height(height = 1, unit = "cm") |> 
+  hrule(rule = "atleast", part = "header") |> 
+  align(align = "center", part = "body") |>
+  flextable::font(fontname = "Consolas", part = "all") |>
+  theme_vanilla()
 ```
 
 Note that this gives us two extra comparisons we might not really want (the 3rd and 4th lines of the output) as it estimates every single pairwise comparison. We can get a bit fancier and customise the `emmeans` output to give us only what we want:
 
 ```{r}
-#| label: risk ratios custom
+#| label: risk_ratios_custom
+#| tbl-cap: Custom Pairwise Risk Ratios
 emm <- emmeans(mod_interact, ~ sex + age, type = "response") # save the estimated risks
 custom <- list(`The effect of being male in younger individuals` = c(-1,1,0,0),
                `The effect of being male in older individuals` = c(0,0,-1,1),
                `The effect of being older in females` = c(-1,0,1,0),
                `The effect of being older in males` = c(0,-1,0,1)) # create custom grid of RR's to estimate
 contrast(emm, custom) |> 
-  summary(infer = T)
+  summary(infer = T) |> 
+  data.frame() |> 
+  flextable() |> 
+  colformat_double(digits = 3, na_str = "N/A") |>
+  set_table_properties(layout = "autofit") |> 
+  height(height = 1, unit = "cm") |> 
+  hrule(rule = "atleast", part = "header") |> 
+  align(align = "center", part = "body") |>
+  flextable::font(fontname = "Consolas", part = "all") |>
+  theme_vanilla()
 ```
 
 Note, that these match the manual calculations pretty well.
 
 Please take some time to learn about `emmeans` (or `margins` in `Stata`). It will make your life so much easier if you plan to have a career in research (and don't always have access to a statistician.)
+
+
