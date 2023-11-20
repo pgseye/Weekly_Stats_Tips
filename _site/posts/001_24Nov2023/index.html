@@ -261,28 +261,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>mod_crude <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex, <span class="at">data =</span> dat_agg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">tbl_regression</span>(mod_crude,</span>
-<span id="cb4-3"><a href="#cb4-3"></a>               <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">tbl_regression</span>(mod_crude, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
-<div id="xmmdplpwjr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xmmdplpwjr table {
+<div id="vuarureoxr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vuarureoxr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xmmdplpwjr thead, #xmmdplpwjr tbody, #xmmdplpwjr tfoot, #xmmdplpwjr tr, #xmmdplpwjr td, #xmmdplpwjr th {
+#vuarureoxr thead, #vuarureoxr tbody, #vuarureoxr tfoot, #vuarureoxr tr, #vuarureoxr td, #vuarureoxr th {
   border-style: none;
 }
 
-#xmmdplpwjr p {
+#vuarureoxr p {
   margin: 0;
   padding: 0;
 }
 
-#xmmdplpwjr .gt_table {
+#vuarureoxr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -308,12 +307,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_caption {
+#vuarureoxr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xmmdplpwjr .gt_title {
+#vuarureoxr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -325,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#xmmdplpwjr .gt_subtitle {
+#vuarureoxr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -337,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#xmmdplpwjr .gt_heading {
+#vuarureoxr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -349,13 +348,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_bottom_border {
+#vuarureoxr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_col_headings {
+#vuarureoxr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -370,7 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_col_heading {
+#vuarureoxr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -390,7 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#xmmdplpwjr .gt_column_spanner_outer {
+#vuarureoxr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -402,15 +401,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#xmmdplpwjr .gt_column_spanner_outer:first-child {
+#vuarureoxr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xmmdplpwjr .gt_column_spanner_outer:last-child {
+#vuarureoxr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xmmdplpwjr .gt_column_spanner {
+#vuarureoxr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -422,11 +421,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#xmmdplpwjr .gt_spanner_row {
+#vuarureoxr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xmmdplpwjr .gt_group_heading {
+#vuarureoxr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -452,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#xmmdplpwjr .gt_empty_group_heading {
+#vuarureoxr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -467,15 +466,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#xmmdplpwjr .gt_from_md > :first-child {
+#vuarureoxr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xmmdplpwjr .gt_from_md > :last-child {
+#vuarureoxr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xmmdplpwjr .gt_row {
+#vuarureoxr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -494,7 +493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#xmmdplpwjr .gt_stub {
+#vuarureoxr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -507,7 +506,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xmmdplpwjr .gt_stub_row_group {
+#vuarureoxr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -521,15 +520,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#xmmdplpwjr .gt_row_group_first td {
+#vuarureoxr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xmmdplpwjr .gt_row_group_first th {
+#vuarureoxr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xmmdplpwjr .gt_summary_row {
+#vuarureoxr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -539,16 +538,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xmmdplpwjr .gt_first_summary_row {
+#vuarureoxr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_first_summary_row.thick {
+#vuarureoxr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xmmdplpwjr .gt_last_summary_row {
+#vuarureoxr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -558,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_grand_summary_row {
+#vuarureoxr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -568,7 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xmmdplpwjr .gt_first_grand_summary_row {
+#vuarureoxr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -578,7 +577,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_last_grand_summary_row_top {
+#vuarureoxr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -588,11 +587,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_striped {
+#vuarureoxr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xmmdplpwjr .gt_table_body {
+#vuarureoxr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -601,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_footnotes {
+#vuarureoxr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -615,7 +614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_footnote {
+#vuarureoxr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -624,7 +623,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xmmdplpwjr .gt_sourcenotes {
+#vuarureoxr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -638,7 +637,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xmmdplpwjr .gt_sourcenote {
+#vuarureoxr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -646,63 +645,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xmmdplpwjr .gt_left {
+#vuarureoxr .gt_left {
   text-align: left;
 }
 
-#xmmdplpwjr .gt_center {
+#vuarureoxr .gt_center {
   text-align: center;
 }
 
-#xmmdplpwjr .gt_right {
+#vuarureoxr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xmmdplpwjr .gt_font_normal {
+#vuarureoxr .gt_font_normal {
   font-weight: normal;
 }
 
-#xmmdplpwjr .gt_font_bold {
+#vuarureoxr .gt_font_bold {
   font-weight: bold;
 }
 
-#xmmdplpwjr .gt_font_italic {
+#vuarureoxr .gt_font_italic {
   font-style: italic;
 }
 
-#xmmdplpwjr .gt_super {
+#vuarureoxr .gt_super {
   font-size: 65%;
 }
 
-#xmmdplpwjr .gt_footnote_marks {
+#vuarureoxr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xmmdplpwjr .gt_asterisk {
+#vuarureoxr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xmmdplpwjr .gt_indent_1 {
+#vuarureoxr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xmmdplpwjr .gt_indent_2 {
+#vuarureoxr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xmmdplpwjr .gt_indent_3 {
+#vuarureoxr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xmmdplpwjr .gt_indent_4 {
+#vuarureoxr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xmmdplpwjr .gt_indent_5 {
+#vuarureoxr .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -769,28 +768,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>mod_confound <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">data =</span> dat_disagg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">tbl_regression</span>(mod_confound,</span>
-<span id="cb7-3"><a href="#cb7-3"></a>               <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">tbl_regression</span>(mod_confound, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
-<div id="jqtdcfndfv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jqtdcfndfv table {
+<div id="qznmwqayeg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qznmwqayeg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jqtdcfndfv thead, #jqtdcfndfv tbody, #jqtdcfndfv tfoot, #jqtdcfndfv tr, #jqtdcfndfv td, #jqtdcfndfv th {
+#qznmwqayeg thead, #qznmwqayeg tbody, #qznmwqayeg tfoot, #qznmwqayeg tr, #qznmwqayeg td, #qznmwqayeg th {
   border-style: none;
 }
 
-#jqtdcfndfv p {
+#qznmwqayeg p {
   margin: 0;
   padding: 0;
 }
 
-#jqtdcfndfv .gt_table {
+#qznmwqayeg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -816,12 +814,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_caption {
+#qznmwqayeg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jqtdcfndfv .gt_title {
+#qznmwqayeg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -833,7 +831,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#jqtdcfndfv .gt_subtitle {
+#qznmwqayeg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -845,7 +843,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#jqtdcfndfv .gt_heading {
+#qznmwqayeg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -857,13 +855,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_bottom_border {
+#qznmwqayeg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_col_headings {
+#qznmwqayeg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -878,7 +876,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_col_heading {
+#qznmwqayeg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -898,7 +896,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jqtdcfndfv .gt_column_spanner_outer {
+#qznmwqayeg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -910,15 +908,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#jqtdcfndfv .gt_column_spanner_outer:first-child {
+#qznmwqayeg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jqtdcfndfv .gt_column_spanner_outer:last-child {
+#qznmwqayeg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jqtdcfndfv .gt_column_spanner {
+#qznmwqayeg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -930,11 +928,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#jqtdcfndfv .gt_spanner_row {
+#qznmwqayeg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jqtdcfndfv .gt_group_heading {
+#qznmwqayeg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -960,7 +958,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#jqtdcfndfv .gt_empty_group_heading {
+#qznmwqayeg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -975,15 +973,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#jqtdcfndfv .gt_from_md > :first-child {
+#qznmwqayeg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jqtdcfndfv .gt_from_md > :last-child {
+#qznmwqayeg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jqtdcfndfv .gt_row {
+#qznmwqayeg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1002,7 +1000,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jqtdcfndfv .gt_stub {
+#qznmwqayeg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1015,7 +1013,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jqtdcfndfv .gt_stub_row_group {
+#qznmwqayeg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1029,15 +1027,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#jqtdcfndfv .gt_row_group_first td {
+#qznmwqayeg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jqtdcfndfv .gt_row_group_first th {
+#qznmwqayeg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jqtdcfndfv .gt_summary_row {
+#qznmwqayeg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1047,16 +1045,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jqtdcfndfv .gt_first_summary_row {
+#qznmwqayeg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_first_summary_row.thick {
+#qznmwqayeg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jqtdcfndfv .gt_last_summary_row {
+#qznmwqayeg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1066,7 +1064,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_grand_summary_row {
+#qznmwqayeg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1076,7 +1074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jqtdcfndfv .gt_first_grand_summary_row {
+#qznmwqayeg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1086,7 +1084,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_last_grand_summary_row_top {
+#qznmwqayeg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1096,11 +1094,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_striped {
+#qznmwqayeg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jqtdcfndfv .gt_table_body {
+#qznmwqayeg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1109,7 +1107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_footnotes {
+#qznmwqayeg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1123,7 +1121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_footnote {
+#qznmwqayeg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1132,7 +1130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jqtdcfndfv .gt_sourcenotes {
+#qznmwqayeg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1146,7 +1144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jqtdcfndfv .gt_sourcenote {
+#qznmwqayeg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1154,63 +1152,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jqtdcfndfv .gt_left {
+#qznmwqayeg .gt_left {
   text-align: left;
 }
 
-#jqtdcfndfv .gt_center {
+#qznmwqayeg .gt_center {
   text-align: center;
 }
 
-#jqtdcfndfv .gt_right {
+#qznmwqayeg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jqtdcfndfv .gt_font_normal {
+#qznmwqayeg .gt_font_normal {
   font-weight: normal;
 }
 
-#jqtdcfndfv .gt_font_bold {
+#qznmwqayeg .gt_font_bold {
   font-weight: bold;
 }
 
-#jqtdcfndfv .gt_font_italic {
+#qznmwqayeg .gt_font_italic {
   font-style: italic;
 }
 
-#jqtdcfndfv .gt_super {
+#qznmwqayeg .gt_super {
   font-size: 65%;
 }
 
-#jqtdcfndfv .gt_footnote_marks {
+#qznmwqayeg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jqtdcfndfv .gt_asterisk {
+#qznmwqayeg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jqtdcfndfv .gt_indent_1 {
+#qznmwqayeg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jqtdcfndfv .gt_indent_2 {
+#qznmwqayeg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jqtdcfndfv .gt_indent_3 {
+#qznmwqayeg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jqtdcfndfv .gt_indent_4 {
+#qznmwqayeg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jqtdcfndfv .gt_indent_5 {
+#qznmwqayeg .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1272,28 +1270,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>mod_interact <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex <span class="sc">*</span> age, <span class="at">data =</span> dat_disagg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">tbl_regression</span>(mod_interact,</span>
-<span id="cb8-3"><a href="#cb8-3"></a>               <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">tbl_regression</span>(mod_interact, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
-<div id="zfeavfdqbo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zfeavfdqbo table {
+<div id="vfgpvllxkx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vfgpvllxkx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zfeavfdqbo thead, #zfeavfdqbo tbody, #zfeavfdqbo tfoot, #zfeavfdqbo tr, #zfeavfdqbo td, #zfeavfdqbo th {
+#vfgpvllxkx thead, #vfgpvllxkx tbody, #vfgpvllxkx tfoot, #vfgpvllxkx tr, #vfgpvllxkx td, #vfgpvllxkx th {
   border-style: none;
 }
 
-#zfeavfdqbo p {
+#vfgpvllxkx p {
   margin: 0;
   padding: 0;
 }
 
-#zfeavfdqbo .gt_table {
+#vfgpvllxkx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1319,12 +1316,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_caption {
+#vfgpvllxkx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zfeavfdqbo .gt_title {
+#vfgpvllxkx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1336,7 +1333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#zfeavfdqbo .gt_subtitle {
+#vfgpvllxkx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1348,7 +1345,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#zfeavfdqbo .gt_heading {
+#vfgpvllxkx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1360,13 +1357,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_bottom_border {
+#vfgpvllxkx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_col_headings {
+#vfgpvllxkx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1381,7 +1378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_col_heading {
+#vfgpvllxkx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1401,7 +1398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zfeavfdqbo .gt_column_spanner_outer {
+#vfgpvllxkx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1413,15 +1410,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#zfeavfdqbo .gt_column_spanner_outer:first-child {
+#vfgpvllxkx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zfeavfdqbo .gt_column_spanner_outer:last-child {
+#vfgpvllxkx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zfeavfdqbo .gt_column_spanner {
+#vfgpvllxkx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1433,11 +1430,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#zfeavfdqbo .gt_spanner_row {
+#vfgpvllxkx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zfeavfdqbo .gt_group_heading {
+#vfgpvllxkx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1463,7 +1460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#zfeavfdqbo .gt_empty_group_heading {
+#vfgpvllxkx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1478,15 +1475,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#zfeavfdqbo .gt_from_md > :first-child {
+#vfgpvllxkx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zfeavfdqbo .gt_from_md > :last-child {
+#vfgpvllxkx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zfeavfdqbo .gt_row {
+#vfgpvllxkx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1505,7 +1502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zfeavfdqbo .gt_stub {
+#vfgpvllxkx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1518,7 +1515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zfeavfdqbo .gt_stub_row_group {
+#vfgpvllxkx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1532,15 +1529,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#zfeavfdqbo .gt_row_group_first td {
+#vfgpvllxkx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zfeavfdqbo .gt_row_group_first th {
+#vfgpvllxkx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zfeavfdqbo .gt_summary_row {
+#vfgpvllxkx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1550,16 +1547,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zfeavfdqbo .gt_first_summary_row {
+#vfgpvllxkx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_first_summary_row.thick {
+#vfgpvllxkx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zfeavfdqbo .gt_last_summary_row {
+#vfgpvllxkx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1569,7 +1566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_grand_summary_row {
+#vfgpvllxkx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1579,7 +1576,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zfeavfdqbo .gt_first_grand_summary_row {
+#vfgpvllxkx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1589,7 +1586,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_last_grand_summary_row_top {
+#vfgpvllxkx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1599,11 +1596,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_striped {
+#vfgpvllxkx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zfeavfdqbo .gt_table_body {
+#vfgpvllxkx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1612,7 +1609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_footnotes {
+#vfgpvllxkx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1626,7 +1623,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_footnote {
+#vfgpvllxkx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1635,7 +1632,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zfeavfdqbo .gt_sourcenotes {
+#vfgpvllxkx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1649,7 +1646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zfeavfdqbo .gt_sourcenote {
+#vfgpvllxkx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1657,63 +1654,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zfeavfdqbo .gt_left {
+#vfgpvllxkx .gt_left {
   text-align: left;
 }
 
-#zfeavfdqbo .gt_center {
+#vfgpvllxkx .gt_center {
   text-align: center;
 }
 
-#zfeavfdqbo .gt_right {
+#vfgpvllxkx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zfeavfdqbo .gt_font_normal {
+#vfgpvllxkx .gt_font_normal {
   font-weight: normal;
 }
 
-#zfeavfdqbo .gt_font_bold {
+#vfgpvllxkx .gt_font_bold {
   font-weight: bold;
 }
 
-#zfeavfdqbo .gt_font_italic {
+#vfgpvllxkx .gt_font_italic {
   font-style: italic;
 }
 
-#zfeavfdqbo .gt_super {
+#vfgpvllxkx .gt_super {
   font-size: 65%;
 }
 
-#zfeavfdqbo .gt_footnote_marks {
+#vfgpvllxkx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zfeavfdqbo .gt_asterisk {
+#vfgpvllxkx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zfeavfdqbo .gt_indent_1 {
+#vfgpvllxkx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zfeavfdqbo .gt_indent_2 {
+#vfgpvllxkx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zfeavfdqbo .gt_indent_3 {
+#vfgpvllxkx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zfeavfdqbo .gt_indent_4 {
+#vfgpvllxkx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zfeavfdqbo .gt_indent_5 {
+#vfgpvllxkx .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1820,7 +1817,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output-display">
 
-<div class="tabwid"><style>.cl-d512aaec{table-layout:auto;}.cl-d50ab026{font-family:'Consolas';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d50ab03a{font-family:'Consolas';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d50e4420{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d50e442a{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d50e5e7e{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5e88{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5e89{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5e92{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5e9c{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5e9d{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5e9e{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d50e5ea6{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d512aaec"><caption><p>Predicted Probabilities of Hospitalisation</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-d50e5e7e"><p class="cl-d50e4420"><span class="cl-d50ab026">sex</span></p></th><th class="cl-d50e5e7e"><p class="cl-d50e4420"><span class="cl-d50ab026">age</span></p></th><th class="cl-d50e5e88"><p class="cl-d50e442a"><span class="cl-d50ab026">prob</span></p></th><th class="cl-d50e5e88"><p class="cl-d50e442a"><span class="cl-d50ab026">SE</span></p></th><th class="cl-d50e5e88"><p class="cl-d50e442a"><span class="cl-d50ab026">df</span></p></th><th class="cl-d50e5e88"><p class="cl-d50e442a"><span class="cl-d50ab026">asymp.LCL</span></p></th><th class="cl-d50e5e88"><p class="cl-d50e442a"><span class="cl-d50ab026">asymp.UCL</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d50e5e89"><p class="cl-d50e4420"><span class="cl-d50ab03a">Female</span></p></td><td class="cl-d50e5e89"><p class="cl-d50e4420"><span class="cl-d50ab03a">&lt; 40</span></p></td><td class="cl-d50e5e92"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.133</span></p></td><td class="cl-d50e5e92"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.006</span></p></td><td class="cl-d50e5e92"><p class="cl-d50e442a"><span class="cl-d50ab03a"> Inf</span></p></td><td class="cl-d50e5e92"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.122</span></p></td><td class="cl-d50e5e92"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.145</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d50e5e9c"><p class="cl-d50e4420"><span class="cl-d50ab03a">Male</span></p></td><td class="cl-d50e5e9c"><p class="cl-d50e4420"><span class="cl-d50ab03a">&lt; 40</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.235</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.007</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a"> Inf</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.222</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.248</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d50e5e9c"><p class="cl-d50e4420"><span class="cl-d50ab03a">Female</span></p></td><td class="cl-d50e5e9c"><p class="cl-d50e4420"><span class="cl-d50ab03a">≥ 40</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.093</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.005</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a"> Inf</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.084</span></p></td><td class="cl-d50e5e9d"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.103</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d50e5e9e"><p class="cl-d50e4420"><span class="cl-d50ab03a">Male</span></p></td><td class="cl-d50e5e9e"><p class="cl-d50e4420"><span class="cl-d50ab03a">≥ 40</span></p></td><td class="cl-d50e5ea6"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.086</span></p></td><td class="cl-d50e5ea6"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.004</span></p></td><td class="cl-d50e5ea6"><p class="cl-d50e442a"><span class="cl-d50ab03a"> Inf</span></p></td><td class="cl-d50e5ea6"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.078</span></p></td><td class="cl-d50e5ea6"><p class="cl-d50e442a"><span class="cl-d50ab03a">0.095</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-50663f90{table-layout:auto;}.cl-505ec814{font-family:'Consolas';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-505ec828{font-family:'Consolas';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5061f6ce{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5061f6e2{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-50620cc2{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620ccc{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620cd6{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620cd7{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620cd8{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620ce0{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620ce1{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50620ce2{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-50663f90"><caption><p>Predicted Probabilities of Hospitalisation</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-50620cc2"><p class="cl-5061f6ce"><span class="cl-505ec814">sex</span></p></th><th class="cl-50620cc2"><p class="cl-5061f6ce"><span class="cl-505ec814">age</span></p></th><th class="cl-50620ccc"><p class="cl-5061f6e2"><span class="cl-505ec814">prob</span></p></th><th class="cl-50620ccc"><p class="cl-5061f6e2"><span class="cl-505ec814">SE</span></p></th><th class="cl-50620ccc"><p class="cl-5061f6e2"><span class="cl-505ec814">df</span></p></th><th class="cl-50620ccc"><p class="cl-5061f6e2"><span class="cl-505ec814">asymp.LCL</span></p></th><th class="cl-50620ccc"><p class="cl-5061f6e2"><span class="cl-505ec814">asymp.UCL</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-50620cd6"><p class="cl-5061f6ce"><span class="cl-505ec828">Female</span></p></td><td class="cl-50620cd6"><p class="cl-5061f6ce"><span class="cl-505ec828">&lt; 40</span></p></td><td class="cl-50620cd7"><p class="cl-5061f6e2"><span class="cl-505ec828">0.133</span></p></td><td class="cl-50620cd7"><p class="cl-5061f6e2"><span class="cl-505ec828">0.006</span></p></td><td class="cl-50620cd7"><p class="cl-5061f6e2"><span class="cl-505ec828"> Inf</span></p></td><td class="cl-50620cd7"><p class="cl-5061f6e2"><span class="cl-505ec828">0.122</span></p></td><td class="cl-50620cd7"><p class="cl-5061f6e2"><span class="cl-505ec828">0.145</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-50620cd8"><p class="cl-5061f6ce"><span class="cl-505ec828">Male</span></p></td><td class="cl-50620cd8"><p class="cl-5061f6ce"><span class="cl-505ec828">&lt; 40</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.235</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.007</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828"> Inf</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.222</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.248</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-50620cd8"><p class="cl-5061f6ce"><span class="cl-505ec828">Female</span></p></td><td class="cl-50620cd8"><p class="cl-5061f6ce"><span class="cl-505ec828">≥ 40</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.093</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.005</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828"> Inf</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.084</span></p></td><td class="cl-50620ce0"><p class="cl-5061f6e2"><span class="cl-505ec828">0.103</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-50620ce1"><p class="cl-5061f6ce"><span class="cl-505ec828">Male</span></p></td><td class="cl-50620ce1"><p class="cl-5061f6ce"><span class="cl-505ec828">≥ 40</span></p></td><td class="cl-50620ce2"><p class="cl-5061f6e2"><span class="cl-505ec828">0.086</span></p></td><td class="cl-50620ce2"><p class="cl-5061f6e2"><span class="cl-505ec828">0.004</span></p></td><td class="cl-50620ce2"><p class="cl-5061f6e2"><span class="cl-505ec828"> Inf</span></p></td><td class="cl-50620ce2"><p class="cl-5061f6e2"><span class="cl-505ec828">0.078</span></p></td><td class="cl-50620ce2"><p class="cl-5061f6e2"><span class="cl-505ec828">0.095</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p>Specifying <code>type = "response"</code> in the <code>emmeans</code> call indicates that we want to calculate the outcome on the probability (i.e.&nbsp;risk) scale. To get the risk ratios we have been working with until now, we simply add the <code>pairs(rev = T)</code> function to the call:</p>
@@ -1840,7 +1837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output-display">
 
-<div class="tabwid"><style>.cl-d53425aa{table-layout:auto;}.cl-d52d4dac{font-family:'Consolas';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d52d4db6{font-family:'Consolas';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d530103c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d5301046{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d530223e{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d530223f{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5302248{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5302249{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d530224a{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5302252{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5302253{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5302254{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d53425aa"><caption><p>All Pairwise Risk Ratios</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-d530223e"><p class="cl-d530103c"><span class="cl-d52d4dac">contrast</span></p></th><th class="cl-d530223f"><p class="cl-d5301046"><span class="cl-d52d4dac">ratio</span></p></th><th class="cl-d530223f"><p class="cl-d5301046"><span class="cl-d52d4dac">SE</span></p></th><th class="cl-d530223f"><p class="cl-d5301046"><span class="cl-d52d4dac">df</span></p></th><th class="cl-d530223f"><p class="cl-d5301046"><span class="cl-d52d4dac">null</span></p></th><th class="cl-d530223f"><p class="cl-d5301046"><span class="cl-d52d4dac">z.ratio</span></p></th><th class="cl-d530223f"><p class="cl-d5301046"><span class="cl-d52d4dac">p.value</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d5302248"><p class="cl-d530103c"><span class="cl-d52d4db6">Male &lt; 40 / Female &lt; 40</span></p></td><td class="cl-d5302249"><p class="cl-d5301046"><span class="cl-d52d4db6">1.767</span></p></td><td class="cl-d5302249"><p class="cl-d5301046"><span class="cl-d52d4db6">0.091</span></p></td><td class="cl-d5302249"><p class="cl-d5301046"><span class="cl-d52d4db6"> Inf</span></p></td><td class="cl-d5302249"><p class="cl-d5301046"><span class="cl-d52d4db6">1.000</span></p></td><td class="cl-d5302249"><p class="cl-d5301046"><span class="cl-d52d4db6">11.003</span></p></td><td class="cl-d5302249"><p class="cl-d5301046"><span class="cl-d52d4db6">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d530224a"><p class="cl-d530103c"><span class="cl-d52d4db6">Female ≥ 40 / Female &lt; 40</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.698</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.047</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6"> Inf</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">1.000</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">-5.356</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d530224a"><p class="cl-d530103c"><span class="cl-d52d4db6">Female ≥ 40 / Male &lt; 40</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.395</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.023</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6"> Inf</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">1.000</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">-15.923</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d530224a"><p class="cl-d530103c"><span class="cl-d52d4db6">Male ≥ 40 / Female &lt; 40</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.646</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.043</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6"> Inf</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">1.000</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">-6.582</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d530224a"><p class="cl-d530103c"><span class="cl-d52d4db6">Male ≥ 40 / Male &lt; 40</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.366</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.021</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6"> Inf</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">1.000</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">-17.499</span></p></td><td class="cl-d5302252"><p class="cl-d5301046"><span class="cl-d52d4db6">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d5302253"><p class="cl-d530103c"><span class="cl-d52d4db6">Male ≥ 40 / Female ≥ 40</span></p></td><td class="cl-d5302254"><p class="cl-d5301046"><span class="cl-d52d4db6">0.925</span></p></td><td class="cl-d5302254"><p class="cl-d5301046"><span class="cl-d52d4db6">0.066</span></p></td><td class="cl-d5302254"><p class="cl-d5301046"><span class="cl-d52d4db6"> Inf</span></p></td><td class="cl-d5302254"><p class="cl-d5301046"><span class="cl-d52d4db6">1.000</span></p></td><td class="cl-d5302254"><p class="cl-d5301046"><span class="cl-d52d4db6">-1.083</span></p></td><td class="cl-d5302254"><p class="cl-d5301046"><span class="cl-d52d4db6">0.700</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-508681ec{table-layout:auto;}.cl-50802afe{font-family:'Consolas';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-50802b08{font-family:'Consolas';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5082e2c6{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5082e2d0{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5082f662{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f66c{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f66d{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f676{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f677{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f680{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f681{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5082f682{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-508681ec"><caption><p>All Pairwise Risk Ratios</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-5082f662"><p class="cl-5082e2c6"><span class="cl-50802afe">contrast</span></p></th><th class="cl-5082f66c"><p class="cl-5082e2d0"><span class="cl-50802afe">ratio</span></p></th><th class="cl-5082f66c"><p class="cl-5082e2d0"><span class="cl-50802afe">SE</span></p></th><th class="cl-5082f66c"><p class="cl-5082e2d0"><span class="cl-50802afe">df</span></p></th><th class="cl-5082f66c"><p class="cl-5082e2d0"><span class="cl-50802afe">null</span></p></th><th class="cl-5082f66c"><p class="cl-5082e2d0"><span class="cl-50802afe">z.ratio</span></p></th><th class="cl-5082f66c"><p class="cl-5082e2d0"><span class="cl-50802afe">p.value</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-5082f66d"><p class="cl-5082e2c6"><span class="cl-50802b08">Male &lt; 40 / Female &lt; 40</span></p></td><td class="cl-5082f676"><p class="cl-5082e2d0"><span class="cl-50802b08">1.767</span></p></td><td class="cl-5082f676"><p class="cl-5082e2d0"><span class="cl-50802b08">0.091</span></p></td><td class="cl-5082f676"><p class="cl-5082e2d0"><span class="cl-50802b08"> Inf</span></p></td><td class="cl-5082f676"><p class="cl-5082e2d0"><span class="cl-50802b08">1.000</span></p></td><td class="cl-5082f676"><p class="cl-5082e2d0"><span class="cl-50802b08">11.003</span></p></td><td class="cl-5082f676"><p class="cl-5082e2d0"><span class="cl-50802b08">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5082f677"><p class="cl-5082e2c6"><span class="cl-50802b08">Female ≥ 40 / Female &lt; 40</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.698</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.047</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08"> Inf</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">1.000</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">-5.356</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5082f677"><p class="cl-5082e2c6"><span class="cl-50802b08">Female ≥ 40 / Male &lt; 40</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.395</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.023</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08"> Inf</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">1.000</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">-15.923</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5082f677"><p class="cl-5082e2c6"><span class="cl-50802b08">Male ≥ 40 / Female &lt; 40</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.646</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.043</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08"> Inf</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">1.000</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">-6.582</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5082f677"><p class="cl-5082e2c6"><span class="cl-50802b08">Male ≥ 40 / Male &lt; 40</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.366</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.021</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08"> Inf</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">1.000</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">-17.499</span></p></td><td class="cl-5082f680"><p class="cl-5082e2d0"><span class="cl-50802b08">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5082f681"><p class="cl-5082e2c6"><span class="cl-50802b08">Male ≥ 40 / Female ≥ 40</span></p></td><td class="cl-5082f682"><p class="cl-5082e2d0"><span class="cl-50802b08">0.925</span></p></td><td class="cl-5082f682"><p class="cl-5082e2d0"><span class="cl-50802b08">0.066</span></p></td><td class="cl-5082f682"><p class="cl-5082e2d0"><span class="cl-50802b08"> Inf</span></p></td><td class="cl-5082f682"><p class="cl-5082e2d0"><span class="cl-50802b08">1.000</span></p></td><td class="cl-5082f682"><p class="cl-5082e2d0"><span class="cl-50802b08">-1.083</span></p></td><td class="cl-5082f682"><p class="cl-5082e2d0"><span class="cl-50802b08">0.700</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p>Note that this gives us two extra comparisons we might not really want (the 3rd and 4th lines of the output) as it estimates every single pairwise comparison. We can get a bit fancier and customise the <code>emmeans</code> output to give us only what we want:</p>
@@ -1866,11 +1863,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output-display">
 
-<div class="tabwid"><style>.cl-d5568280{table-layout:auto;}.cl-d54f6b12{font-family:'Consolas';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d54f6b1c{font-family:'Consolas';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d552391e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d5523932{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d5524d14{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d1e{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d28{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d29{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d2a{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d32{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d33{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d5524d34{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d5568280"><caption><p>Custom Pairwise Risk Ratios</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-d5524d14"><p class="cl-d552391e"><span class="cl-d54f6b12">contrast</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">ratio</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">SE</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">df</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">asymp.LCL</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">asymp.UCL</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">null</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">z.ratio</span></p></th><th class="cl-d5524d1e"><p class="cl-d5523932"><span class="cl-d54f6b12">p.value</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d5524d28"><p class="cl-d552391e"><span class="cl-d54f6b1c">The effect of being male in younger individuals</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.767</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.091</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c"> Inf</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.597</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.956</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.000</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">11.003</span></p></td><td class="cl-d5524d29"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d5524d2a"><p class="cl-d552391e"><span class="cl-d54f6b1c">The effect of being male in older individuals</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.925</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.066</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c"> Inf</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.804</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.065</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.000</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">-1.083</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.279</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d5524d2a"><p class="cl-d552391e"><span class="cl-d54f6b1c">The effect of being older in females</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.698</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.047</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c"> Inf</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.612</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.796</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.000</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">-5.356</span></p></td><td class="cl-d5524d32"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d5524d33"><p class="cl-d552391e"><span class="cl-d54f6b1c">The effect of being older in males</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.366</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.021</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c"> Inf</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.327</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.409</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">1.000</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">-17.499</span></p></td><td class="cl-d5524d34"><p class="cl-d5523932"><span class="cl-d54f6b1c">0.000</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-50a78aa4{table-layout:auto;}.cl-50a0c53e{font-family:'Consolas';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-50a0c548{font-family:'Consolas';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-50a38300{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-50a3830a{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-50a3964c{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a39656{height:0.25in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a39657{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a39660{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a39661{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a3966a{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a3966b{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-50a39674{background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-50a78aa4"><caption><p>Custom Pairwise Risk Ratios</p></caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-50a3964c"><p class="cl-50a38300"><span class="cl-50a0c53e">contrast</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">ratio</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">SE</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">df</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">asymp.LCL</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">asymp.UCL</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">null</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">z.ratio</span></p></th><th class="cl-50a39656"><p class="cl-50a3830a"><span class="cl-50a0c53e">p.value</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-50a39657"><p class="cl-50a38300"><span class="cl-50a0c548">The effect of being male in younger individuals</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">1.767</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">0.091</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548"> Inf</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">1.597</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">1.956</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">1.000</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">11.003</span></p></td><td class="cl-50a39660"><p class="cl-50a3830a"><span class="cl-50a0c548">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-50a39661"><p class="cl-50a38300"><span class="cl-50a0c548">The effect of being male in older individuals</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.925</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.066</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548"> Inf</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.804</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">1.065</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">1.000</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">-1.083</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.279</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-50a39661"><p class="cl-50a38300"><span class="cl-50a0c548">The effect of being older in females</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.698</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.047</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548"> Inf</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.612</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.796</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">1.000</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">-5.356</span></p></td><td class="cl-50a3966a"><p class="cl-50a3830a"><span class="cl-50a0c548">0.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-50a3966b"><p class="cl-50a38300"><span class="cl-50a0c548">The effect of being older in males</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">0.366</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">0.021</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548"> Inf</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">0.327</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">0.409</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">1.000</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">-17.499</span></p></td><td class="cl-50a39674"><p class="cl-50a3830a"><span class="cl-50a0c548">0.000</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p>Note, that these match the manual calculations pretty well.</p>
-<p>Please take some time to learn about <code>emmeans</code> (or <code>margins</code> in <code>Stata</code>). It will make your life so much easier if you plan to have a career in research (and don’t always have access to a statistician.)</p>
+<p>Please take some time to learn about <code>emmeans</code> (or <code>margins</code> in <code>Stata</code>). It will make your life so much easier if you plan to have a career in research (and don’t always have access to a statistician).</p>
 
 
 <!-- -->
@@ -2359,151 +2356,148 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-84"><a href="#cb12-84"></a><span class="in">```{r}</span></span>
 <span id="cb12-85"><a href="#cb12-85"></a><span class="co">#| label: crude model</span></span>
 <span id="cb12-86"><a href="#cb12-86"></a>mod_crude <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex, <span class="at">data =</span> dat_agg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
-<span id="cb12-87"><a href="#cb12-87"></a><span class="fu">tbl_regression</span>(mod_crude,</span>
-<span id="cb12-88"><a href="#cb12-88"></a>               <span class="at">exp =</span> T)</span>
-<span id="cb12-89"><a href="#cb12-89"></a><span class="in">```</span></span>
-<span id="cb12-90"><a href="#cb12-90"></a></span>
-<span id="cb12-91"><a href="#cb12-91"></a><span class="fu">## Let's introduce age (\&lt;40 vs ≥ 40) as a third variable</span></span>
-<span id="cb12-92"><a href="#cb12-92"></a></span>
-<span id="cb12-95"><a href="#cb12-95"></a><span class="in">```{r}</span></span>
-<span id="cb12-96"><a href="#cb12-96"></a><span class="co">#| label: disaggregated_data</span></span>
-<span id="cb12-97"><a href="#cb12-97"></a>dat_disagg <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">"Female"</span>, <span class="st">"Male"</span>, <span class="st">"Female"</span>),</span>
-<span id="cb12-98"><a href="#cb12-98"></a>                         <span class="at">age =</span> <span class="fu">c</span>(<span class="st">"&lt; 40"</span>, <span class="st">"&lt; 40"</span>, <span class="st">"≥ 40"</span>, <span class="st">"≥ 40"</span>),</span>
-<span id="cb12-99"><a href="#cb12-99"></a>                         <span class="at">hospitalised =</span> <span class="fu">as.numeric</span>(<span class="fu">c</span>(<span class="dv">966</span>, <span class="dv">460</span>, <span class="dv">364</span>, <span class="dv">348</span>)), </span>
-<span id="cb12-100"><a href="#cb12-100"></a>                         <span class="at">not_hospitalised =</span> <span class="fu">as.numeric</span>(<span class="fu">c</span>(<span class="dv">3146</span>, <span class="dv">3000</span>, <span class="dv">3872</span>, <span class="dv">3400</span>)))</span>
-<span id="cb12-101"><a href="#cb12-101"></a>dat_disagg</span>
-<span id="cb12-102"><a href="#cb12-102"></a><span class="in">```</span></span>
-<span id="cb12-103"><a href="#cb12-103"></a></span>
-<span id="cb12-104"><a href="#cb12-104"></a><span class="fu">### Age as a confounder</span></span>
-<span id="cb12-105"><a href="#cb12-105"></a></span>
-<span id="cb12-106"><a href="#cb12-106"></a>For now, let's just assume age is a confounder in the association between sex and hospitalisation risk. The model formulation in <span class="in">`R`</span> is then:</span>
-<span id="cb12-107"><a href="#cb12-107"></a></span>
-<span id="cb12-108"><a href="#cb12-108"></a><span class="in">`mod_adj &lt;- glm(cbind(hospitalised, not_hospitalised) ~ sex + age, data = dat_agg, family = binomial(link = "log"))`</span></span>
-<span id="cb12-109"><a href="#cb12-109"></a></span>
-<span id="cb12-110"><a href="#cb12-110"></a>and the risk ratios we get are:</span>
-<span id="cb12-111"><a href="#cb12-111"></a></span>
-<span id="cb12-114"><a href="#cb12-114"></a><span class="in">```{r}</span></span>
-<span id="cb12-115"><a href="#cb12-115"></a><span class="co">#| label: adjusted model confounding</span></span>
-<span id="cb12-116"><a href="#cb12-116"></a>mod_confound <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">data =</span> dat_disagg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
-<span id="cb12-117"><a href="#cb12-117"></a><span class="fu">tbl_regression</span>(mod_confound,</span>
-<span id="cb12-118"><a href="#cb12-118"></a>               <span class="at">exp =</span> T)</span>
-<span id="cb12-119"><a href="#cb12-119"></a><span class="in">```</span></span>
+<span id="cb12-87"><a href="#cb12-87"></a><span class="fu">tbl_regression</span>(mod_crude, <span class="at">exp =</span> T)</span>
+<span id="cb12-88"><a href="#cb12-88"></a><span class="in">```</span></span>
+<span id="cb12-89"><a href="#cb12-89"></a></span>
+<span id="cb12-90"><a href="#cb12-90"></a><span class="fu">## Let's introduce age (\&lt;40 vs ≥ 40) as a third variable</span></span>
+<span id="cb12-91"><a href="#cb12-91"></a></span>
+<span id="cb12-94"><a href="#cb12-94"></a><span class="in">```{r}</span></span>
+<span id="cb12-95"><a href="#cb12-95"></a><span class="co">#| label: disaggregated_data</span></span>
+<span id="cb12-96"><a href="#cb12-96"></a>dat_disagg <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">"Female"</span>, <span class="st">"Male"</span>, <span class="st">"Female"</span>),</span>
+<span id="cb12-97"><a href="#cb12-97"></a>                         <span class="at">age =</span> <span class="fu">c</span>(<span class="st">"&lt; 40"</span>, <span class="st">"&lt; 40"</span>, <span class="st">"≥ 40"</span>, <span class="st">"≥ 40"</span>),</span>
+<span id="cb12-98"><a href="#cb12-98"></a>                         <span class="at">hospitalised =</span> <span class="fu">as.numeric</span>(<span class="fu">c</span>(<span class="dv">966</span>, <span class="dv">460</span>, <span class="dv">364</span>, <span class="dv">348</span>)), </span>
+<span id="cb12-99"><a href="#cb12-99"></a>                         <span class="at">not_hospitalised =</span> <span class="fu">as.numeric</span>(<span class="fu">c</span>(<span class="dv">3146</span>, <span class="dv">3000</span>, <span class="dv">3872</span>, <span class="dv">3400</span>)))</span>
+<span id="cb12-100"><a href="#cb12-100"></a>dat_disagg</span>
+<span id="cb12-101"><a href="#cb12-101"></a><span class="in">```</span></span>
+<span id="cb12-102"><a href="#cb12-102"></a></span>
+<span id="cb12-103"><a href="#cb12-103"></a><span class="fu">### Age as a confounder</span></span>
+<span id="cb12-104"><a href="#cb12-104"></a></span>
+<span id="cb12-105"><a href="#cb12-105"></a>For now, let's just assume age is a confounder in the association between sex and hospitalisation risk. The model formulation in <span class="in">`R`</span> is then:</span>
+<span id="cb12-106"><a href="#cb12-106"></a></span>
+<span id="cb12-107"><a href="#cb12-107"></a><span class="in">`mod_adj &lt;- glm(cbind(hospitalised, not_hospitalised) ~ sex + age, data = dat_agg, family = binomial(link = "log"))`</span></span>
+<span id="cb12-108"><a href="#cb12-108"></a></span>
+<span id="cb12-109"><a href="#cb12-109"></a>and the risk ratios we get are:</span>
+<span id="cb12-110"><a href="#cb12-110"></a></span>
+<span id="cb12-113"><a href="#cb12-113"></a><span class="in">```{r}</span></span>
+<span id="cb12-114"><a href="#cb12-114"></a><span class="co">#| label: adjusted model confounding</span></span>
+<span id="cb12-115"><a href="#cb12-115"></a>mod_confound <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">data =</span> dat_disagg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
+<span id="cb12-116"><a href="#cb12-116"></a><span class="fu">tbl_regression</span>(mod_confound, <span class="at">exp =</span> T)</span>
+<span id="cb12-117"><a href="#cb12-117"></a><span class="in">```</span></span>
+<span id="cb12-118"><a href="#cb12-118"></a></span>
+<span id="cb12-119"><a href="#cb12-119"></a>So, what we are seeing here is that the magnitude of association between sex and hospitalisation risk is averaged (in a weighted way) over both categories of age to produce one effect estimate <span class="in">`sex = 1.43 (95% CI 1.32, 1.55; p &lt; 0.001)`</span>. This just so happens to be almost the same as the crude estimate when you ignore age altogether.</span>
 <span id="cb12-120"><a href="#cb12-120"></a></span>
-<span id="cb12-121"><a href="#cb12-121"></a>So, what we are seeing here is that the magnitude of association between sex and hospitalisation risk is averaged (in a weighted way) over both categories of age to produce one effect estimate <span class="in">`sex = 1.43 (95% CI 1.32, 1.55; p &lt; 0.001)`</span>. This just so happens to be almost the same as the crude estimate when you ignore age altogether.</span>
+<span id="cb12-121"><a href="#cb12-121"></a>The effect for age in this model is such that whatever your sex, there is about a <span class="in">`53%`</span> reduction in the risk of hospitalisation if you are over 40 vs under 40. Note that in the stratification approach, you aren't able to calculate an effect for age because you are stratifying by it (essentially treating it as a nuisance variable).</span>
 <span id="cb12-122"><a href="#cb12-122"></a></span>
-<span id="cb12-123"><a href="#cb12-123"></a>The effect for age in this model is such that whatever your sex, there is about a <span class="in">`53%`</span> reduction in the risk of hospitalisation if you are over 40 vs under 40. Note that in the stratification approach, you aren't able to calculate an effect for age because you are stratifying by it (essentially treating it as a nuisance variable).</span>
+<span id="cb12-123"><a href="#cb12-123"></a><span class="fu">### Age as an effect modifier</span></span>
 <span id="cb12-124"><a href="#cb12-124"></a></span>
-<span id="cb12-125"><a href="#cb12-125"></a><span class="fu">### Age as an effect modifier</span></span>
+<span id="cb12-125"><a href="#cb12-125"></a>Now, let's correctly model age as an effect modifier in the association between sex and hospitalisation risk. The model formulation in <span class="in">`R`</span> is then (note the <span class="in">`*`</span> operator):</span>
 <span id="cb12-126"><a href="#cb12-126"></a></span>
-<span id="cb12-127"><a href="#cb12-127"></a>Now, let's correctly model age as an effect modifier in the association between sex and hospitalisation risk. The model formulation in <span class="in">`R`</span> is then (note the <span class="in">`*`</span> operator):</span>
+<span id="cb12-127"><a href="#cb12-127"></a><span class="in">`mod_adj &lt;- glm(cbind(hospitalised, not_hospitalised) ~ sex * age, data = dat_agg, family = binomial(link = "log"))`</span></span>
 <span id="cb12-128"><a href="#cb12-128"></a></span>
-<span id="cb12-129"><a href="#cb12-129"></a><span class="in">`mod_adj &lt;- glm(cbind(hospitalised, not_hospitalised) ~ sex * age, data = dat_agg, family = binomial(link = "log"))`</span></span>
+<span id="cb12-129"><a href="#cb12-129"></a>and the risk ratios we get are:</span>
 <span id="cb12-130"><a href="#cb12-130"></a></span>
-<span id="cb12-131"><a href="#cb12-131"></a>and the risk ratios we get are:</span>
-<span id="cb12-132"><a href="#cb12-132"></a></span>
-<span id="cb12-135"><a href="#cb12-135"></a><span class="in">```{r}</span></span>
-<span id="cb12-136"><a href="#cb12-136"></a><span class="co">#| label: adjusted_model_effect_modification</span></span>
-<span id="cb12-137"><a href="#cb12-137"></a>mod_interact <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex <span class="sc">*</span> age, <span class="at">data =</span> dat_disagg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
-<span id="cb12-138"><a href="#cb12-138"></a><span class="fu">tbl_regression</span>(mod_interact,</span>
-<span id="cb12-139"><a href="#cb12-139"></a>               <span class="at">exp =</span> T)</span>
-<span id="cb12-140"><a href="#cb12-140"></a><span class="in">```</span></span>
-<span id="cb12-141"><a href="#cb12-141"></a></span>
-<span id="cb12-142"><a href="#cb12-142"></a>Note how the p value for the interaction term is very low - this would be a good indicator that the model fits the data better with the interaction term present than without it (i.e. assuming age as a confounder only).</span>
-<span id="cb12-143"><a href="#cb12-143"></a></span>
-<span id="cb12-144"><a href="#cb12-144"></a>As I mentioned earlier, the model interpretation with an interaction present does become a little more complicated, but let's break this down (note that I use "effect" in a non-causal way):</span>
-<span id="cb12-145"><a href="#cb12-145"></a></span>
-<span id="cb12-146"><a href="#cb12-146"></a><span class="ss">-   </span>The coefficient for <span class="in">`sex = 1.77 (95% CI 1.60, 1.96; p &lt; 0.001)`</span>. The represents the **"effect"** of sex (being male relative to female) on hospitalisation risk at the **reference level** of age, which in this case is the under 40 yrs group. So, for those under 40, there is about a <span class="in">`77%`</span> increased risk for males relative to females.</span>
-<span id="cb12-147"><a href="#cb12-147"></a></span>
-<span id="cb12-148"><a href="#cb12-148"></a><span class="ss">-   </span>The coefficient for <span class="in">`age = 0.70 (95% CI 0.61, 0.80; p &lt; 0.001)`</span>. This represents the **"effect"** of age (being older than 40 yrs relative to younger than 40 yrs) on hospitalisation risk at the **reference level** of sex, which in this case is female. So, for females, there is about a <span class="in">`30%`</span> risk reduction in the need for hospitalisation for older relative to younger drivers.</span>
-<span id="cb12-149"><a href="#cb12-149"></a></span>
-<span id="cb12-150"><a href="#cb12-150"></a><span class="ss">-   </span>The coefficient for the interaction term: <span class="in">`sex * age = 0.52 (95% CI 0.44, 0.62; p &lt; 0.001)`</span>. This represents the **multiplicative** increase in the magnitude of association for males over 40 yrs.</span>
-<span id="cb12-151"><a href="#cb12-151"></a></span>
-<span id="cb12-152"><a href="#cb12-152"></a><span class="fu">## Effect modification means more associations to estimate</span></span>
-<span id="cb12-153"><a href="#cb12-153"></a></span>
-<span id="cb12-154"><a href="#cb12-154"></a>In this specific case, when you treat age as a confounder, the model produces two risk ratios - one for <span class="in">`sex`</span> and one for <span class="in">`age`</span>. However, when you treat age as an effect modifier, there are now four possible risk ratios to estimate (if you care about age more than it being a "nuisance" variable to control for). These are:</span>
-<span id="cb12-155"><a href="#cb12-155"></a></span>
-<span id="cb12-156"><a href="#cb12-156"></a><span class="ss">1.  </span>The effect of being male in younger individuals.</span>
-<span id="cb12-157"><a href="#cb12-157"></a><span class="ss">2.  </span>The effect of being male in older individuals.</span>
-<span id="cb12-158"><a href="#cb12-158"></a><span class="ss">3.  </span>The effect of being older in females.</span>
-<span id="cb12-159"><a href="#cb12-159"></a><span class="ss">4.  </span>The effect of being older in males.</span>
-<span id="cb12-160"><a href="#cb12-160"></a></span>
-<span id="cb12-161"><a href="#cb12-161"></a>You can easily enough work these out manually by multiplying the respective reference coefficients with the interaction coefficient. The risk ratios for each of the above would then be:</span>
-<span id="cb12-162"><a href="#cb12-162"></a></span>
-<span id="cb12-163"><a href="#cb12-163"></a><span class="ss">1.  </span><span class="in">`1.77`</span> (we can just read this one straight off the model output)</span>
-<span id="cb12-164"><a href="#cb12-164"></a><span class="ss">2.  </span><span class="in">`1.77 x 0.52 = 0.92`</span></span>
-<span id="cb12-165"><a href="#cb12-165"></a><span class="ss">3.  </span><span class="in">`0.70`</span> (again we can just read this one straight off)</span>
-<span id="cb12-166"><a href="#cb12-166"></a><span class="ss">4.  </span><span class="in">`0.70 x 0.52 = 0.36`</span></span>
-<span id="cb12-167"><a href="#cb12-167"></a></span>
-<span id="cb12-168"><a href="#cb12-168"></a>Note that the effects for 1. and 2. are very similar to what we calculated straight from the 2 x 2 tables (<span class="in">`1.84`</span> and <span class="in">`0.92`</span>, respectively - as previously mentioned, the effects for 3. and 4. aren't able to be calculated for the stratifying variable).</span>
-<span id="cb12-169"><a href="#cb12-169"></a></span>
-<span id="cb12-170"><a href="#cb12-170"></a><span class="fu">## Emmeans should be your new best friend</span></span>
-<span id="cb12-171"><a href="#cb12-171"></a></span>
-<span id="cb12-172"><a href="#cb12-172"></a>Perhaps I am preaching to the converted, but if you don't know what the <span class="in">`emmeans`</span> package and specific function in <span class="in">`R`</span> does, then you should learn about it (the equivalent function in <span class="in">`Stata`</span> is <span class="in">`margins`</span>).</span>
-<span id="cb12-173"><a href="#cb12-173"></a></span>
-<span id="cb12-174"><a href="#cb12-174"></a><span class="ot">&lt;https://cran.r-project.org/web/packages/emmeans/index.html&gt;</span></span>
-<span id="cb12-175"><a href="#cb12-175"></a></span>
-<span id="cb12-176"><a href="#cb12-176"></a><span class="ot">&lt;https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/&gt;</span></span>
-<span id="cb12-177"><a href="#cb12-177"></a></span>
-<span id="cb12-178"><a href="#cb12-178"></a><span class="in">`emmeans`</span> does a lot of things, but perhaps its workhorse function is to allow you to take a model and calculate adjusted predictions (either at set values of covariates, or by 'averaging' over them). In this case, we can very easily use <span class="in">`emmeans`</span> to reproduce the manual calculations we just did.</span>
-<span id="cb12-179"><a href="#cb12-179"></a></span>
-<span id="cb12-182"><a href="#cb12-182"></a><span class="in">```{r}</span></span>
-<span id="cb12-183"><a href="#cb12-183"></a><span class="co">#| label: emmeans</span></span>
-<span id="cb12-184"><a href="#cb12-184"></a><span class="co">#| tbl-cap: Predicted Probabilities of Hospitalisation</span></span>
-<span id="cb12-185"><a href="#cb12-185"></a><span class="fu">emmeans</span>(mod_interact, <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-186"><a href="#cb12-186"></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-187"><a href="#cb12-187"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-188"><a href="#cb12-188"></a>  <span class="fu">colformat_double</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">na_str =</span> <span class="st">"N/A"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-189"><a href="#cb12-189"></a>  <span class="fu">set_table_properties</span>(<span class="at">layout =</span> <span class="st">"autofit"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-190"><a href="#cb12-190"></a>  <span class="fu">height</span>(<span class="at">height =</span> <span class="dv">1</span>, <span class="at">unit =</span> <span class="st">"cm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-191"><a href="#cb12-191"></a>  <span class="fu">hrule</span>(<span class="at">rule =</span> <span class="st">"atleast"</span>, <span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-192"><a href="#cb12-192"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"body"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-193"><a href="#cb12-193"></a>  flextable<span class="sc">::</span><span class="fu">font</span>(<span class="at">fontname =</span> <span class="st">"Consolas"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-194"><a href="#cb12-194"></a>  <span class="fu">theme_vanilla</span>()</span>
-<span id="cb12-195"><a href="#cb12-195"></a><span class="in">```</span></span>
-<span id="cb12-196"><a href="#cb12-196"></a></span>
-<span id="cb12-197"><a href="#cb12-197"></a>Specifying <span class="in">`type = "response"`</span> in the <span class="in">`emmeans`</span> call indicates that we want to calculate the outcome on the probability (i.e. risk) scale. To get the risk ratios we have been working with until now, we simply add the <span class="in">`pairs(rev = T)`</span> function to the call:</span>
-<span id="cb12-198"><a href="#cb12-198"></a></span>
-<span id="cb12-201"><a href="#cb12-201"></a><span class="in">```{r}</span></span>
-<span id="cb12-202"><a href="#cb12-202"></a><span class="co">#| label: risk_ratios</span></span>
-<span id="cb12-203"><a href="#cb12-203"></a><span class="co">#| tbl-cap: All Pairwise Risk Ratios</span></span>
-<span id="cb12-204"><a href="#cb12-204"></a><span class="fu">emmeans</span>(mod_interact, <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span> <span class="fu">pairs</span>(<span class="at">rev =</span> T) <span class="sc">|&gt;</span> </span>
-<span id="cb12-205"><a href="#cb12-205"></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-206"><a href="#cb12-206"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-207"><a href="#cb12-207"></a>  <span class="fu">colformat_double</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">na_str =</span> <span class="st">"N/A"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-208"><a href="#cb12-208"></a>  <span class="fu">set_table_properties</span>(<span class="at">layout =</span> <span class="st">"autofit"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-209"><a href="#cb12-209"></a>  <span class="fu">height</span>(<span class="at">height =</span> <span class="dv">1</span>, <span class="at">unit =</span> <span class="st">"cm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-210"><a href="#cb12-210"></a>  <span class="fu">hrule</span>(<span class="at">rule =</span> <span class="st">"atleast"</span>, <span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-211"><a href="#cb12-211"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"body"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-212"><a href="#cb12-212"></a>  flextable<span class="sc">::</span><span class="fu">font</span>(<span class="at">fontname =</span> <span class="st">"Consolas"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-213"><a href="#cb12-213"></a>  <span class="fu">theme_vanilla</span>()</span>
-<span id="cb12-214"><a href="#cb12-214"></a><span class="in">```</span></span>
-<span id="cb12-215"><a href="#cb12-215"></a></span>
-<span id="cb12-216"><a href="#cb12-216"></a>Note that this gives us two extra comparisons we might not really want (the 3rd and 4th lines of the output) as it estimates every single pairwise comparison. We can get a bit fancier and customise the <span class="in">`emmeans`</span> output to give us only what we want:</span>
-<span id="cb12-217"><a href="#cb12-217"></a></span>
-<span id="cb12-220"><a href="#cb12-220"></a><span class="in">```{r}</span></span>
-<span id="cb12-221"><a href="#cb12-221"></a><span class="co">#| label: risk_ratios_custom</span></span>
-<span id="cb12-222"><a href="#cb12-222"></a><span class="co">#| tbl-cap: Custom Pairwise Risk Ratios</span></span>
-<span id="cb12-223"><a href="#cb12-223"></a>emm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mod_interact, <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">type =</span> <span class="st">"response"</span>) <span class="co"># save the estimated risks</span></span>
-<span id="cb12-224"><a href="#cb12-224"></a>custom <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">The effect of being male in younger individuals</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>),</span>
-<span id="cb12-225"><a href="#cb12-225"></a>               <span class="st">`</span><span class="at">The effect of being male in older individuals</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>),</span>
-<span id="cb12-226"><a href="#cb12-226"></a>               <span class="st">`</span><span class="at">The effect of being older in females</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>),</span>
-<span id="cb12-227"><a href="#cb12-227"></a>               <span class="st">`</span><span class="at">The effect of being older in males</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>)) <span class="co"># create custom grid of RR's to estimate</span></span>
-<span id="cb12-228"><a href="#cb12-228"></a><span class="fu">contrast</span>(emm, custom) <span class="sc">|&gt;</span> </span>
-<span id="cb12-229"><a href="#cb12-229"></a>  <span class="fu">summary</span>(<span class="at">infer =</span> T) <span class="sc">|&gt;</span> </span>
-<span id="cb12-230"><a href="#cb12-230"></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-231"><a href="#cb12-231"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-232"><a href="#cb12-232"></a>  <span class="fu">colformat_double</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">na_str =</span> <span class="st">"N/A"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-233"><a href="#cb12-233"></a>  <span class="fu">set_table_properties</span>(<span class="at">layout =</span> <span class="st">"autofit"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-234"><a href="#cb12-234"></a>  <span class="fu">height</span>(<span class="at">height =</span> <span class="dv">1</span>, <span class="at">unit =</span> <span class="st">"cm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-235"><a href="#cb12-235"></a>  <span class="fu">hrule</span>(<span class="at">rule =</span> <span class="st">"atleast"</span>, <span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-236"><a href="#cb12-236"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"body"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-237"><a href="#cb12-237"></a>  flextable<span class="sc">::</span><span class="fu">font</span>(<span class="at">fontname =</span> <span class="st">"Consolas"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-238"><a href="#cb12-238"></a>  <span class="fu">theme_vanilla</span>()</span>
-<span id="cb12-239"><a href="#cb12-239"></a><span class="in">```</span></span>
-<span id="cb12-240"><a href="#cb12-240"></a></span>
-<span id="cb12-241"><a href="#cb12-241"></a>Note, that these match the manual calculations pretty well.</span>
-<span id="cb12-242"><a href="#cb12-242"></a></span>
-<span id="cb12-243"><a href="#cb12-243"></a>Please take some time to learn about <span class="in">`emmeans`</span> (or <span class="in">`margins`</span> in <span class="in">`Stata`</span>). It will make your life so much easier if you plan to have a career in research (and don't always have access to a statistician.)</span>
+<span id="cb12-133"><a href="#cb12-133"></a><span class="in">```{r}</span></span>
+<span id="cb12-134"><a href="#cb12-134"></a><span class="co">#| label: adjusted_model_effect_modification</span></span>
+<span id="cb12-135"><a href="#cb12-135"></a>mod_interact <span class="ot">&lt;-</span> <span class="fu">glm</span>(<span class="fu">cbind</span>(hospitalised, not_hospitalised) <span class="sc">~</span> sex <span class="sc">*</span> age, <span class="at">data =</span> dat_disagg, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"log"</span>))</span>
+<span id="cb12-136"><a href="#cb12-136"></a><span class="fu">tbl_regression</span>(mod_interact, <span class="at">exp =</span> T)</span>
+<span id="cb12-137"><a href="#cb12-137"></a><span class="in">```</span></span>
+<span id="cb12-138"><a href="#cb12-138"></a></span>
+<span id="cb12-139"><a href="#cb12-139"></a>Note how the p value for the interaction term is very low - this would be a good indicator that the model fits the data better with the interaction term present than without it (i.e. assuming age as a confounder only).</span>
+<span id="cb12-140"><a href="#cb12-140"></a></span>
+<span id="cb12-141"><a href="#cb12-141"></a>As I mentioned earlier, the model interpretation with an interaction present does become a little more complicated, but let's break this down (note that I use "effect" in a non-causal way):</span>
+<span id="cb12-142"><a href="#cb12-142"></a></span>
+<span id="cb12-143"><a href="#cb12-143"></a><span class="ss">-   </span>The coefficient for <span class="in">`sex = 1.77 (95% CI 1.60, 1.96; p &lt; 0.001)`</span>. The represents the **"effect"** of sex (being male relative to female) on hospitalisation risk at the **reference level** of age, which in this case is the under 40 yrs group. So, for those under 40, there is about a <span class="in">`77%`</span> increased risk for males relative to females.</span>
+<span id="cb12-144"><a href="#cb12-144"></a></span>
+<span id="cb12-145"><a href="#cb12-145"></a><span class="ss">-   </span>The coefficient for <span class="in">`age = 0.70 (95% CI 0.61, 0.80; p &lt; 0.001)`</span>. This represents the **"effect"** of age (being older than 40 yrs relative to younger than 40 yrs) on hospitalisation risk at the **reference level** of sex, which in this case is female. So, for females, there is about a <span class="in">`30%`</span> risk reduction in the need for hospitalisation for older relative to younger drivers.</span>
+<span id="cb12-146"><a href="#cb12-146"></a></span>
+<span id="cb12-147"><a href="#cb12-147"></a><span class="ss">-   </span>The coefficient for the interaction term: <span class="in">`sex * age = 0.52 (95% CI 0.44, 0.62; p &lt; 0.001)`</span>. This represents the **multiplicative** increase in the magnitude of association for males over 40 yrs.</span>
+<span id="cb12-148"><a href="#cb12-148"></a></span>
+<span id="cb12-149"><a href="#cb12-149"></a><span class="fu">## Effect modification means more associations to estimate</span></span>
+<span id="cb12-150"><a href="#cb12-150"></a></span>
+<span id="cb12-151"><a href="#cb12-151"></a>In this specific case, when you treat age as a confounder, the model produces two risk ratios - one for <span class="in">`sex`</span> and one for <span class="in">`age`</span>. However, when you treat age as an effect modifier, there are now four possible risk ratios to estimate (if you care about age more than it being a "nuisance" variable to control for). These are:</span>
+<span id="cb12-152"><a href="#cb12-152"></a></span>
+<span id="cb12-153"><a href="#cb12-153"></a><span class="ss">1.  </span>The effect of being male in younger individuals.</span>
+<span id="cb12-154"><a href="#cb12-154"></a><span class="ss">2.  </span>The effect of being male in older individuals.</span>
+<span id="cb12-155"><a href="#cb12-155"></a><span class="ss">3.  </span>The effect of being older in females.</span>
+<span id="cb12-156"><a href="#cb12-156"></a><span class="ss">4.  </span>The effect of being older in males.</span>
+<span id="cb12-157"><a href="#cb12-157"></a></span>
+<span id="cb12-158"><a href="#cb12-158"></a>You can easily enough work these out manually by multiplying the respective reference coefficients with the interaction coefficient. The risk ratios for each of the above would then be:</span>
+<span id="cb12-159"><a href="#cb12-159"></a></span>
+<span id="cb12-160"><a href="#cb12-160"></a><span class="ss">1.  </span><span class="in">`1.77`</span> (we can just read this one straight off the model output)</span>
+<span id="cb12-161"><a href="#cb12-161"></a><span class="ss">2.  </span><span class="in">`1.77 x 0.52 = 0.92`</span></span>
+<span id="cb12-162"><a href="#cb12-162"></a><span class="ss">3.  </span><span class="in">`0.70`</span> (again we can just read this one straight off)</span>
+<span id="cb12-163"><a href="#cb12-163"></a><span class="ss">4.  </span><span class="in">`0.70 x 0.52 = 0.36`</span></span>
+<span id="cb12-164"><a href="#cb12-164"></a></span>
+<span id="cb12-165"><a href="#cb12-165"></a>Note that the effects for 1. and 2. are very similar to what we calculated straight from the 2 x 2 tables (<span class="in">`1.84`</span> and <span class="in">`0.92`</span>, respectively - as previously mentioned, the effects for 3. and 4. aren't able to be calculated for the stratifying variable).</span>
+<span id="cb12-166"><a href="#cb12-166"></a></span>
+<span id="cb12-167"><a href="#cb12-167"></a><span class="fu">## Emmeans should be your new best friend</span></span>
+<span id="cb12-168"><a href="#cb12-168"></a></span>
+<span id="cb12-169"><a href="#cb12-169"></a>Perhaps I am preaching to the converted, but if you don't know what the <span class="in">`emmeans`</span> package and specific function in <span class="in">`R`</span> does, then you should learn about it (the equivalent function in <span class="in">`Stata`</span> is <span class="in">`margins`</span>).</span>
+<span id="cb12-170"><a href="#cb12-170"></a></span>
+<span id="cb12-171"><a href="#cb12-171"></a><span class="ot">&lt;https://cran.r-project.org/web/packages/emmeans/index.html&gt;</span></span>
+<span id="cb12-172"><a href="#cb12-172"></a></span>
+<span id="cb12-173"><a href="#cb12-173"></a><span class="ot">&lt;https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/&gt;</span></span>
+<span id="cb12-174"><a href="#cb12-174"></a></span>
+<span id="cb12-175"><a href="#cb12-175"></a><span class="in">`emmeans`</span> does a lot of things, but perhaps its workhorse function is to allow you to take a model and calculate adjusted predictions (either at set values of covariates, or by 'averaging' over them). In this case, we can very easily use <span class="in">`emmeans`</span> to reproduce the manual calculations we just did.</span>
+<span id="cb12-176"><a href="#cb12-176"></a></span>
+<span id="cb12-179"><a href="#cb12-179"></a><span class="in">```{r}</span></span>
+<span id="cb12-180"><a href="#cb12-180"></a><span class="co">#| label: emmeans</span></span>
+<span id="cb12-181"><a href="#cb12-181"></a><span class="co">#| tbl-cap: Predicted Probabilities of Hospitalisation</span></span>
+<span id="cb12-182"><a href="#cb12-182"></a><span class="fu">emmeans</span>(mod_interact, <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-183"><a href="#cb12-183"></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-184"><a href="#cb12-184"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-185"><a href="#cb12-185"></a>  <span class="fu">colformat_double</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">na_str =</span> <span class="st">"N/A"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-186"><a href="#cb12-186"></a>  <span class="fu">set_table_properties</span>(<span class="at">layout =</span> <span class="st">"autofit"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-187"><a href="#cb12-187"></a>  <span class="fu">height</span>(<span class="at">height =</span> <span class="dv">1</span>, <span class="at">unit =</span> <span class="st">"cm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-188"><a href="#cb12-188"></a>  <span class="fu">hrule</span>(<span class="at">rule =</span> <span class="st">"atleast"</span>, <span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-189"><a href="#cb12-189"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"body"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-190"><a href="#cb12-190"></a>  flextable<span class="sc">::</span><span class="fu">font</span>(<span class="at">fontname =</span> <span class="st">"Consolas"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-191"><a href="#cb12-191"></a>  <span class="fu">theme_vanilla</span>()</span>
+<span id="cb12-192"><a href="#cb12-192"></a><span class="in">```</span></span>
+<span id="cb12-193"><a href="#cb12-193"></a></span>
+<span id="cb12-194"><a href="#cb12-194"></a>Specifying <span class="in">`type = "response"`</span> in the <span class="in">`emmeans`</span> call indicates that we want to calculate the outcome on the probability (i.e. risk) scale. To get the risk ratios we have been working with until now, we simply add the <span class="in">`pairs(rev = T)`</span> function to the call:</span>
+<span id="cb12-195"><a href="#cb12-195"></a></span>
+<span id="cb12-198"><a href="#cb12-198"></a><span class="in">```{r}</span></span>
+<span id="cb12-199"><a href="#cb12-199"></a><span class="co">#| label: risk_ratios</span></span>
+<span id="cb12-200"><a href="#cb12-200"></a><span class="co">#| tbl-cap: All Pairwise Risk Ratios</span></span>
+<span id="cb12-201"><a href="#cb12-201"></a><span class="fu">emmeans</span>(mod_interact, <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span> <span class="fu">pairs</span>(<span class="at">rev =</span> T) <span class="sc">|&gt;</span> </span>
+<span id="cb12-202"><a href="#cb12-202"></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-203"><a href="#cb12-203"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-204"><a href="#cb12-204"></a>  <span class="fu">colformat_double</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">na_str =</span> <span class="st">"N/A"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-205"><a href="#cb12-205"></a>  <span class="fu">set_table_properties</span>(<span class="at">layout =</span> <span class="st">"autofit"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-206"><a href="#cb12-206"></a>  <span class="fu">height</span>(<span class="at">height =</span> <span class="dv">1</span>, <span class="at">unit =</span> <span class="st">"cm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-207"><a href="#cb12-207"></a>  <span class="fu">hrule</span>(<span class="at">rule =</span> <span class="st">"atleast"</span>, <span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-208"><a href="#cb12-208"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"body"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-209"><a href="#cb12-209"></a>  flextable<span class="sc">::</span><span class="fu">font</span>(<span class="at">fontname =</span> <span class="st">"Consolas"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-210"><a href="#cb12-210"></a>  <span class="fu">theme_vanilla</span>()</span>
+<span id="cb12-211"><a href="#cb12-211"></a><span class="in">```</span></span>
+<span id="cb12-212"><a href="#cb12-212"></a></span>
+<span id="cb12-213"><a href="#cb12-213"></a>Note that this gives us two extra comparisons we might not really want (the 3rd and 4th lines of the output) as it estimates every single pairwise comparison. We can get a bit fancier and customise the <span class="in">`emmeans`</span> output to give us only what we want:</span>
+<span id="cb12-214"><a href="#cb12-214"></a></span>
+<span id="cb12-217"><a href="#cb12-217"></a><span class="in">```{r}</span></span>
+<span id="cb12-218"><a href="#cb12-218"></a><span class="co">#| label: risk_ratios_custom</span></span>
+<span id="cb12-219"><a href="#cb12-219"></a><span class="co">#| tbl-cap: Custom Pairwise Risk Ratios</span></span>
+<span id="cb12-220"><a href="#cb12-220"></a>emm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(mod_interact, <span class="sc">~</span> sex <span class="sc">+</span> age, <span class="at">type =</span> <span class="st">"response"</span>) <span class="co"># save the estimated risks</span></span>
+<span id="cb12-221"><a href="#cb12-221"></a>custom <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">The effect of being male in younger individuals</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb12-222"><a href="#cb12-222"></a>               <span class="st">`</span><span class="at">The effect of being male in older individuals</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>),</span>
+<span id="cb12-223"><a href="#cb12-223"></a>               <span class="st">`</span><span class="at">The effect of being older in females</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>),</span>
+<span id="cb12-224"><a href="#cb12-224"></a>               <span class="st">`</span><span class="at">The effect of being older in males</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>)) <span class="co"># create custom grid of RR's to estimate</span></span>
+<span id="cb12-225"><a href="#cb12-225"></a><span class="fu">contrast</span>(emm, custom) <span class="sc">|&gt;</span> </span>
+<span id="cb12-226"><a href="#cb12-226"></a>  <span class="fu">summary</span>(<span class="at">infer =</span> T) <span class="sc">|&gt;</span> </span>
+<span id="cb12-227"><a href="#cb12-227"></a>  <span class="fu">data.frame</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-228"><a href="#cb12-228"></a>  <span class="fu">flextable</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-229"><a href="#cb12-229"></a>  <span class="fu">colformat_double</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">na_str =</span> <span class="st">"N/A"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-230"><a href="#cb12-230"></a>  <span class="fu">set_table_properties</span>(<span class="at">layout =</span> <span class="st">"autofit"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-231"><a href="#cb12-231"></a>  <span class="fu">height</span>(<span class="at">height =</span> <span class="dv">1</span>, <span class="at">unit =</span> <span class="st">"cm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-232"><a href="#cb12-232"></a>  <span class="fu">hrule</span>(<span class="at">rule =</span> <span class="st">"atleast"</span>, <span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-233"><a href="#cb12-233"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"body"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-234"><a href="#cb12-234"></a>  flextable<span class="sc">::</span><span class="fu">font</span>(<span class="at">fontname =</span> <span class="st">"Consolas"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-235"><a href="#cb12-235"></a>  <span class="fu">theme_vanilla</span>()</span>
+<span id="cb12-236"><a href="#cb12-236"></a><span class="in">```</span></span>
+<span id="cb12-237"><a href="#cb12-237"></a></span>
+<span id="cb12-238"><a href="#cb12-238"></a>Note, that these match the manual calculations pretty well.</span>
+<span id="cb12-239"><a href="#cb12-239"></a></span>
+<span id="cb12-240"><a href="#cb12-240"></a>Please take some time to learn about <span class="in">`emmeans`</span> (or <span class="in">`margins`</span> in <span class="in">`Stata`</span>). It will make your life so much easier if you plan to have a career in research (and don't always have access to a statistician).</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

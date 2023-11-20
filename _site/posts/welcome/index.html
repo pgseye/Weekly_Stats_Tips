@@ -175,12 +175,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I’m not sure how much everyone’s getting out of the stats tips that I put on WhatsApp on Fridays, but maybe some of it is helpful. For those of you who are interested, I thought that if I was going to do this on a semi-regular basis, I might as well turn it into a resource. So I am having a go at a blog-style format of weekly tips. It also means I can more easily illustrate concepts where needed with code, etc. And it also helps to not overload your WhatsApp with a bunch of text. Some posts will be short and some will be longer and I may miss some weeks depending on workload, but will do my best. I hope it’s something people find useful.</p>
 <p>Some general housekeeping:</p>
 <ul>
-<li>You can view and copy the code as section blocks just before each set of output or by clicking the <code>&lt;/&gt; Code</code> button at the top right, then <code>View Source</code> and copying the entire block.</li>
-</ul>
-<!-- -->
-<ul>
-<li><p>There is a light/dark mode toggle on the top right of the page.</p></li>
-<li><p>Feel free to add any comments to a post.</p></li>
+<li>You can view and copy the code as blocks just before each set of output (there will be a <code>Copy to Clipboard</code> button at the top right of each code block); or by clicking the <code>&lt;/&gt; Code</code> button at the top right of the page, then <code>View Source</code> and copying the entire block.</li>
+<li>There is a light/dark mode toggle on the top right of the page, depending on how you like to view your internet.</li>
+<li>Feel free to add any comments to a post.</li>
 </ul>
 
 
@@ -330,6 +327,58 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -537,7 +586,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <script src="https://giscus.app/client.js" data-repo="pgseye/Weekly_Stats_Tips" data-repo-id="R_kgDOKvfOfQ" data-category="General" data-category-id="DIC_kwDOKvfOfc4CbFWq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Stats Tips - Welcome"</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="an">date:</span><span class="co"> 2023-11-22</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="an">categories:</span><span class="co"> [news]</span></span>
@@ -549,14 +598,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-10"><a href="#cb1-10"></a></span>
 <span id="cb1-11"><a href="#cb1-11"></a>Some general housekeeping:</span>
 <span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">-   </span>You can view and copy the code as section blocks just before each set of output or by clicking the <span class="in">`&lt;/&gt; Code`</span> button at the top right, then <span class="in">`View Source`</span> and copying the entire block.</span>
-<span id="cb1-14"><a href="#cb1-14"></a></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="in">```{=html}</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="in">&lt;!-- --&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="in">```</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="ss">-   </span>There is a light/dark mode toggle on the top right of the page.</span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="ss">-   </span>Feel free to add any comments to a post.</span></code></pre></div>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">-   </span>You can view and copy the code as blocks just before each set of output (there will be a <span class="in">`Copy to Clipboard`</span> button at the top right of each code block); or by clicking the <span class="in">`&lt;/&gt; Code`</span> button at the top right of the page, then <span class="in">`View Source`</span> and copying the entire block.</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">-   </span>There is a light/dark mode toggle on the top right of the page, depending on how you like to view your internet.</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="ss">-   </span>Feel free to add any comments to a post.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
