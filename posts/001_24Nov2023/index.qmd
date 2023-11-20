@@ -25,6 +25,8 @@ opts_chunk$set(echo = T,
 
 ## The Question
 
+<details>
+
 Recall that the question this week was to choose between:
 
 A\) Age is a confounder in the relationship between sex and hospitalisation from car crash.
@@ -34,6 +36,8 @@ B\) Age is an effect modifier in the relationship between sex and hospitalisatio
 using the data supplied below.
 
 ![](images/interact.png)
+
+</details>
 
 ## The Answer
 
