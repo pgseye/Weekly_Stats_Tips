@@ -1,0 +1,9 @@
+---
+title: "next tip"
+date: 2023-12-01
+categories: [news]
+image: hello_world.jpg
+draft: true
+---
+
+next post here...
