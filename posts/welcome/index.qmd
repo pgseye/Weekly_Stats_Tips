@@ -10,7 +10,7 @@ I'm not sure how much everyone's getting out of the stats tips that I put on Wha
 
 Some general housekeeping:
 
--   You can view and copy the code as section blocks just before each set of output or by clicking the `</> Code` button at the top right, then `View Source` and copying the entire block.
+-   You can view and copy the code as blocks just before each set of output (there will be a `Copy to Clipboard` button at the top right of each code block; or by clicking the `</> Code` button at the top right of the page, then `View Source` and copying the entire block.
 
 ```{=html}
 <!-- -->

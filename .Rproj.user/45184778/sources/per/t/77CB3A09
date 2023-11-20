@@ -1,14 +1,14 @@
 {
-    "id": "A437CEF9",
-    "path": "~/Dropbox/Alfred Neuroscience/Weekly_Stats_Tips/posts/welcome/index.qmd",
-    "project_path": "posts/welcome/index.qmd",
+    "id": "77CB3A09",
+    "path": "~/Dropbox/Alfred Neuroscience/Weekly_Stats_Tips/index.qmd",
+    "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "1296375258",
     "contents": "",
     "dirty": false,
-    "created": 1700424622014.0,
+    "created": 1700431080322.0,
     "source_on_save": false,
-    "relative_order": 3,
+    "relative_order": 1,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "1060:0",
         "cursorPosition": "0,0",
-        "scrollLine": "0"
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "37:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1700444183,
+    "lastKnownWriteTime": 1700428685,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1700444183847,
+    "last_content_update": 1700428685,
     "read_only": false,
     "read_only_alternatives": []
 }

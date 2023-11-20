@@ -2,16 +2,6 @@
 title: "Effect Modification"
 date: 2023-11-24
 categories: [code, analysis, modelling]
-format:
-  html:
-    code-fold: true
-    code-tools: true
-    fontsize: 1.1em
-    fig-height: 9
-    fig-width: 12
-    number-sections: true
-    toc: true
-    toc-depth: 3
 ---
 
 ```{r}
@@ -88,8 +78,7 @@ The model-derived crude risk ratio for `sex = 1.44 (95% CI 1.32, 1.56; p < 0.001
 ```{r}
 #| label: crude model
 mod_crude <- glm(cbind(hospitalised, not_hospitalised) ~ sex, data = dat_agg, family = binomial(link = "log"))
-tbl_regression(mod_crude,
-               exp = T)
+tbl_regression(mod_crude, exp = T)
 ```
 
 ## Let's introduce age (\<40 vs ≥ 40) as a third variable
@@ -114,8 +103,7 @@ and the risk ratios we get are:
 ```{r}
 #| label: adjusted model confounding
 mod_confound <- glm(cbind(hospitalised, not_hospitalised) ~ sex + age, data = dat_disagg, family = binomial(link = "log"))
-tbl_regression(mod_confound,
-               exp = T)
+tbl_regression(mod_confound, exp = T)
 ```
 
 So, what we are seeing here is that the magnitude of association between sex and hospitalisation risk is averaged (in a weighted way) over both categories of age to produce one effect estimate `sex = 1.43 (95% CI 1.32, 1.55; p < 0.001)`. This just so happens to be almost the same as the crude estimate when you ignore age altogether.
@@ -133,8 +121,7 @@ and the risk ratios we get are:
 ```{r}
 #| label: adjusted_model_effect_modification
 mod_interact <- glm(cbind(hospitalised, not_hospitalised) ~ sex * age, data = dat_disagg, family = binomial(link = "log"))
-tbl_regression(mod_interact,
-               exp = T)
+tbl_regression(mod_interact, exp = T)
 ```
 
 Note how the p value for the interaction term is very low - this would be a good indicator that the model fits the data better with the interaction term present than without it (i.e. assuming age as a confounder only).
@@ -232,4 +219,4 @@ contrast(emm, custom) |>
 
 Note, that these match the manual calculations pretty well.
 
-Please take some time to learn about `emmeans` (or `margins` in `Stata`). It will make your life so much easier if you plan to have a career in research (and don't always have access to a statistician.)
+Please take some time to learn about `emmeans` (or `margins` in `Stata`). It will make your life so much easier if you plan to have a career in research (and don't always have access to a statistician).
