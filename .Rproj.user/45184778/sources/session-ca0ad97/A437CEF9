@@ -3,7 +3,7 @@
     "path": "~/Dropbox/Alfred Neuroscience/Weekly_Stats_Tips/posts/welcome/index.qmd",
     "project_path": "posts/welcome/index.qmd",
     "type": "quarto_markdown",
-    "hash": "3263249664",
+    "hash": "1215005857",
     "contents": "",
     "dirty": false,
     "created": 1700424622014.0,
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "684:0",
+        "rmdVisualModeLocation": "870:0",
         "cursorPosition": "0,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1700429226,
+    "lastKnownWriteTime": 1700442349,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1700429226354,
+    "last_content_update": 1700442349103,
     "read_only": false,
     "read_only_alternatives": []
 }
