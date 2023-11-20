@@ -3,6 +3,7 @@
 "0","library(quarto)"
 "0","library(emmeans)"
 "0","library(flextable)"
+"0","library(ggplot2)"
 "0","suppressPackageStartupMessages(library(gtsummary))"
 "0","opts_chunk$set(echo = T,"
 "0","               cache = F,"

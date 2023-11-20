@@ -11,6 +11,7 @@ library(knitr)
 library(quarto)
 library(emmeans)
 library(flextable)
+library(ggplot2)
 suppressPackageStartupMessages(library(gtsummary))
 opts_chunk$set(echo = T,
                cache = F,
@@ -182,7 +183,8 @@ Specifying `type = "response"` in the `emmeans` call indicates that we want to c
 
 ```{r}
 #| label: plot_risk_ratios
-emmip(mod_interact, sex ~ age, type = "response")
+emmip(mod_interact, sex ~ age, type = "response") + 
+  theme_bw(base_size = 15)
 ```
 
 To get the risk ratios we have been working with until now, we simply add the `pairs(rev = T)` function to the call:
