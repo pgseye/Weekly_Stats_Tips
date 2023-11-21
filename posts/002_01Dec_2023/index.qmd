@@ -4,7 +4,7 @@ date: 2023-12-01
 categories: [puzzle, probability, Bayesian]
 image: monty_small.jpg
 number-sections: false
-#draft: true
+draft: true
 ---
 
 ## The Question
@@ -45,7 +45,7 @@ If you choose the incorrect door to start with (for which there is a 66.7% chanc
 
 ***Staying is associated with a 33.3% success rate, whereas switching doubles your chance of success to 66.7%.***
 
-<FONT COLOR = red>**Stop here**</FONT> if you equations give the equivalent of the aftermath of eating Mexican food. What I have done below is show how we can arrive at the equivalent answer using an analytical approach when our logic/intuition fails. You may not want to venture that far...
+<FONT COLOR = red>**Stop here**</FONT> if equations give you the equivalent of the aftermath of eating Mexican food. What I have done below is show how we can arrive at the same answer using an analytical approach when our logic/intuition fails. You may not want to venture that far...
 
 What I think is cool about this problem is that while the result might seem counterintuitive to how we naturally process chance, using Bayesian reasoning provides a formulaic way to get at the right answer. This again uses conditional probabilities as I introduced them a few weeks ago. Bayesian thinking is about utilising prior knowledge in conjunction with new data to improve or update our knowledge (whereas the Frequentist approach to statistics doesn't care so much about prior knowledge and instead just uses the data at hand).
 

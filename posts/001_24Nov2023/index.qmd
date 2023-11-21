@@ -49,17 +49,17 @@ using the data supplied below.
 -   Subgroups of data are created for each category of confounder/effect modifier and estimates of interest (mean differences, risk ratios, etc) calculated in each.
 -   These can then be combined in a weighted manner to give an overall (adjusted) estimate if NO effect modification is present.
 -   This is equivalent to including the third variable as a covariate in our regression model (we now use models rather than stratification methods).
--   Simple inclusion in the regression model (using `+` in R) FORCES the exposure -\> outcome association to be the **same** across all categories of the effect modifier even if in reality it's not.
+-   Simple inclusion in the regression model (using `+` in `R`) FORCES the exposure -\> outcome association to be the **same** across all categories of the effect modifier even if in reality it's not.
 -   `+` assumes confounding **ONLY** and **NO** effect modification.
 -   A problem arises, however, when the third variable is more an effect modifier, rather than confounder.
--   If we suspect effect modification is present, we need to include this third variable in the model as an interaction term (using `*` in R)
+-   If we suspect effect modification is present, we need to include this third variable in the model as an interaction term (using `*` in `R`)
 -   This will allow the exposure -\> outcome association to **differ** across categories of the effect modifier.
 -   `*` assumes effect modification is present.
 -   This is a more flexible model specification, than simply 'adjusting' for a variable.
 -   Interpretation is a little more involved (always happy to help with this) but the point is it's important not to blindly assume a third variable can only ever be a confounder.
 -   If effect modification is present, you need to know about it.
--   It is simple to test for effect modification in R, Stata, etc. Include the interaction term and then drop it if not clinically/statistically significant at some level.
--   I have included some R output below showing the equivalence of stratification and modelling approaches to interaction effects.
+-   It is simple to test for effect modification in `R`, `Stata`, etc. Include the interaction term and then drop it if not clinically/statistically significant at some level.
+-   I have included some `R` output below showing the equivalence of stratification and modelling approaches to interaction effects.
 
 Before we get to that - a simple set of guidelines for how to think about crude vs stratified associations:
 
@@ -77,7 +77,7 @@ dat_agg <- data.frame(sex = c("Male", "Female"),
 dat_agg
 ```
 
-To estimate this model in `R` we essentially run a logistic regression but instead of outputting an odds ratio, we calculate a risk ratio by specifying a `log` rather than `logit` link. We will also use the aggregate model specification, as we don't have the individual-level data.
+To estimate this model in `R` we essentially run a logistic regression but instead of outputting an odds ratio, we calculate a risk ratio by specifying a `log` rather than the default `logit` link. We will also use the aggregate model specification, as we don't have the individual-level data.
 
 The model-derived crude risk ratio for `sex = 1.44 (95% CI 1.32, 1.56; p < 0.001)`. This is very close to the estimate that we initially calculated manually from the 2 x 2 table (`1.45`).
 
@@ -142,7 +142,7 @@ As I mentioned earlier, the model interpretation with an interaction present doe
 
 ## Effect modification means more associations to estimate
 
-In this specific case, when you treat age as a confounder, the model produces two risk ratios - one for `sex` and one for `age`. However, when you treat age as an effect modifier, there are now four possible risk ratios to estimate (if you care about age more than it being a "nuisance" variable to control for). These are:
+In this specific case, when you treat age as a confounder, the model produces two risk ratios - one for `sex` and one for `age`. However, when you treat `age` as an effect modifier, there are now four possible risk ratios to estimate (if you care about age more than it being a "nuisance" variable to control for). These are:
 
 1.  The effect of being male in younger individuals.
 2.  The effect of being male in older individuals.
