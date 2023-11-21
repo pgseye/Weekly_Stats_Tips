@@ -179,6 +179,7 @@ emmeans(mod_interact, ~ sex + age, type = "response") |>
   height(height = 1, unit = "cm") |> 
   hrule(rule = "atleast", part = "header") |> 
   align(align = "center", part = "body") |>
+  bg(bg = "white", part = "all") |> 
   flextable::font(fontname = "Consolas", part = "all") |>
   theme_vanilla()
 ```
@@ -204,6 +205,7 @@ emmeans(mod_interact, ~ sex + age, type = "response") |> pairs(rev = T) |>
   height(height = 1, unit = "cm") |> 
   hrule(rule = "atleast", part = "header") |> 
   align(align = "center", part = "body") |>
+  bg(bg = "white", part = "all") |> 
   flextable::font(fontname = "Consolas", part = "all") |>
   theme_vanilla()
 ```
@@ -227,6 +229,7 @@ contrast(emm, custom) |>
   height(height = 1, unit = "cm") |> 
   hrule(rule = "atleast", part = "header") |> 
   align(align = "center", part = "body") |>
+  bg(bg = "white", part = "all") |> 
   flextable::font(fontname = "Consolas", part = "all") |>
   theme_vanilla()
 ```
