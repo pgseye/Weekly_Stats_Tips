@@ -3,6 +3,7 @@ title: "Stats Tips - Welcome"
 date: 2023-11-22
 categories: [news]
 image: hello_world.jpg
+description: "Welcome to what I hope can become a useful stats resource."
 ---
 
 Hi Everyone,

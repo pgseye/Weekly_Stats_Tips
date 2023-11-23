@@ -3,6 +3,7 @@ title: "It pays to think like a Bayesian"
 date: 2023-12-01
 categories: [puzzle, probability, Bayesian]
 image: monty_small.jpg
+description: "Bayesian reasoning is more in line with how we process chance in everyday life."
 number-sections: false
 draft: true
 ---
@@ -67,7 +68,15 @@ $Pr(data)$ is the prior probability of the data
 
 $Pr(\theta | data)$ is the **posterior probability of our hypothesis** (i.e. "in light of the data")
 
-On the Bayesian/Frequentist topic, note that $Pr(data | \theta)$ is what null-hypothesis significance testing (NHST) encapsulates and this is a Frequentist concept. Whenever we calculate a p value we are asking "What is the probability of this new data (or data even more extreme) occurring by chance **given** the null hypothesis is true?" But really, what we want to know most of the time is the opposite - i.e. "What is the probability of the null hypothesis being true **given** this new data?" That is a Bayesian concept and is answered with $Pr(\theta | data)$. Maybe we should become more Bayesian in how we handle our research...
+On the Bayesian/Frequentist topic, note that $Pr(data | \theta)$ is what null-hypothesis significance testing (NHST) encapsulates and this is a Frequentist concept. Whenever we calculate a p value we are asking:
+
+-   "What is the probability of this new data (or data even more extreme) occurring by chance **given** the null hypothesis is true?"
+
+But really, what we want to know most of the time is the opposite:
+
+-   "What is the probability of the null hypothesis being true **given** this new data?"
+
+That is a Bayesian concept and is answered with $Pr(\theta | data)$. Maybe we should become more Bayesian in how we handle our research...
 
 Anyway, excuse the digression. We can generalise Bayes Theorem to the Monty Hall problem as:
 
