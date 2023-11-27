@@ -9,6 +9,7 @@ website:
         href: index.qmd
       - icon: github
         href: https://github.com/
+  google-analytics: "G-MV332ZMPGW"
 format:
   html:
     page-layout: article
@@ -21,6 +22,7 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
+    df-print: kable
     fontsize: 1.1em
     fig-height: 9
     fig-width: 12
