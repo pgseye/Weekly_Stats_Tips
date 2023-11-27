@@ -8,7 +8,7 @@ website:
       - text: All Posts
         href: index.qmd
   google-analytics: 
-    tracking-id: "G-MV332ZMPGW"
+    tracking-id: "G-RQ4NY7VSS4"
 
 format:
   html:
