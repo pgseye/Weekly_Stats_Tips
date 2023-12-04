@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "MSNI Stats Tips"
+  title: "Stats Tips"
   navbar:
     right:
       - text: All Posts
