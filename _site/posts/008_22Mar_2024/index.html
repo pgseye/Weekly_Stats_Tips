@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-03-22">
+<meta name="description" content="Use by() to view your data by a grouping variable.">
 
-<title>Stats Tips - MSNI Stats Tips</title>
+<title>Stats Tips - Easily view your data by a grouping variable</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,26 +59,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,35 +104,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ4NY7VSS4"></script>
 
 <script type="text/javascript">
@@ -143,37 +114,8 @@ gtag('js', new Date());
 gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -183,7 +125,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Stats Tips</span>
     </a>
   </div>
@@ -194,7 +136,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">All Posts</span></a>
   </li>  
 </ul>
@@ -206,25 +148,39 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Bayesian">Bayesian <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(6)</span></div><div class="category" data-category="concept">concept <span class="quarto-category-count">(2)</span></div><div class="category" data-category="fun">fun <span class="quarto-category-count">(1)</span></div><div class="category" data-category="logistic">logistic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="modelling">modelling <span class="quarto-category-count">(2)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="probability">probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="puzzle">puzzle <span class="quarto-category-count">(1)</span></div><div class="category" data-category="survival">survival <span class="quarto-category-count">(2)</span></div><div class="category" data-category="visualisation">visualisation <span class="quarto-category-count">(4)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">MSNI Stats Tips</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Easily view your data by a grouping variable</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">code</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Use <code>by()</code> to view your data by a grouping variable.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 22, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -234,383 +190,178 @@ window.Quarto = {
 </header>
 
 
+<p>It is easy enough to view a dataframe in <code>RStudio</code> by opening the dataframe in the viewer or printing the dataframe (or part of it) to the console. However, this can be messy if you want to quickly identify data by a grouping variable (usually the patient id). The <code>by()</code> function can help you to do this. Let’s illustrate its utility with the <code>sleepstudy</code> dataset from the <code>lme4</code> package. To start with I’ll print the data for the first 3 subjects as one might.</p>
+<p><code>sleepstudy |&gt; as_tibble() |&gt; print(n = 30)</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Load data</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">data</span>(<span class="st">"sleepstudy"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>sleepstudy <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 180 × 3
+   Reaction  Days Subject
+      &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  
+ 1     250.     0 308    
+ 2     259.     1 308    
+ 3     251.     2 308    
+ 4     321.     3 308    
+ 5     357.     4 308    
+ 6     415.     5 308    
+ 7     382.     6 308    
+ 8     290.     7 308    
+ 9     431.     8 308    
+10     466.     9 308    
+11     223.     0 309    
+12     205.     1 309    
+13     203.     2 309    
+14     205.     3 309    
+15     208.     4 309    
+16     216.     5 309    
+17     214.     6 309    
+18     218.     7 309    
+19     224.     8 309    
+20     237.     9 309    
+21     199.     0 310    
+22     194.     1 310    
+23     234.     2 310    
+24     233.     3 310    
+25     229.     4 310    
+26     220.     5 310    
+27     235.     6 310    
+28     256.     7 310    
+29     261.     8 310    
+30     248.     9 310    
+# ℹ 150 more rows</code></pre>
+</div>
+</div>
+<p>But we can do this better with:</p>
+<p><code>by(sleepstudy, sleepstudy$PATIENT_ID, identity)[1:3]</code></p>
+<p>Note that the <code>[1:3]</code> indicates the range of group indices that you want to view.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">by</span>(sleepstudy, sleepstudy<span class="sc">$</span>Subject, identity)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`308`
+   Reaction Days Subject
+1  249.5600    0     308
+2  258.7047    1     308
+3  250.8006    2     308
+4  321.4398    3     308
+5  356.8519    4     308
+6  414.6901    5     308
+7  382.2038    6     308
+8  290.1486    7     308
+9  430.5853    8     308
+10 466.3535    9     308
 
+$`309`
+   Reaction Days Subject
+11 222.7339    0     309
+12 205.2658    1     309
+13 202.9778    2     309
+14 204.7070    3     309
+15 207.7161    4     309
+16 215.9618    5     309
+17 213.6303    6     309
+18 217.7272    7     309
+19 224.2957    8     309
+20 237.3142    9     309
+
+$`310`
+   Reaction Days Subject
+21 199.0539    0     310
+22 194.3322    1     310
+23 234.3200    2     310
+24 232.8416    3     310
+25 229.3074    4     310
+26 220.4579    5     310
+27 235.4208    6     310
+28 255.7511    7     310
+29 261.0125    8     310
+30 247.5153    9     310</code></pre>
+</div>
+</div>
+<p>If you want to take this a step further, you can generalise this with a function that will allow you to quickly view the data in any range that you want, without having to continually copy and paste that line of code. Just call the function with your dataframe and group id names and the range of group indices that you want to view (interestingly while writing this function I worked out you don’t even need the <code>by()</code> function to achieve the same result).</p>
+<p><code>print_groups(sleepstudy, Subject, 1, 3)</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Create function</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>print_groups <span class="ot">&lt;-</span> <span class="cf">function</span>(df, id, index1, index2) {</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(df)</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  ids_all <span class="ot">&lt;-</span>  <span class="fu">unique</span>(<span class="fu">eval</span>(<span class="fu">substitute</span>(id), df))</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  ids_range <span class="ot">&lt;-</span> ids_all[index1<span class="sc">:</span>index2]</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="cf">if</span> (index1 <span class="sc">&lt;=</span> <span class="fu">length</span>(ids_all) <span class="sc">&amp;</span> index2 <span class="sc">&lt;=</span> <span class="fu">length</span>(ids_all)) {</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="cf">for</span> (id2 <span class="cf">in</span> ids_range) {</span>
+<span id="cb5-8"><a href="#cb5-8"></a>      <span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">"id = "</span>, id2, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>))</span>
+<span id="cb5-9"><a href="#cb5-9"></a>      <span class="fu">print</span>(df[<span class="fu">eval</span>(<span class="fu">substitute</span>(id), df) <span class="sc">%in%</span> id2,])</span>
+<span id="cb5-10"><a href="#cb5-10"></a>      <span class="fu">cat</span>(<span class="st">"----------------------------</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    }</span>
+<span id="cb5-12"><a href="#cb5-12"></a>  } <span class="cf">else</span> {</span>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="fu">print</span>(<span class="st">"There aren't that many groups in your dataset"</span>)</span>
+<span id="cb5-14"><a href="#cb5-14"></a>  }</span>
+<span id="cb5-15"><a href="#cb5-15"></a>}</span>
+<span id="cb5-16"><a href="#cb5-16"></a></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="co"># Use function</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="fu">print_groups</span>(sleepstudy, Subject, <span class="dv">1</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>id = 308
+   Reaction Days Subject
+1  249.5600    0     308
+2  258.7047    1     308
+3  250.8006    2     308
+4  321.4398    3     308
+5  356.8519    4     308
+6  414.6901    5     308
+7  382.2038    6     308
+8  290.1486    7     308
+9  430.5853    8     308
+10 466.3535    9     308
+----------------------------
+
+id = 309
+   Reaction Days Subject
+11 222.7339    0     309
+12 205.2658    1     309
+13 202.9778    2     309
+14 204.7070    3     309
+15 207.7161    4     309
+16 215.9618    5     309
+17 213.6303    6     309
+18 217.7272    7     309
+19 224.2957    8     309
+20 237.3142    9     309
+----------------------------
+
+id = 310
+   Reaction Days Subject
+21 199.0539    0     310
+22 194.3322    1     310
+23 234.3200    2     310
+24 232.8416    3     310
+25 229.3074    4     310
+26 220.4579    5     310
+27 235.4208    6     310
+28 255.7511    7     310
+29 261.0125    8     310
+30 247.5153    9     310
+----------------------------</code></pre>
+</div>
+</div>
+<p>And there you have it!</p>
 
 
 <!-- -->
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="code" data-listing-date-sort="1711026000000" data-listing-file-modified-sort="1708923251000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="309">
-<div class="thumbnail">
-<p><a href="./posts/008_22Mar_2024/index.html" class="no-external"></a></p><a href="./posts/008_22Mar_2024/index.html" class="no-external">
-<p><img src="./posts/008_22Mar_2024/R_small.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/008_22Mar_2024/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/008_22Mar_2024/index.html" class="no-external">Easily view your data by a grouping variable</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/008_22Mar_2024/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/008_22Mar_2024/index.html" class="no-external">Use <code>by()</code> to view your data by a grouping variable.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/008_22Mar_2024/index.html" class="no-external">
-<div class="listing-date">
-Mar 22, 2024
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="concept,code,visualisation" data-listing-date-sort="1709816400000" data-listing-file-modified-sort="1709851798830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1241">
-<div class="thumbnail">
-<p><a href="./posts/007_08Mar_2024/index.html" class="no-external"></a></p><a href="./posts/007_08Mar_2024/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/007_08Mar_2024/index_files/figure-html/setup-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/007_08Mar_2024/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/007_08Mar_2024/index.html" class="no-external">Simpson’s Paradox - Contextualised for Research Students</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/007_08Mar_2024/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('concept'); return false;">
-concept
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('visualisation'); return false;">
-visualisation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/007_08Mar_2024/index.html" class="no-external">Simpson’s Paradox is essentially an extreme form of confounding, characterised by a reversal of the effect estimate sign.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/007_08Mar_2024/index.html" class="no-external">
-<div class="listing-date">
-Mar 8, 2024
-</div>
-<div class="listing-reading-time">
-7 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="code,analysis,modelling,survival,visualisation" data-listing-date-sort="1708606800000" data-listing-file-modified-sort="1708641068844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1555">
-<div class="thumbnail">
-<p><a href="./posts/006_23Feb_2024/index.html" class="no-external"></a></p><a href="./posts/006_23Feb_2024/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/006_23Feb_2024/index_files/figure-html/survival trajectories-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/006_23Feb_2024/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_23Feb_2024/index.html" class="no-external">Immortal time bias - “The fallacy that never dies” (Part 2)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/006_23Feb_2024/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('modelling'); return false;">
-modelling
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('survival'); return false;">
-survival
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('visualisation'); return false;">
-visualisation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/006_23Feb_2024/index.html" class="no-external">Let’s investigate immortal time bias with a coded example.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/006_23Feb_2024/index.html" class="no-external">
-<div class="listing-date">
-Feb 23, 2024
-</div>
-<div class="listing-reading-time">
-8 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="concept,survival" data-listing-date-sort="1708002000000" data-listing-file-modified-sort="1708026333971" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="457">
-<div class="thumbnail">
-<p><a href="./posts/005_16Feb_2024/index.html" class="no-external"></a></p><a href="./posts/005_16Feb_2024/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/005_16Feb_2024/images/immortal_time_bias.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/005_16Feb_2024/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_16Feb_2024/index.html" class="no-external">Immortal time bias - “The fallacy that never dies” (Part 1)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/005_16Feb_2024/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('concept'); return false;">
-concept
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('survival'); return false;">
-survival
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/005_16Feb_2024/index.html" class="no-external">Learn why this misclassification of time in a survival analysis can seriously bias your results.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/005_16Feb_2024/index.html" class="no-external">
-<div class="listing-date">
-Feb 16, 2024
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="visualisation,code" data-listing-date-sort="1706792400000" data-listing-file-modified-sort="1706331516656" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="445">
-<div class="thumbnail">
-<p><a href="./posts/004_02Feb_2024/index.html" class="no-external"></a></p><a href="./posts/004_02Feb_2024/index.html" class="no-external">
-<p><img src="./posts/004_02Feb_2024/plotly_small.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/004_02Feb_2024/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_02Feb_2024/index.html" class="no-external">Put your ggplot on steroids</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_02Feb_2024/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('visualisation'); return false;">
-visualisation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_02Feb_2024/index.html" class="no-external">Plotly adds some interactivity and can help clarify your data.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_02Feb_2024/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="fun,code,visualisation" data-listing-date-sort="1701954000000" data-listing-file-modified-sort="1701301610000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="881">
-<div class="thumbnail">
-<p><a href="./posts/003_08Dec_2023/index.html" class="no-external"></a></p><a href="./posts/003_08Dec_2023/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/003_08Dec_2023/index_files/figure-html/unnamed-chunk-1-1.gif"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/003_08Dec_2023/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_08Dec_2023/index.html" class="no-external">A Very Merry Christmas</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_08Dec_2023/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('fun'); return false;">
-fun
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('visualisation'); return false;">
-visualisation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_08Dec_2023/index.html" class="no-external">Ho, Ho, Ho</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_08Dec_2023/index.html" class="no-external">
-<div class="listing-date">
-Dec 8, 2023
-</div>
-<div class="listing-reading-time">
-5 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="puzzle,probability,Bayesian" data-listing-date-sort="1701349200000" data-listing-file-modified-sort="1701205443000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1064">
-<div class="thumbnail">
-<p><a href="./posts/002_01Dec_2023/index.html" class="no-external"></a></p><a href="./posts/002_01Dec_2023/index.html" class="no-external">
-<p><img src="./posts/002_01Dec_2023/monty_small.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/002_01Dec_2023/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_01Dec_2023/index.html" class="no-external">It pays to think like a Bayesian</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_01Dec_2023/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('puzzle'); return false;">
-puzzle
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('probability'); return false;">
-probability
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Bayesian'); return false;">
-Bayesian
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_01Dec_2023/index.html" class="no-external">Bayesian reasoning is more in line with how we process chance in everyday life.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_01Dec_2023/index.html" class="no-external">
-<div class="listing-date">
-Dec 1, 2023
-</div>
-<div class="listing-reading-time">
-6 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="code,analysis,modelling,logistic" data-listing-date-sort="1700744400000" data-listing-file-modified-sort="1701114320000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2222">
-<div class="thumbnail">
-<p><a href="./posts/001_24Nov2023/index.html" class="no-external"></a></p><a href="./posts/001_24Nov2023/index.html" class="no-external">
-<p><img src="./posts/001_24Nov2023/interact_plot.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/001_24Nov2023/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_24Nov2023/index.html" class="no-external">Interactions (effect modifiers) are important - don’t ignore them</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_24Nov2023/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('modelling'); return false;">
-modelling
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('logistic'); return false;">
-logistic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_24Nov2023/index.html" class="no-external">Keep an open mind to interactions in your next model.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_24Nov2023/index.html" class="no-external">
-<div class="listing-date">
-Nov 24, 2023
-</div>
-<div class="listing-reading-time">
-12 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="news" data-listing-date-sort="1700571600000" data-listing-file-modified-sort="1700771305000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p><img src="./posts/welcome/hello_world.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Stats Tips - Welcome</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Welcome to what I hope can become a useful stats resource.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Nov 22, 2023
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1192,21 +943,72 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "MSNI Stats Tips"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">listing:</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">  contents: posts/**/*.qmd</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">  sort: "date desc"</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">  type: default</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">  categories: true</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">  sort-ui: true</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">  filter-ui: true</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">  fields: [image, date, title, reading-time, description, categories]</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">  feed: true</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="an">title-block-banner:</span><span class="co"> false</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</script>
+<script src="https://giscus.app/client.js" data-repo="pgseye/Weekly_Stats_Tips" data-repo-id="R_kgDOKvfOfQ" data-category="General" data-category-id="DIC_kwDOKvfOfc4CbFWq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark"><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> "Easily view your data by a grouping variable"</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="an">date:</span><span class="co"> 2024-03-22</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="an">categories:</span><span class="co"> [code]</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="an">image:</span><span class="co"> "R_small.jpeg"</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="an">description:</span><span class="co"> "Use `by()` to view your data by a grouping variable."</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">---</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>It is easy enough to view a dataframe in <span class="in">`RStudio`</span> by opening the dataframe in the viewer or printing the dataframe (or part of it) to the console. However, this can be messy if you want to quickly identify data by a grouping variable (usually the patient id). The <span class="in">`by()`</span> function can help you to do this. Let's illustrate its utility with the <span class="in">`sleepstudy`</span> dataset from the <span class="in">`lme4`</span> package. To start with I'll print the data for the first 3 subjects as one might.</span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="in">`sleepstudy |&gt; as_tibble() |&gt; print(n = 30)`</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="in">```{r}</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a><span class="co">#| label: setup</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="co">#| message: false</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="co"># Load data</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a><span class="fu">data</span>(<span class="st">"sleepstudy"</span>)</span>
+<span id="cb7-22"><a href="#cb7-22"></a>sleepstudy <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">30</span>)</span>
+<span id="cb7-23"><a href="#cb7-23"></a><span class="in">```</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a></span>
+<span id="cb7-25"><a href="#cb7-25"></a>But we can do this better with:</span>
+<span id="cb7-26"><a href="#cb7-26"></a></span>
+<span id="cb7-27"><a href="#cb7-27"></a><span class="in">`by(sleepstudy, sleepstudy$PATIENT_ID, identity)[1:3]`</span></span>
+<span id="cb7-28"><a href="#cb7-28"></a></span>
+<span id="cb7-29"><a href="#cb7-29"></a>Note that the <span class="in">`[1:3]`</span> indicates the range of group indices that you want to view.</span>
+<span id="cb7-30"><a href="#cb7-30"></a></span>
+<span id="cb7-33"><a href="#cb7-33"></a><span class="in">```{r}</span></span>
+<span id="cb7-34"><a href="#cb7-34"></a><span class="co">#| label: by()</span></span>
+<span id="cb7-35"><a href="#cb7-35"></a><span class="fu">by</span>(sleepstudy, sleepstudy<span class="sc">$</span>Subject, identity)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
+<span id="cb7-36"><a href="#cb7-36"></a><span class="in">```</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a></span>
+<span id="cb7-38"><a href="#cb7-38"></a>If you want to take this a step further, you can generalise this with a function that will allow you to quickly view the data in any range that you want, without having to continually copy and paste that line of code. Just call the function with your dataframe and group id names and the range of group indices that you want to view (interestingly while writing this function I worked out you don't even need the <span class="in">`by()`</span> function to achieve the same result).</span>
+<span id="cb7-39"><a href="#cb7-39"></a></span>
+<span id="cb7-40"><a href="#cb7-40"></a><span class="in">`print_groups(sleepstudy, Subject, 1, 3)`</span></span>
+<span id="cb7-41"><a href="#cb7-41"></a></span>
+<span id="cb7-44"><a href="#cb7-44"></a><span class="in">```{r}</span></span>
+<span id="cb7-45"><a href="#cb7-45"></a><span class="co">#| label: function</span></span>
+<span id="cb7-46"><a href="#cb7-46"></a><span class="co"># Create function</span></span>
+<span id="cb7-47"><a href="#cb7-47"></a>print_groups <span class="ot">&lt;-</span> <span class="cf">function</span>(df, id, index1, index2) {</span>
+<span id="cb7-48"><a href="#cb7-48"></a>  df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(df)</span>
+<span id="cb7-49"><a href="#cb7-49"></a>  ids_all <span class="ot">&lt;-</span>  <span class="fu">unique</span>(<span class="fu">eval</span>(<span class="fu">substitute</span>(id), df))</span>
+<span id="cb7-50"><a href="#cb7-50"></a>  ids_range <span class="ot">&lt;-</span> ids_all[index1<span class="sc">:</span>index2]</span>
+<span id="cb7-51"><a href="#cb7-51"></a>  <span class="cf">if</span> (index1 <span class="sc">&lt;=</span> <span class="fu">length</span>(ids_all) <span class="sc">&amp;</span> index2 <span class="sc">&lt;=</span> <span class="fu">length</span>(ids_all)) {</span>
+<span id="cb7-52"><a href="#cb7-52"></a>    <span class="cf">for</span> (id2 <span class="cf">in</span> ids_range) {</span>
+<span id="cb7-53"><a href="#cb7-53"></a>      <span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">"id = "</span>, id2, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>))</span>
+<span id="cb7-54"><a href="#cb7-54"></a>      <span class="fu">print</span>(df[<span class="fu">eval</span>(<span class="fu">substitute</span>(id), df) <span class="sc">%in%</span> id2,])</span>
+<span id="cb7-55"><a href="#cb7-55"></a>      <span class="fu">cat</span>(<span class="st">"----------------------------</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb7-56"><a href="#cb7-56"></a>    }</span>
+<span id="cb7-57"><a href="#cb7-57"></a>  } <span class="cf">else</span> {</span>
+<span id="cb7-58"><a href="#cb7-58"></a>    <span class="fu">print</span>(<span class="st">"There aren't that many groups in your dataset"</span>)</span>
+<span id="cb7-59"><a href="#cb7-59"></a>  }</span>
+<span id="cb7-60"><a href="#cb7-60"></a>}</span>
+<span id="cb7-61"><a href="#cb7-61"></a></span>
+<span id="cb7-62"><a href="#cb7-62"></a><span class="co"># Use function</span></span>
+<span id="cb7-63"><a href="#cb7-63"></a><span class="fu">print_groups</span>(sleepstudy, Subject, <span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb7-64"><a href="#cb7-64"></a><span class="in">```</span></span>
+<span id="cb7-65"><a href="#cb7-65"></a></span>
+<span id="cb7-66"><a href="#cb7-66"></a>And there you have it!</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
