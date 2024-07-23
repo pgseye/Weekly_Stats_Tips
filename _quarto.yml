@@ -5,6 +5,8 @@ website:
   title: "Stats Tips"
   navbar:
     right:
+      - text: About
+        href: about.qmd
       - text: All Posts
         href: index.qmd
   google-analytics: "G-RQ4NY7VSS4"
