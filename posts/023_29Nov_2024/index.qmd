@@ -34,6 +34,6 @@ The slides I used in recent lab meetings relating to this talk are included belo
 
 Merry Xmas and Happy New Year to all! See you in 2025.
 
-(BTW - the home page image was created in ChatGPT with the prompt "Create a christmas-themed image of a statistician wearing a santa hat". I guess you get what you ask for...)
+(BTW - the home page image was created in ChatGPT with the prompt "Create a christmas-themed image of a statistician wearing a Santa hat". I guess you get what you ask for...)
 
 {{< revealjs "2024.3_Nov_Stats_Club_no_notes.html" >}}
