@@ -1,0 +1,14 @@
+29/11/2024 
+
+I had an odd experience today trying to render the 12 Days of Statistician post that had the embedded revealjs presentation in it. This worked fine on the test site, but when I tried to do it on the proper site, I received an error saying that the revealjs shortcode wasn't found.
+
+I get the impression you might need to install embed:
+https://github.com/coatless-quarto/embedio#readme
+On a project by project basis? 
+This allows the embedding of a revealjs presentation.
+
+I did the install:
+quarto add coatless-quarto/embedio
+Directly in the terminal window of the Weekly Stats Tips project.
+
+(Hopefully that will now work for future embedding)
