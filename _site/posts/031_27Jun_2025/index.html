@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-06-27">
+<meta name="description" content="Visualising fixed vs random effects.">
+
+<title>Stats Tips - Model Prediction/Visualisation  5. Linear Mixed Models (LMMs)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ4NY7VSS4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Stats Tips</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">All Posts</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#predicting" id="toc-predicting" class="nav-link active" data-scroll-target="#predicting"><span class="header-section-number">1</span> Predicting</a></li>
+  <li><a href="#one-plot-visualisation" id="toc-one-plot-visualisation" class="nav-link" data-scroll-target="#one-plot-visualisation"><span class="header-section-number">2</span> One-Plot Visualisation</a></li>
+  <li><a href="#multi-plot-visualisation" id="toc-multi-plot-visualisation" class="nav-link" data-scroll-target="#multi-plot-visualisation"><span class="header-section-number">3</span> Multi-Plot Visualisation</a></li>
+  <li><a href="#some-background-stuff" id="toc-some-background-stuff" class="nav-link" data-scroll-target="#some-background-stuff"><span class="header-section-number">4</span> Some Background Stuff</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Model Prediction/Visualisation <br> 5. Linear Mixed Models (LMMs)</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">code</div>
+    <div class="quarto-category">concept</div>
+    <div class="quarto-category">modelling</div>
+    <div class="quarto-category">visualisation</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Visualising fixed vs random effects.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 27, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This week we are continuing our series on predicting and visualising models in <code>R</code> by focussing on linear mixed models (LMM’s). Like GLM’s, the fundamentals of the process remain the same bar a few tweaks specific to LMM’s that you need to be aware of. Here we are back to dealing with a continuous covariate and outcome - the new development to note is the distinction between <a href="https://www.theanalysisfactor.com/specifying-fixed-and-random-factors-in-mixed-models/">fixed and random effects</a> and how to handle each appropriately in the <code>predict()</code> function.</p>
+<section id="predicting" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Predicting</h1>
+<p>To illustrate these ideas we’ll revisit the <code>sleepstudy</code> dataset which is available in the <code>lme4</code> package (I have used this for a similar purpose in one of my <a href="https://msni-stats-tips.netlify.app/posts/004_02feb_2024/">previous posts</a>). The <code>sleepstudy</code> data looks at reaction times over time in sleep-deprived individuals. For the sake of the exercise we will fit a mixed model with reaction time (ms) as the outcome, time (days) as a fixed-effect and time (days) and individual as random-effects. So this is a random slopes model allowing the ‘effect’ of sleep-deprivation on reaction time to vary over time for each individual. We fit the model and view a few lines of the dataframe which now contains the fixed (<code>mod_pred_fix</code>) and random (<code>mod_pred_ran</code>) predictions. Obtaining the predictions is very easy - we create the two new variables by simply calling:</p>
+<p><code>predict(mod)</code> for the random-effects, and:</p>
+<p><code>predict(mod, re.form = NA)</code> for the fixed-effects.</p>
+<p>Note the <code>re.form = NA</code> sets all random-effects to <code>0</code>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Load data</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">data</span>(<span class="st">"sleepstudy"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Model</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>mod <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Reaction <span class="sc">~</span> Days <span class="sc">+</span> (Days <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy)</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># Predict</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>sleepstudy<span class="sc">$</span>mod_pred_fix <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod, <span class="at">re.form =</span> <span class="cn">NA</span>) <span class="co"># predict fixed effects</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>sleepstudy<span class="sc">$</span>mod_pred_ran <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod) <span class="co"># predict random effects</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># View data</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">head</span>(sleepstudy, <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Reaction</th>
+<th style="text-align: center;">Days</th>
+<th style="text-align: center;">Subject</th>
+<th style="text-align: center;">mod_pred_fix</th>
+<th style="text-align: center;">mod_pred_ran</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">249.56</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">251.41</td>
+<td style="text-align: center;">253.66</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">258.70</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">261.87</td>
+<td style="text-align: center;">273.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">250.80</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">272.34</td>
+<td style="text-align: center;">293.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">321.44</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">282.81</td>
+<td style="text-align: center;">312.66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">356.85</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">293.27</td>
+<td style="text-align: center;">332.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">414.69</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">303.74</td>
+<td style="text-align: center;">351.99</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">382.20</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">314.21</td>
+<td style="text-align: center;">371.66</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">290.15</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">324.68</td>
+<td style="text-align: center;">391.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">430.59</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">335.14</td>
+<td style="text-align: center;">410.99</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">466.35</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">308</td>
+<td style="text-align: center;">345.61</td>
+<td style="text-align: center;">430.66</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><br></p>
+<p>So, <code>mod_pred_fix</code> represents the <strong>group-averaged</strong> prediction of <code>reaction time</code> (outcome) as a function of time (covariate) and similarly <code>mod_pred_ran</code> represents the <strong>individual</strong> predictions of the same.</p>
+</section>
+<section id="one-plot-visualisation" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> One-Plot Visualisation</h1>
+<p>Plotting the results is then quite straightforward with <code>ggplot2</code>:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Plot all data</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>sleepstudy <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> Reaction, <span class="at">color =</span> <span class="fu">factor</span>(Subject))) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_ran)) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_fix), <span class="at">linewidth =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">500</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">200</span>, <span class="dv">500</span>, <span class="at">by =</span> <span class="dv">50</span>)) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">9</span>, <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Reaction Time ~ Days of Sleep Deprivation"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Time (days)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Average Reaction Time (ms)"</span>) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="multi-plot-visualisation" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Multi-Plot Visualisation</h1>
+<p>The above plot is good for showing all the data at once, but can get a little bit confusing if you are interested in looking more closely at any specific individual trajectories. If that is in fact the case, an alternative plot representation is to facet on individuals, like so:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Plot - facet on individual</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>sleepstudy <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> Reaction)) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_ran), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_fix), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">500</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">200</span>, <span class="dv">500</span>, <span class="at">by =</span> <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">9</span>, <span class="at">by =</span> <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Subject) <span class="sc">+</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time (Days)"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11"></a>       <span class="at">y =</span> <span class="st">"Average Reaction Time (ms)"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12"></a>       <span class="at">title =</span> <span class="st">"Reaction Time ~ Days of Sleep Deprivation"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13"></a>       <span class="at">subtitle =</span> <span class="st">"Blue = Fixed Effects Prediction | Green = Random Effects Prediction"</span>) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>It’s now much easier to see the individual trajectories and how they compare to that of the group average.</p>
+</section>
+<section id="some-background-stuff" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Some Background Stuff</h1>
+<p>While not essential to producing a visualisation of the model predictions, taking a little detour to understand in more detail how we actually arrived at the fixed- and random-effect predictions is a worthwhile exercise and one which can aid in building your mixed-modelling intuition.</p>
+<p>Let’s first inspect an unprettified summary of the model output:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">summary</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear mixed model fit by REML ['lmerMod']
+Formula: Reaction ~ Days + (Days | Subject)
+   Data: sleepstudy
+
+REML criterion at convergence: 1743.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.9536 -0.4634  0.0231  0.4634  5.1793 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ Subject  (Intercept) 612.10   24.741       
+          Days         35.07    5.922   0.07
+ Residual             654.94   25.592       
+Number of obs: 180, groups:  Subject, 18
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)  251.405      6.825  36.838
+Days          10.467      1.546   6.771
+
+Correlation of Fixed Effects:
+     (Intr)
+Days -0.138</code></pre>
+</div>
+</div>
+<p>We obtain the fixed-effects as an <code>Intercept</code> and a coefficient for time (<code>Days</code>) and we can interpret that as an average reaction time of <code>251.4 ms</code> at baseline and an average increase of <code>10.5 ms</code> in reaction time for the passing of each day. Note that the random-effects are not as easily interpretable in their reported form which is an estimate of the variance of the distribution of individual reaction times, not average differences as for fixed-effects.</p>
+<p>A shortcut to obtain the fixed-effects of an <code>lmer</code> class model in <code>R</code> is:</p>
+<p><code>fixef(mod)</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">fixef</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)        Days 
+  251.40510    10.46729 </code></pre>
+</div>
+</div>
+<p>and similarly for the random-effects:</p>
+<p><code>ranef(mod)</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ranef</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$Subject
+    (Intercept)        Days
+308   2.2585509   9.1989758
+309 -40.3987381  -8.6196806
+310 -38.9604090  -5.4488565
+330  23.6906196  -4.8143503
+331  22.2603126  -3.0699116
+332   9.0395679  -0.2721770
+333  16.8405086  -0.2236361
+334  -7.2326151   1.0745816
+335  -0.3336684 -10.7521652
+337  34.8904868   8.6282652
+349 -25.2102286   1.1734322
+350 -13.0700342   6.6142178
+351   4.5778642  -3.0152621
+352  20.8636782   3.5360011
+369   3.2754656   0.8722149
+370 -25.6129993   4.8224850
+371   0.8070461  -0.9881562
+372  12.3145921   1.2840221
+
+with conditional variances for "Subject" </code></pre>
+</div>
+</div>
+<p>So what do the random-effects actually tell us? In a nutshell, these represent the individual differences from the fixed-effects values.</p>
+<p>Let’s consider <code>Subject 308</code> as an example to illustrate this. If we are interested in the predicted baseline reaction time for this individual, all we need to do is add the fixed- and random-effects intercepts values - <code>251.405 + 2.259 = 253.664</code> ms (we can ignore the time ‘effect’ which is <code>0</code> by definition at baseline). By comparison, we can also easily obtain that predicted value with the following code:</p>
+<p><code>predict(mod, newdata = data.frame(days = 0, Subject = 308), re.form = ~(Days|Subject))</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">predict</span>(mod, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Days =</span> <span class="dv">0</span>, <span class="at">Subject =</span> <span class="dv">308</span>), <span class="at">re.form =</span> <span class="sc">~</span>(Days<span class="sc">|</span>Subject))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1 
+253.6637 </code></pre>
+</div>
+</div>
+<p>It’s a little bit more complex to manually calculate the predicted value at any other time point because the ‘effect’ of time is no longer ignorable and we just need to remember the basics of our regression equation. Say, we want to calculate the reaction time for <code>Subject 308</code> at <code>5</code> days. A simple way to do this is to first work out the fixed-effect prediction at <code>5</code> days and then add the random-effect prediction to it.</p>
+<p>The fixed-effect prediction is just the intercept value plus the coefficient for time multiplied by the number of days (either from the model summary or from <code>fixef()</code>). In numbers: <code>251.405 + (10.467 * 5) = 303.74</code>. This gives the predicted group-average reaction time at <code>5</code> days.</p>
+<p>The random-effect prediction is the same but from <code>ranef()</code> and specific to the individual. In numbers: <code>2.259 + (9.198 * 5) = 48.249</code>. This gives the <strong>additional</strong> (to the group-average) reaction time specific to the individual.</p>
+<p>We can then add those two values to obtain the predicted reaction time for <code>Subject 308</code> at <code>5</code> days - i.e.&nbsp;<code>303.74 + 48.249 = 351.989</code>. If you don’t want to manually calculate this, then you can use:</p>
+<p><code>predict(mod, newdata = data.frame(days = 5, Subject = 308), re.form = ~(Days|Subject))</code></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">predict</span>(mod, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Days =</span> <span class="dv">5</span>, <span class="at">Subject =</span> <span class="dv">308</span>), <span class="at">re.form =</span> <span class="sc">~</span>(Days<span class="sc">|</span>Subject))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      1 
+351.995 </code></pre>
+</div>
+</div>
+<p>Which is essentially the same, bar rounding error.</p>
+<p>And that brings us to the end of this post. Hopefully that gives you some idea as to how random effects and their predictions are calculated. In the next post, we will finish our series on model prediction and visualisation be taking a look at the Cox model. Until then…</p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="pgseye/Weekly_Stats_Tips" data-repo-id="R_kgDOKvfOfQ" data-category="General" data-category-id="DIC_kwDOKvfOfc4CbFWq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark"><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> "Model Prediction/Visualisation &lt;br&gt; 5. Linear Mixed Models (LMMs)"</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="an">date:</span><span class="co"> 2025-06-27</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="an">categories:</span><span class="co"> [code, concept, modelling, visualisation]</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="co"># image: "images/plot.png"</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="an">description:</span><span class="co"> "Visualising fixed vs random effects."</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="co">---</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a>This week we are continuing our series on predicting and visualising models in <span class="in">`R`</span> by focussing on linear mixed models (LMM's). Like GLM's, the fundamentals of the process remain the same bar a few tweaks specific to LMM's that you need to be aware of. Here we are back to dealing with a continuous covariate and outcome - the new development to note is the distinction between <span class="co">[</span><span class="ot">fixed and random effects</span><span class="co">](https://www.theanalysisfactor.com/specifying-fixed-and-random-factors-in-mixed-models/)</span> and how to handle each appropriately in the <span class="in">`predict()`</span> function.</span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="fu"># Predicting</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13"></a>To illustrate these ideas we'll revisit the <span class="in">`sleepstudy`</span> dataset which is available in the <span class="in">`lme4`</span> package (I have used this for a similar purpose in one of my <span class="co">[</span><span class="ot">previous posts</span><span class="co">](https://msni-stats-tips.netlify.app/posts/004_02feb_2024/)</span>). The <span class="in">`sleepstudy`</span> data looks at reaction times over time in sleep-deprived individuals. For the sake of the exercise we will fit a mixed model with reaction time (ms) as the outcome, time (days) as a fixed-effect and time (days) and individual as random-effects. So this is a random slopes model allowing the 'effect' of sleep-deprivation on reaction time to vary over time for each individual. We fit the model and view a few lines of the dataframe which now contains the fixed (<span class="in">`mod_pred_fix`</span>) and random (<span class="in">`mod_pred_ran`</span>) predictions. Obtaining the predictions is very easy - we create the two new variables by simply calling:</span>
+<span id="cb14-14"><a href="#cb14-14"></a></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="in">`predict(mod)`</span> for the random-effects, and:</span>
+<span id="cb14-16"><a href="#cb14-16"></a></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="in">`predict(mod, re.form = NA)`</span> for the fixed-effects.</span>
+<span id="cb14-18"><a href="#cb14-18"></a></span>
+<span id="cb14-19"><a href="#cb14-19"></a>Note the <span class="in">`re.form = NA`</span> sets all random-effects to <span class="in">`0`</span>.</span>
+<span id="cb14-20"><a href="#cb14-20"></a></span>
+<span id="cb14-23"><a href="#cb14-23"></a><span class="in">```{r}</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#| message: false</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb14-26"><a href="#cb14-26"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-27"><a href="#cb14-27"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="co"># Load data</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="fu">data</span>(<span class="st">"sleepstudy"</span>)</span>
+<span id="cb14-31"><a href="#cb14-31"></a><span class="co"># Model</span></span>
+<span id="cb14-32"><a href="#cb14-32"></a>mod <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Reaction <span class="sc">~</span> Days <span class="sc">+</span> (Days <span class="sc">|</span> Subject), <span class="at">data =</span> sleepstudy)</span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="co"># Predict</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a>sleepstudy<span class="sc">$</span>mod_pred_fix <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod, <span class="at">re.form =</span> <span class="cn">NA</span>) <span class="co"># predict fixed effects</span></span>
+<span id="cb14-35"><a href="#cb14-35"></a>sleepstudy<span class="sc">$</span>mod_pred_ran <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod) <span class="co"># predict random effects</span></span>
+<span id="cb14-36"><a href="#cb14-36"></a><span class="co"># View data</span></span>
+<span id="cb14-37"><a href="#cb14-37"></a><span class="fu">head</span>(sleepstudy, <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb14-38"><a href="#cb14-38"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb14-39"><a href="#cb14-39"></a><span class="in">```</span></span>
+<span id="cb14-40"><a href="#cb14-40"></a></span>
+<span id="cb14-41"><a href="#cb14-41"></a>&lt;br&gt;</span>
+<span id="cb14-42"><a href="#cb14-42"></a></span>
+<span id="cb14-43"><a href="#cb14-43"></a>So, <span class="in">`mod_pred_fix`</span> represents the **group-averaged** prediction of `reaction time` (outcome) as a function of time (covariate) and similarly `mod_pred_ran` represents the **individual** predictions of the same.</span>
+<span id="cb14-44"><a href="#cb14-44"></a></span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="fu"># One-Plot Visualisation</span></span>
+<span id="cb14-46"><a href="#cb14-46"></a></span>
+<span id="cb14-47"><a href="#cb14-47"></a>Plotting the results is then quite straightforward with <span class="in">`ggplot2`</span>:</span>
+<span id="cb14-48"><a href="#cb14-48"></a></span>
+<span id="cb14-51"><a href="#cb14-51"></a><span class="in">```{r}</span></span>
+<span id="cb14-52"><a href="#cb14-52"></a><span class="co">#| message: false</span></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="co">#| warning: false</span></span>
+<span id="cb14-54"><a href="#cb14-54"></a><span class="co"># Plot all data</span></span>
+<span id="cb14-55"><a href="#cb14-55"></a>sleepstudy <span class="sc">|&gt;</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> Reaction, <span class="at">color =</span> <span class="fu">factor</span>(Subject))) <span class="sc">+</span></span>
+<span id="cb14-57"><a href="#cb14-57"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_ran)) <span class="sc">+</span></span>
+<span id="cb14-58"><a href="#cb14-58"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_fix), <span class="at">linewidth =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb14-59"><a href="#cb14-59"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">500</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">200</span>, <span class="dv">500</span>, <span class="at">by =</span> <span class="dv">50</span>)) <span class="sc">+</span></span>
+<span id="cb14-60"><a href="#cb14-60"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">9</span>, <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb14-61"><a href="#cb14-61"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb14-62"><a href="#cb14-62"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Reaction Time ~ Days of Sleep Deprivation"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Time (days)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Average Reaction Time (ms)"</span>) <span class="sc">+</span></span>
+<span id="cb14-63"><a href="#cb14-63"></a>    <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span>
+<span id="cb14-64"><a href="#cb14-64"></a><span class="in">```</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a></span>
+<span id="cb14-66"><a href="#cb14-66"></a><span class="fu"># Multi-Plot Visualisation</span></span>
+<span id="cb14-67"><a href="#cb14-67"></a></span>
+<span id="cb14-68"><a href="#cb14-68"></a>The above plot is good for showing all the data at once, but can get a little bit confusing if you are interested in looking more closely at any specific individual trajectories. If that is in fact the case, an alternative plot representation is to facet on individuals, like so:</span>
+<span id="cb14-69"><a href="#cb14-69"></a></span>
+<span id="cb14-72"><a href="#cb14-72"></a><span class="in">```{r}</span></span>
+<span id="cb14-73"><a href="#cb14-73"></a><span class="co">#| message: false</span></span>
+<span id="cb14-74"><a href="#cb14-74"></a><span class="co">#| warning: false</span></span>
+<span id="cb14-75"><a href="#cb14-75"></a><span class="co"># Plot - facet on individual</span></span>
+<span id="cb14-76"><a href="#cb14-76"></a>sleepstudy <span class="sc">|&gt;</span></span>
+<span id="cb14-77"><a href="#cb14-77"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> Reaction)) <span class="sc">+</span></span>
+<span id="cb14-78"><a href="#cb14-78"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_ran), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
+<span id="cb14-79"><a href="#cb14-79"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> Days, <span class="at">y =</span> mod_pred_fix), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb14-80"><a href="#cb14-80"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">500</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">200</span>, <span class="dv">500</span>, <span class="at">by =</span> <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb14-81"><a href="#cb14-81"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">9</span>, <span class="at">by =</span> <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb14-82"><a href="#cb14-82"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb14-83"><a href="#cb14-83"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Subject) <span class="sc">+</span></span>
+<span id="cb14-84"><a href="#cb14-84"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time (Days)"</span>,</span>
+<span id="cb14-85"><a href="#cb14-85"></a>       <span class="at">y =</span> <span class="st">"Average Reaction Time (ms)"</span>,</span>
+<span id="cb14-86"><a href="#cb14-86"></a>       <span class="at">title =</span> <span class="st">"Reaction Time ~ Days of Sleep Deprivation"</span>,</span>
+<span id="cb14-87"><a href="#cb14-87"></a>       <span class="at">subtitle =</span> <span class="st">"Blue = Fixed Effects Prediction | Green = Random Effects Prediction"</span>) <span class="sc">+</span></span>
+<span id="cb14-88"><a href="#cb14-88"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">15</span>)</span>
+<span id="cb14-89"><a href="#cb14-89"></a><span class="in">```</span></span>
+<span id="cb14-90"><a href="#cb14-90"></a></span>
+<span id="cb14-91"><a href="#cb14-91"></a>It's now much easier to see the individual trajectories and how they compare to that of the group average.</span>
+<span id="cb14-92"><a href="#cb14-92"></a></span>
+<span id="cb14-93"><a href="#cb14-93"></a><span class="fu"># Some Background Stuff</span></span>
+<span id="cb14-94"><a href="#cb14-94"></a></span>
+<span id="cb14-95"><a href="#cb14-95"></a>While not essential to producing a visualisation of the model predictions, taking a little detour to understand in more detail how we actually arrived at the fixed- and random-effect predictions is a worthwhile exercise and one which can aid in building your mixed-modelling intuition.</span>
+<span id="cb14-96"><a href="#cb14-96"></a></span>
+<span id="cb14-97"><a href="#cb14-97"></a>Let's first inspect an unprettified summary of the model output:</span>
+<span id="cb14-98"><a href="#cb14-98"></a></span>
+<span id="cb14-101"><a href="#cb14-101"></a><span class="in">```{r}</span></span>
+<span id="cb14-102"><a href="#cb14-102"></a><span class="fu">summary</span>(mod)</span>
+<span id="cb14-103"><a href="#cb14-103"></a><span class="in">```</span></span>
+<span id="cb14-104"><a href="#cb14-104"></a></span>
+<span id="cb14-105"><a href="#cb14-105"></a>We obtain the fixed-effects as an <span class="in">`Intercept`</span> and a coefficient for time (<span class="in">`Days`</span>) and we can interpret that as an average reaction time of <span class="in">`251.4 ms`</span> at baseline and an average increase of <span class="in">`10.5 ms`</span> in reaction time for the passing of each day. Note that the random-effects are not as easily interpretable in their reported form which is an estimate of the variance of the distribution of individual reaction times, not average differences as for fixed-effects.</span>
+<span id="cb14-106"><a href="#cb14-106"></a></span>
+<span id="cb14-107"><a href="#cb14-107"></a>A shortcut to obtain the fixed-effects of an <span class="in">`lmer`</span> class model in <span class="in">`R`</span> is:</span>
+<span id="cb14-108"><a href="#cb14-108"></a></span>
+<span id="cb14-109"><a href="#cb14-109"></a><span class="in">`fixef(mod)`</span></span>
+<span id="cb14-110"><a href="#cb14-110"></a></span>
+<span id="cb14-113"><a href="#cb14-113"></a><span class="in">```{r}</span></span>
+<span id="cb14-114"><a href="#cb14-114"></a><span class="fu">fixef</span>(mod)</span>
+<span id="cb14-115"><a href="#cb14-115"></a><span class="in">```</span></span>
+<span id="cb14-116"><a href="#cb14-116"></a></span>
+<span id="cb14-117"><a href="#cb14-117"></a>and similarly for the random-effects:</span>
+<span id="cb14-118"><a href="#cb14-118"></a></span>
+<span id="cb14-119"><a href="#cb14-119"></a><span class="in">`ranef(mod)`</span></span>
+<span id="cb14-120"><a href="#cb14-120"></a></span>
+<span id="cb14-123"><a href="#cb14-123"></a><span class="in">```{r}</span></span>
+<span id="cb14-124"><a href="#cb14-124"></a><span class="fu">ranef</span>(mod)</span>
+<span id="cb14-125"><a href="#cb14-125"></a><span class="in">```</span></span>
+<span id="cb14-126"><a href="#cb14-126"></a></span>
+<span id="cb14-127"><a href="#cb14-127"></a>So what do the random-effects actually tell us? In a nutshell, these represent the individual differences from the fixed-effects values.</span>
+<span id="cb14-128"><a href="#cb14-128"></a></span>
+<span id="cb14-129"><a href="#cb14-129"></a>Let's consider <span class="in">`Subject 308`</span> as an example to illustrate this. If we are interested in the predicted baseline reaction time for this individual, all we need to do is add the fixed- and random-effects intercepts values - <span class="in">`251.405 + 2.259 = 253.664`</span> ms (we can ignore the time 'effect' which is <span class="in">`0`</span> by definition at baseline). By comparison, we can also easily obtain that predicted value with the following code:</span>
+<span id="cb14-130"><a href="#cb14-130"></a></span>
+<span id="cb14-131"><a href="#cb14-131"></a><span class="in">`predict(mod, newdata = data.frame(days = 0, Subject = 308), re.form = ~(Days|Subject))`</span></span>
+<span id="cb14-132"><a href="#cb14-132"></a></span>
+<span id="cb14-135"><a href="#cb14-135"></a><span class="in">```{r}</span></span>
+<span id="cb14-136"><a href="#cb14-136"></a><span class="fu">predict</span>(mod, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Days =</span> <span class="dv">0</span>, <span class="at">Subject =</span> <span class="dv">308</span>), <span class="at">re.form =</span> <span class="sc">~</span>(Days<span class="sc">|</span>Subject))</span>
+<span id="cb14-137"><a href="#cb14-137"></a><span class="in">```</span></span>
+<span id="cb14-138"><a href="#cb14-138"></a></span>
+<span id="cb14-139"><a href="#cb14-139"></a>It's a little bit more complex to manually calculate the predicted value at any other time point because the 'effect' of time is no longer ignorable and we just need to remember the basics of our regression equation. Say, we want to calculate the reaction time for <span class="in">`Subject 308`</span> at <span class="in">`5`</span> days. A simple way to do this is to first work out the fixed-effect prediction at <span class="in">`5`</span> days and then add the random-effect prediction to it.</span>
+<span id="cb14-140"><a href="#cb14-140"></a></span>
+<span id="cb14-141"><a href="#cb14-141"></a>The fixed-effect prediction is just the intercept value plus the coefficient for time multiplied by the number of days (either from the model summary or from <span class="in">`fixef()`</span>). In numbers: <span class="in">`251.405 + (10.467 * 5) = 303.74`</span>. This gives the predicted group-average reaction time at <span class="in">`5`</span> days.</span>
+<span id="cb14-142"><a href="#cb14-142"></a></span>
+<span id="cb14-143"><a href="#cb14-143"></a>The random-effect prediction is the same but from <span class="in">`ranef()`</span> and specific to the individual. In numbers: <span class="in">`2.259 + (9.198 * 5) = 48.249`</span>. This gives the **additional** (to the group-average) reaction time specific to the individual.</span>
+<span id="cb14-144"><a href="#cb14-144"></a></span>
+<span id="cb14-145"><a href="#cb14-145"></a>We can then add those two values to obtain the predicted reaction time for <span class="in">`Subject 308`</span> at <span class="in">`5`</span> days - i.e. <span class="in">`303.74 + 48.249 = 351.989`</span>. If you don't want to manually calculate this, then you can use:</span>
+<span id="cb14-146"><a href="#cb14-146"></a></span>
+<span id="cb14-147"><a href="#cb14-147"></a><span class="in">`predict(mod, newdata = data.frame(days = 5, Subject = 308), re.form = ~(Days|Subject))`</span></span>
+<span id="cb14-148"><a href="#cb14-148"></a></span>
+<span id="cb14-151"><a href="#cb14-151"></a><span class="in">```{r}</span></span>
+<span id="cb14-152"><a href="#cb14-152"></a><span class="fu">predict</span>(mod, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Days =</span> <span class="dv">5</span>, <span class="at">Subject =</span> <span class="dv">308</span>), <span class="at">re.form =</span> <span class="sc">~</span>(Days<span class="sc">|</span>Subject))</span>
+<span id="cb14-153"><a href="#cb14-153"></a><span class="in">```</span></span>
+<span id="cb14-154"><a href="#cb14-154"></a></span>
+<span id="cb14-155"><a href="#cb14-155"></a>Which is essentially the same, bar rounding error.</span>
+<span id="cb14-156"><a href="#cb14-156"></a></span>
+<span id="cb14-157"><a href="#cb14-157"></a>And that brings us to the end of this post. Hopefully that gives you some idea as to how random effects and their predictions are calculated. In the next post, we will finish our series on model prediction and visualisation be taking a look at the Cox model. Until then...</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
