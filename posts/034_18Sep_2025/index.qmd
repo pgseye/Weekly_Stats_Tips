@@ -6,8 +6,6 @@ image: "images/tvc_plot.png"
 description: "The hazards of misunderstanding the hazard ratio."
 ---
 
-Welcome back to Stats Tips after a brief mid-year break.
-
 In the last post we discussed some approaches to the diagnosis of non-proportional hazards for a covariate in our Cox model.
 
 And the big question I'm sure you're chomping at the bit to ask is "Well, what can we do about it?"

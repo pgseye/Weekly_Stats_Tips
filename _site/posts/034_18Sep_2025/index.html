@@ -219,7 +219,6 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
 </header>
 
 
-<p>Welcome back to Stats Tips after a brief mid-year break.</p>
 <p>In the last post we discussed some approaches to the diagnosis of non-proportional hazards for a covariate in our Cox model.</p>
 <p>And the big question I’m sure you’re chomping at the bit to ask is “Well, what can we do about it?”</p>
 <p>Ok, relax… there are in fact several things we can do. Today we are going to consider the remediation actions we can take when we are faced with this issue in our day-to-day work. To get us started and to introduce the concepts to you, I’ve broken those actions down broadly into four groups:</p>
@@ -280,23 +279,23 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">tbl_regression</span>(vfit1, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="tpccrjzaqv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tpccrjzaqv table {
+<div id="pcicdaugef" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pcicdaugef table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tpccrjzaqv thead, #tpccrjzaqv tbody, #tpccrjzaqv tfoot, #tpccrjzaqv tr, #tpccrjzaqv td, #tpccrjzaqv th {
+#pcicdaugef thead, #pcicdaugef tbody, #pcicdaugef tfoot, #pcicdaugef tr, #pcicdaugef td, #pcicdaugef th {
   border-style: none;
 }
 
-#tpccrjzaqv p {
+#pcicdaugef p {
   margin: 0;
   padding: 0;
 }
 
-#tpccrjzaqv .gt_table {
+#pcicdaugef .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -322,12 +321,12 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-left-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_caption {
+#pcicdaugef .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tpccrjzaqv .gt_title {
+#pcicdaugef .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -339,7 +338,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-bottom-width: 0;
 }
 
-#tpccrjzaqv .gt_subtitle {
+#pcicdaugef .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -351,7 +350,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-top-width: 0;
 }
 
-#tpccrjzaqv .gt_heading {
+#pcicdaugef .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -363,13 +362,13 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-right-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_bottom_border {
+#pcicdaugef .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_col_headings {
+#pcicdaugef .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -384,7 +383,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-right-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_col_heading {
+#pcicdaugef .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -404,7 +403,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   overflow-x: hidden;
 }
 
-#tpccrjzaqv .gt_column_spanner_outer {
+#pcicdaugef .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -416,15 +415,15 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   padding-right: 4px;
 }
 
-#tpccrjzaqv .gt_column_spanner_outer:first-child {
+#pcicdaugef .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tpccrjzaqv .gt_column_spanner_outer:last-child {
+#pcicdaugef .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tpccrjzaqv .gt_column_spanner {
+#pcicdaugef .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -436,11 +435,11 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   width: 100%;
 }
 
-#tpccrjzaqv .gt_spanner_row {
+#pcicdaugef .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tpccrjzaqv .gt_group_heading {
+#pcicdaugef .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -466,7 +465,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   text-align: left;
 }
 
-#tpccrjzaqv .gt_empty_group_heading {
+#pcicdaugef .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -481,15 +480,15 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   vertical-align: middle;
 }
 
-#tpccrjzaqv .gt_from_md > :first-child {
+#pcicdaugef .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tpccrjzaqv .gt_from_md > :last-child {
+#pcicdaugef .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tpccrjzaqv .gt_row {
+#pcicdaugef .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -508,7 +507,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   overflow-x: hidden;
 }
 
-#tpccrjzaqv .gt_stub {
+#pcicdaugef .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -521,7 +520,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   padding-right: 5px;
 }
 
-#tpccrjzaqv .gt_stub_row_group {
+#pcicdaugef .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -535,15 +534,15 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   vertical-align: top;
 }
 
-#tpccrjzaqv .gt_row_group_first td {
+#pcicdaugef .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tpccrjzaqv .gt_row_group_first th {
+#pcicdaugef .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tpccrjzaqv .gt_summary_row {
+#pcicdaugef .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -553,16 +552,16 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   padding-right: 5px;
 }
 
-#tpccrjzaqv .gt_first_summary_row {
+#pcicdaugef .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_first_summary_row.thick {
+#pcicdaugef .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tpccrjzaqv .gt_last_summary_row {
+#pcicdaugef .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -572,7 +571,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-bottom-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_grand_summary_row {
+#pcicdaugef .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -582,7 +581,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   padding-right: 5px;
 }
 
-#tpccrjzaqv .gt_first_grand_summary_row {
+#pcicdaugef .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -592,7 +591,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-top-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_last_grand_summary_row_top {
+#pcicdaugef .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -602,11 +601,11 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-bottom-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_striped {
+#pcicdaugef .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tpccrjzaqv .gt_table_body {
+#pcicdaugef .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -615,7 +614,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-bottom-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_footnotes {
+#pcicdaugef .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -629,7 +628,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-right-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_footnote {
+#pcicdaugef .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -638,7 +637,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   padding-right: 5px;
 }
 
-#tpccrjzaqv .gt_sourcenotes {
+#pcicdaugef .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -652,7 +651,7 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   border-right-color: #D3D3D3;
 }
 
-#tpccrjzaqv .gt_sourcenote {
+#pcicdaugef .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -660,72 +659,72 @@ gtag('config', 'G-RQ4NY7VSS4', { 'anonymize_ip': true});
   padding-right: 5px;
 }
 
-#tpccrjzaqv .gt_left {
+#pcicdaugef .gt_left {
   text-align: left;
 }
 
-#tpccrjzaqv .gt_center {
+#pcicdaugef .gt_center {
   text-align: center;
 }
 
-#tpccrjzaqv .gt_right {
+#pcicdaugef .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tpccrjzaqv .gt_font_normal {
+#pcicdaugef .gt_font_normal {
   font-weight: normal;
 }
 
-#tpccrjzaqv .gt_font_bold {
+#pcicdaugef .gt_font_bold {
   font-weight: bold;
 }
 
-#tpccrjzaqv .gt_font_italic {
+#pcicdaugef .gt_font_italic {
   font-style: italic;
 }
 
-#tpccrjzaqv .gt_super {
+#pcicdaugef .gt_super {
   font-size: 65%;
 }
 
-#tpccrjzaqv .gt_footnote_marks {
+#pcicdaugef .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tpccrjzaqv .gt_asterisk {
+#pcicdaugef .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tpccrjzaqv .gt_indent_1 {
+#pcicdaugef .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tpccrjzaqv .gt_indent_2 {
+#pcicdaugef .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tpccrjzaqv .gt_indent_3 {
+#pcicdaugef .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tpccrjzaqv .gt_indent_4 {
+#pcicdaugef .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tpccrjzaqv .gt_indent_5 {
+#pcicdaugef .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tpccrjzaqv .katex-display {
+#pcicdaugef .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tpccrjzaqv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pcicdaugef div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -784,23 +783,23 @@ GLOBAL  6.20  2 0.045</code></pre>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="fu">tbl_regression</span>(vfit2, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="jyxkqhhqwq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jyxkqhhqwq table {
+<div id="mslspzowps" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mslspzowps table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jyxkqhhqwq thead, #jyxkqhhqwq tbody, #jyxkqhhqwq tfoot, #jyxkqhhqwq tr, #jyxkqhhqwq td, #jyxkqhhqwq th {
+#mslspzowps thead, #mslspzowps tbody, #mslspzowps tfoot, #mslspzowps tr, #mslspzowps td, #mslspzowps th {
   border-style: none;
 }
 
-#jyxkqhhqwq p {
+#mslspzowps p {
   margin: 0;
   padding: 0;
 }
 
-#jyxkqhhqwq .gt_table {
+#mslspzowps .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -826,12 +825,12 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_caption {
+#mslspzowps .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jyxkqhhqwq .gt_title {
+#mslspzowps .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -843,7 +842,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-bottom-width: 0;
 }
 
-#jyxkqhhqwq .gt_subtitle {
+#mslspzowps .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -855,7 +854,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-top-width: 0;
 }
 
-#jyxkqhhqwq .gt_heading {
+#mslspzowps .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -867,13 +866,13 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_bottom_border {
+#mslspzowps .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_col_headings {
+#mslspzowps .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -888,7 +887,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_col_heading {
+#mslspzowps .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -908,7 +907,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   overflow-x: hidden;
 }
 
-#jyxkqhhqwq .gt_column_spanner_outer {
+#mslspzowps .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -920,15 +919,15 @@ GLOBAL  6.20  2 0.045</code></pre>
   padding-right: 4px;
 }
 
-#jyxkqhhqwq .gt_column_spanner_outer:first-child {
+#mslspzowps .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jyxkqhhqwq .gt_column_spanner_outer:last-child {
+#mslspzowps .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jyxkqhhqwq .gt_column_spanner {
+#mslspzowps .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -940,11 +939,11 @@ GLOBAL  6.20  2 0.045</code></pre>
   width: 100%;
 }
 
-#jyxkqhhqwq .gt_spanner_row {
+#mslspzowps .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jyxkqhhqwq .gt_group_heading {
+#mslspzowps .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -970,7 +969,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   text-align: left;
 }
 
-#jyxkqhhqwq .gt_empty_group_heading {
+#mslspzowps .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -985,15 +984,15 @@ GLOBAL  6.20  2 0.045</code></pre>
   vertical-align: middle;
 }
 
-#jyxkqhhqwq .gt_from_md > :first-child {
+#mslspzowps .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jyxkqhhqwq .gt_from_md > :last-child {
+#mslspzowps .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jyxkqhhqwq .gt_row {
+#mslspzowps .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1012,7 +1011,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   overflow-x: hidden;
 }
 
-#jyxkqhhqwq .gt_stub {
+#mslspzowps .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1025,7 +1024,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   padding-right: 5px;
 }
 
-#jyxkqhhqwq .gt_stub_row_group {
+#mslspzowps .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1039,15 +1038,15 @@ GLOBAL  6.20  2 0.045</code></pre>
   vertical-align: top;
 }
 
-#jyxkqhhqwq .gt_row_group_first td {
+#mslspzowps .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jyxkqhhqwq .gt_row_group_first th {
+#mslspzowps .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jyxkqhhqwq .gt_summary_row {
+#mslspzowps .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1057,16 +1056,16 @@ GLOBAL  6.20  2 0.045</code></pre>
   padding-right: 5px;
 }
 
-#jyxkqhhqwq .gt_first_summary_row {
+#mslspzowps .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_first_summary_row.thick {
+#mslspzowps .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jyxkqhhqwq .gt_last_summary_row {
+#mslspzowps .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1076,7 +1075,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_grand_summary_row {
+#mslspzowps .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1086,7 +1085,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   padding-right: 5px;
 }
 
-#jyxkqhhqwq .gt_first_grand_summary_row {
+#mslspzowps .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1096,7 +1095,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_last_grand_summary_row_top {
+#mslspzowps .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1106,11 +1105,11 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_striped {
+#mslspzowps .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jyxkqhhqwq .gt_table_body {
+#mslspzowps .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1119,7 +1118,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_footnotes {
+#mslspzowps .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1133,7 +1132,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_footnote {
+#mslspzowps .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1142,7 +1141,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   padding-right: 5px;
 }
 
-#jyxkqhhqwq .gt_sourcenotes {
+#mslspzowps .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1156,7 +1155,7 @@ GLOBAL  6.20  2 0.045</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#jyxkqhhqwq .gt_sourcenote {
+#mslspzowps .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1164,72 +1163,72 @@ GLOBAL  6.20  2 0.045</code></pre>
   padding-right: 5px;
 }
 
-#jyxkqhhqwq .gt_left {
+#mslspzowps .gt_left {
   text-align: left;
 }
 
-#jyxkqhhqwq .gt_center {
+#mslspzowps .gt_center {
   text-align: center;
 }
 
-#jyxkqhhqwq .gt_right {
+#mslspzowps .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jyxkqhhqwq .gt_font_normal {
+#mslspzowps .gt_font_normal {
   font-weight: normal;
 }
 
-#jyxkqhhqwq .gt_font_bold {
+#mslspzowps .gt_font_bold {
   font-weight: bold;
 }
 
-#jyxkqhhqwq .gt_font_italic {
+#mslspzowps .gt_font_italic {
   font-style: italic;
 }
 
-#jyxkqhhqwq .gt_super {
+#mslspzowps .gt_super {
   font-size: 65%;
 }
 
-#jyxkqhhqwq .gt_footnote_marks {
+#mslspzowps .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jyxkqhhqwq .gt_asterisk {
+#mslspzowps .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jyxkqhhqwq .gt_indent_1 {
+#mslspzowps .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jyxkqhhqwq .gt_indent_2 {
+#mslspzowps .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jyxkqhhqwq .gt_indent_3 {
+#mslspzowps .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jyxkqhhqwq .gt_indent_4 {
+#mslspzowps .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jyxkqhhqwq .gt_indent_5 {
+#mslspzowps .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jyxkqhhqwq .katex-display {
+#mslspzowps .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jyxkqhhqwq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mslspzowps div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1345,23 +1344,23 @@ GLOBAL               6.60  4 0.16</code></pre>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="fu">tbl_regression</span>(vfit3, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="sgvftlafcs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#sgvftlafcs table {
+<div id="hwvxidgfws" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hwvxidgfws table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#sgvftlafcs thead, #sgvftlafcs tbody, #sgvftlafcs tfoot, #sgvftlafcs tr, #sgvftlafcs td, #sgvftlafcs th {
+#hwvxidgfws thead, #hwvxidgfws tbody, #hwvxidgfws tfoot, #hwvxidgfws tr, #hwvxidgfws td, #hwvxidgfws th {
   border-style: none;
 }
 
-#sgvftlafcs p {
+#hwvxidgfws p {
   margin: 0;
   padding: 0;
 }
 
-#sgvftlafcs .gt_table {
+#hwvxidgfws .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1387,12 +1386,12 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_caption {
+#hwvxidgfws .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#sgvftlafcs .gt_title {
+#hwvxidgfws .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1404,7 +1403,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-width: 0;
 }
 
-#sgvftlafcs .gt_subtitle {
+#hwvxidgfws .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1416,7 +1415,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-top-width: 0;
 }
 
-#sgvftlafcs .gt_heading {
+#hwvxidgfws .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1428,13 +1427,13 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_bottom_border {
+#hwvxidgfws .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_col_headings {
+#hwvxidgfws .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1449,7 +1448,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_col_heading {
+#hwvxidgfws .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1469,7 +1468,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   overflow-x: hidden;
 }
 
-#sgvftlafcs .gt_column_spanner_outer {
+#hwvxidgfws .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1481,15 +1480,15 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 4px;
 }
 
-#sgvftlafcs .gt_column_spanner_outer:first-child {
+#hwvxidgfws .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#sgvftlafcs .gt_column_spanner_outer:last-child {
+#hwvxidgfws .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#sgvftlafcs .gt_column_spanner {
+#hwvxidgfws .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1501,11 +1500,11 @@ GLOBAL               6.60  4 0.16</code></pre>
   width: 100%;
 }
 
-#sgvftlafcs .gt_spanner_row {
+#hwvxidgfws .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#sgvftlafcs .gt_group_heading {
+#hwvxidgfws .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1531,7 +1530,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   text-align: left;
 }
 
-#sgvftlafcs .gt_empty_group_heading {
+#hwvxidgfws .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1546,15 +1545,15 @@ GLOBAL               6.60  4 0.16</code></pre>
   vertical-align: middle;
 }
 
-#sgvftlafcs .gt_from_md > :first-child {
+#hwvxidgfws .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#sgvftlafcs .gt_from_md > :last-child {
+#hwvxidgfws .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#sgvftlafcs .gt_row {
+#hwvxidgfws .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1573,7 +1572,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   overflow-x: hidden;
 }
 
-#sgvftlafcs .gt_stub {
+#hwvxidgfws .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1586,7 +1585,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#sgvftlafcs .gt_stub_row_group {
+#hwvxidgfws .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1600,15 +1599,15 @@ GLOBAL               6.60  4 0.16</code></pre>
   vertical-align: top;
 }
 
-#sgvftlafcs .gt_row_group_first td {
+#hwvxidgfws .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#sgvftlafcs .gt_row_group_first th {
+#hwvxidgfws .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#sgvftlafcs .gt_summary_row {
+#hwvxidgfws .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1618,16 +1617,16 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#sgvftlafcs .gt_first_summary_row {
+#hwvxidgfws .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_first_summary_row.thick {
+#hwvxidgfws .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#sgvftlafcs .gt_last_summary_row {
+#hwvxidgfws .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1637,7 +1636,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_grand_summary_row {
+#hwvxidgfws .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1647,7 +1646,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#sgvftlafcs .gt_first_grand_summary_row {
+#hwvxidgfws .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1657,7 +1656,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_last_grand_summary_row_top {
+#hwvxidgfws .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1667,11 +1666,11 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_striped {
+#hwvxidgfws .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#sgvftlafcs .gt_table_body {
+#hwvxidgfws .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1680,7 +1679,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_footnotes {
+#hwvxidgfws .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1694,7 +1693,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_footnote {
+#hwvxidgfws .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1703,7 +1702,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#sgvftlafcs .gt_sourcenotes {
+#hwvxidgfws .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1717,7 +1716,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#sgvftlafcs .gt_sourcenote {
+#hwvxidgfws .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1725,72 +1724,72 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#sgvftlafcs .gt_left {
+#hwvxidgfws .gt_left {
   text-align: left;
 }
 
-#sgvftlafcs .gt_center {
+#hwvxidgfws .gt_center {
   text-align: center;
 }
 
-#sgvftlafcs .gt_right {
+#hwvxidgfws .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#sgvftlafcs .gt_font_normal {
+#hwvxidgfws .gt_font_normal {
   font-weight: normal;
 }
 
-#sgvftlafcs .gt_font_bold {
+#hwvxidgfws .gt_font_bold {
   font-weight: bold;
 }
 
-#sgvftlafcs .gt_font_italic {
+#hwvxidgfws .gt_font_italic {
   font-style: italic;
 }
 
-#sgvftlafcs .gt_super {
+#hwvxidgfws .gt_super {
   font-size: 65%;
 }
 
-#sgvftlafcs .gt_footnote_marks {
+#hwvxidgfws .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#sgvftlafcs .gt_asterisk {
+#hwvxidgfws .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#sgvftlafcs .gt_indent_1 {
+#hwvxidgfws .gt_indent_1 {
   text-indent: 5px;
 }
 
-#sgvftlafcs .gt_indent_2 {
+#hwvxidgfws .gt_indent_2 {
   text-indent: 10px;
 }
 
-#sgvftlafcs .gt_indent_3 {
+#hwvxidgfws .gt_indent_3 {
   text-indent: 15px;
 }
 
-#sgvftlafcs .gt_indent_4 {
+#hwvxidgfws .gt_indent_4 {
   text-indent: 20px;
 }
 
-#sgvftlafcs .gt_indent_5 {
+#hwvxidgfws .gt_indent_5 {
   text-indent: 25px;
 }
 
-#sgvftlafcs .katex-display {
+#hwvxidgfws .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#sgvftlafcs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hwvxidgfws div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1873,23 +1872,23 @@ GLOBAL               6.60  4 0.16</code></pre>
 <span id="cb11-5"><a href="#cb11-5"></a><span class="fu">tbl_regression</span>(vfit4, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="cjdzwerkvf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cjdzwerkvf table {
+<div id="zebwugpznq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zebwugpznq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cjdzwerkvf thead, #cjdzwerkvf tbody, #cjdzwerkvf tfoot, #cjdzwerkvf tr, #cjdzwerkvf td, #cjdzwerkvf th {
+#zebwugpznq thead, #zebwugpznq tbody, #zebwugpznq tfoot, #zebwugpznq tr, #zebwugpznq td, #zebwugpznq th {
   border-style: none;
 }
 
-#cjdzwerkvf p {
+#zebwugpznq p {
   margin: 0;
   padding: 0;
 }
 
-#cjdzwerkvf .gt_table {
+#zebwugpznq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1915,12 +1914,12 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_caption {
+#zebwugpznq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cjdzwerkvf .gt_title {
+#zebwugpznq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1932,7 +1931,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-width: 0;
 }
 
-#cjdzwerkvf .gt_subtitle {
+#zebwugpznq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1944,7 +1943,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-top-width: 0;
 }
 
-#cjdzwerkvf .gt_heading {
+#zebwugpznq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1956,13 +1955,13 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_bottom_border {
+#zebwugpznq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_col_headings {
+#zebwugpznq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1977,7 +1976,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_col_heading {
+#zebwugpznq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1997,7 +1996,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   overflow-x: hidden;
 }
 
-#cjdzwerkvf .gt_column_spanner_outer {
+#zebwugpznq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2009,15 +2008,15 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 4px;
 }
 
-#cjdzwerkvf .gt_column_spanner_outer:first-child {
+#zebwugpznq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cjdzwerkvf .gt_column_spanner_outer:last-child {
+#zebwugpznq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cjdzwerkvf .gt_column_spanner {
+#zebwugpznq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2029,11 +2028,11 @@ GLOBAL               6.60  4 0.16</code></pre>
   width: 100%;
 }
 
-#cjdzwerkvf .gt_spanner_row {
+#zebwugpznq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cjdzwerkvf .gt_group_heading {
+#zebwugpznq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2059,7 +2058,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   text-align: left;
 }
 
-#cjdzwerkvf .gt_empty_group_heading {
+#zebwugpznq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2074,15 +2073,15 @@ GLOBAL               6.60  4 0.16</code></pre>
   vertical-align: middle;
 }
 
-#cjdzwerkvf .gt_from_md > :first-child {
+#zebwugpznq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cjdzwerkvf .gt_from_md > :last-child {
+#zebwugpznq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cjdzwerkvf .gt_row {
+#zebwugpznq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2101,7 +2100,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   overflow-x: hidden;
 }
 
-#cjdzwerkvf .gt_stub {
+#zebwugpznq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2114,7 +2113,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#cjdzwerkvf .gt_stub_row_group {
+#zebwugpznq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2128,15 +2127,15 @@ GLOBAL               6.60  4 0.16</code></pre>
   vertical-align: top;
 }
 
-#cjdzwerkvf .gt_row_group_first td {
+#zebwugpznq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cjdzwerkvf .gt_row_group_first th {
+#zebwugpznq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cjdzwerkvf .gt_summary_row {
+#zebwugpznq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2146,16 +2145,16 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#cjdzwerkvf .gt_first_summary_row {
+#zebwugpznq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_first_summary_row.thick {
+#zebwugpznq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cjdzwerkvf .gt_last_summary_row {
+#zebwugpznq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2165,7 +2164,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_grand_summary_row {
+#zebwugpznq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2175,7 +2174,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#cjdzwerkvf .gt_first_grand_summary_row {
+#zebwugpznq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2185,7 +2184,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_last_grand_summary_row_top {
+#zebwugpznq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2195,11 +2194,11 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_striped {
+#zebwugpznq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cjdzwerkvf .gt_table_body {
+#zebwugpznq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2208,7 +2207,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_footnotes {
+#zebwugpznq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2222,7 +2221,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_footnote {
+#zebwugpznq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2231,7 +2230,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#cjdzwerkvf .gt_sourcenotes {
+#zebwugpznq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2245,7 +2244,7 @@ GLOBAL               6.60  4 0.16</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cjdzwerkvf .gt_sourcenote {
+#zebwugpznq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2253,72 +2252,72 @@ GLOBAL               6.60  4 0.16</code></pre>
   padding-right: 5px;
 }
 
-#cjdzwerkvf .gt_left {
+#zebwugpznq .gt_left {
   text-align: left;
 }
 
-#cjdzwerkvf .gt_center {
+#zebwugpznq .gt_center {
   text-align: center;
 }
 
-#cjdzwerkvf .gt_right {
+#zebwugpznq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cjdzwerkvf .gt_font_normal {
+#zebwugpznq .gt_font_normal {
   font-weight: normal;
 }
 
-#cjdzwerkvf .gt_font_bold {
+#zebwugpznq .gt_font_bold {
   font-weight: bold;
 }
 
-#cjdzwerkvf .gt_font_italic {
+#zebwugpznq .gt_font_italic {
   font-style: italic;
 }
 
-#cjdzwerkvf .gt_super {
+#zebwugpznq .gt_super {
   font-size: 65%;
 }
 
-#cjdzwerkvf .gt_footnote_marks {
+#zebwugpznq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cjdzwerkvf .gt_asterisk {
+#zebwugpznq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cjdzwerkvf .gt_indent_1 {
+#zebwugpznq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cjdzwerkvf .gt_indent_2 {
+#zebwugpznq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cjdzwerkvf .gt_indent_3 {
+#zebwugpznq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cjdzwerkvf .gt_indent_4 {
+#zebwugpznq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cjdzwerkvf .gt_indent_5 {
+#zebwugpznq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cjdzwerkvf .katex-display {
+#zebwugpznq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cjdzwerkvf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#zebwugpznq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2410,23 +2409,23 @@ GLOBAL              3.94  3 0.27</code></pre>
 <span id="cb14-3"><a href="#cb14-3"></a><span class="fu">tbl_regression</span>(vfit5, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="xtsblzmqcv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xtsblzmqcv table {
+<div id="xkwheogqrp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xkwheogqrp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xtsblzmqcv thead, #xtsblzmqcv tbody, #xtsblzmqcv tfoot, #xtsblzmqcv tr, #xtsblzmqcv td, #xtsblzmqcv th {
+#xkwheogqrp thead, #xkwheogqrp tbody, #xkwheogqrp tfoot, #xkwheogqrp tr, #xkwheogqrp td, #xkwheogqrp th {
   border-style: none;
 }
 
-#xtsblzmqcv p {
+#xkwheogqrp p {
   margin: 0;
   padding: 0;
 }
 
-#xtsblzmqcv .gt_table {
+#xkwheogqrp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2452,12 +2451,12 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_caption {
+#xkwheogqrp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xtsblzmqcv .gt_title {
+#xkwheogqrp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2469,7 +2468,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-width: 0;
 }
 
-#xtsblzmqcv .gt_subtitle {
+#xkwheogqrp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2481,7 +2480,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-top-width: 0;
 }
 
-#xtsblzmqcv .gt_heading {
+#xkwheogqrp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2493,13 +2492,13 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_bottom_border {
+#xkwheogqrp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_col_headings {
+#xkwheogqrp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2514,7 +2513,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_col_heading {
+#xkwheogqrp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2534,7 +2533,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   overflow-x: hidden;
 }
 
-#xtsblzmqcv .gt_column_spanner_outer {
+#xkwheogqrp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2546,15 +2545,15 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 4px;
 }
 
-#xtsblzmqcv .gt_column_spanner_outer:first-child {
+#xkwheogqrp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xtsblzmqcv .gt_column_spanner_outer:last-child {
+#xkwheogqrp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xtsblzmqcv .gt_column_spanner {
+#xkwheogqrp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2566,11 +2565,11 @@ GLOBAL              3.94  3 0.27</code></pre>
   width: 100%;
 }
 
-#xtsblzmqcv .gt_spanner_row {
+#xkwheogqrp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xtsblzmqcv .gt_group_heading {
+#xkwheogqrp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2596,7 +2595,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   text-align: left;
 }
 
-#xtsblzmqcv .gt_empty_group_heading {
+#xkwheogqrp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2611,15 +2610,15 @@ GLOBAL              3.94  3 0.27</code></pre>
   vertical-align: middle;
 }
 
-#xtsblzmqcv .gt_from_md > :first-child {
+#xkwheogqrp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xtsblzmqcv .gt_from_md > :last-child {
+#xkwheogqrp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xtsblzmqcv .gt_row {
+#xkwheogqrp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2638,7 +2637,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   overflow-x: hidden;
 }
 
-#xtsblzmqcv .gt_stub {
+#xkwheogqrp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2651,7 +2650,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#xtsblzmqcv .gt_stub_row_group {
+#xkwheogqrp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2665,15 +2664,15 @@ GLOBAL              3.94  3 0.27</code></pre>
   vertical-align: top;
 }
 
-#xtsblzmqcv .gt_row_group_first td {
+#xkwheogqrp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xtsblzmqcv .gt_row_group_first th {
+#xkwheogqrp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xtsblzmqcv .gt_summary_row {
+#xkwheogqrp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2683,16 +2682,16 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#xtsblzmqcv .gt_first_summary_row {
+#xkwheogqrp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_first_summary_row.thick {
+#xkwheogqrp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xtsblzmqcv .gt_last_summary_row {
+#xkwheogqrp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2702,7 +2701,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_grand_summary_row {
+#xkwheogqrp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2712,7 +2711,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#xtsblzmqcv .gt_first_grand_summary_row {
+#xkwheogqrp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2722,7 +2721,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_last_grand_summary_row_top {
+#xkwheogqrp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2732,11 +2731,11 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_striped {
+#xkwheogqrp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xtsblzmqcv .gt_table_body {
+#xkwheogqrp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2745,7 +2744,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_footnotes {
+#xkwheogqrp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2759,7 +2758,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_footnote {
+#xkwheogqrp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2768,7 +2767,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#xtsblzmqcv .gt_sourcenotes {
+#xkwheogqrp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2782,7 +2781,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#xtsblzmqcv .gt_sourcenote {
+#xkwheogqrp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2790,72 +2789,72 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#xtsblzmqcv .gt_left {
+#xkwheogqrp .gt_left {
   text-align: left;
 }
 
-#xtsblzmqcv .gt_center {
+#xkwheogqrp .gt_center {
   text-align: center;
 }
 
-#xtsblzmqcv .gt_right {
+#xkwheogqrp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xtsblzmqcv .gt_font_normal {
+#xkwheogqrp .gt_font_normal {
   font-weight: normal;
 }
 
-#xtsblzmqcv .gt_font_bold {
+#xkwheogqrp .gt_font_bold {
   font-weight: bold;
 }
 
-#xtsblzmqcv .gt_font_italic {
+#xkwheogqrp .gt_font_italic {
   font-style: italic;
 }
 
-#xtsblzmqcv .gt_super {
+#xkwheogqrp .gt_super {
   font-size: 65%;
 }
 
-#xtsblzmqcv .gt_footnote_marks {
+#xkwheogqrp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xtsblzmqcv .gt_asterisk {
+#xkwheogqrp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xtsblzmqcv .gt_indent_1 {
+#xkwheogqrp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xtsblzmqcv .gt_indent_2 {
+#xkwheogqrp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xtsblzmqcv .gt_indent_3 {
+#xkwheogqrp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xtsblzmqcv .gt_indent_4 {
+#xkwheogqrp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xtsblzmqcv .gt_indent_5 {
+#xkwheogqrp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xtsblzmqcv .katex-display {
+#xkwheogqrp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xtsblzmqcv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xkwheogqrp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2925,23 +2924,23 @@ GLOBAL              3.94  3 0.27</code></pre>
 <span id="cb15-7"><a href="#cb15-7"></a><span class="fu">tbl_regression</span>(vfit6, <span class="at">exp =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="bebionaybl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bebionaybl table {
+<div id="gpeflgfyny" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gpeflgfyny table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bebionaybl thead, #bebionaybl tbody, #bebionaybl tfoot, #bebionaybl tr, #bebionaybl td, #bebionaybl th {
+#gpeflgfyny thead, #gpeflgfyny tbody, #gpeflgfyny tfoot, #gpeflgfyny tr, #gpeflgfyny td, #gpeflgfyny th {
   border-style: none;
 }
 
-#bebionaybl p {
+#gpeflgfyny p {
   margin: 0;
   padding: 0;
 }
 
-#bebionaybl .gt_table {
+#gpeflgfyny .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2967,12 +2966,12 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#bebionaybl .gt_caption {
+#gpeflgfyny .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bebionaybl .gt_title {
+#gpeflgfyny .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2984,7 +2983,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-width: 0;
 }
 
-#bebionaybl .gt_subtitle {
+#gpeflgfyny .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2996,7 +2995,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-top-width: 0;
 }
 
-#bebionaybl .gt_heading {
+#gpeflgfyny .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3008,13 +3007,13 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bebionaybl .gt_bottom_border {
+#gpeflgfyny .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bebionaybl .gt_col_headings {
+#gpeflgfyny .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3029,7 +3028,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bebionaybl .gt_col_heading {
+#gpeflgfyny .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3049,7 +3048,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   overflow-x: hidden;
 }
 
-#bebionaybl .gt_column_spanner_outer {
+#gpeflgfyny .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3061,15 +3060,15 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 4px;
 }
 
-#bebionaybl .gt_column_spanner_outer:first-child {
+#gpeflgfyny .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bebionaybl .gt_column_spanner_outer:last-child {
+#gpeflgfyny .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bebionaybl .gt_column_spanner {
+#gpeflgfyny .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3081,11 +3080,11 @@ GLOBAL              3.94  3 0.27</code></pre>
   width: 100%;
 }
 
-#bebionaybl .gt_spanner_row {
+#gpeflgfyny .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bebionaybl .gt_group_heading {
+#gpeflgfyny .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3111,7 +3110,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   text-align: left;
 }
 
-#bebionaybl .gt_empty_group_heading {
+#gpeflgfyny .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3126,15 +3125,15 @@ GLOBAL              3.94  3 0.27</code></pre>
   vertical-align: middle;
 }
 
-#bebionaybl .gt_from_md > :first-child {
+#gpeflgfyny .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bebionaybl .gt_from_md > :last-child {
+#gpeflgfyny .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bebionaybl .gt_row {
+#gpeflgfyny .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3153,7 +3152,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   overflow-x: hidden;
 }
 
-#bebionaybl .gt_stub {
+#gpeflgfyny .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3166,7 +3165,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#bebionaybl .gt_stub_row_group {
+#gpeflgfyny .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3180,15 +3179,15 @@ GLOBAL              3.94  3 0.27</code></pre>
   vertical-align: top;
 }
 
-#bebionaybl .gt_row_group_first td {
+#gpeflgfyny .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bebionaybl .gt_row_group_first th {
+#gpeflgfyny .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bebionaybl .gt_summary_row {
+#gpeflgfyny .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3198,16 +3197,16 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#bebionaybl .gt_first_summary_row {
+#gpeflgfyny .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bebionaybl .gt_first_summary_row.thick {
+#gpeflgfyny .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bebionaybl .gt_last_summary_row {
+#gpeflgfyny .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3217,7 +3216,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#bebionaybl .gt_grand_summary_row {
+#gpeflgfyny .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3227,7 +3226,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#bebionaybl .gt_first_grand_summary_row {
+#gpeflgfyny .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3237,7 +3236,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#bebionaybl .gt_last_grand_summary_row_top {
+#gpeflgfyny .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3247,11 +3246,11 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#bebionaybl .gt_striped {
+#gpeflgfyny .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bebionaybl .gt_table_body {
+#gpeflgfyny .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3260,7 +3259,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#bebionaybl .gt_footnotes {
+#gpeflgfyny .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3274,7 +3273,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bebionaybl .gt_footnote {
+#gpeflgfyny .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3283,7 +3282,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#bebionaybl .gt_sourcenotes {
+#gpeflgfyny .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3297,7 +3296,7 @@ GLOBAL              3.94  3 0.27</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bebionaybl .gt_sourcenote {
+#gpeflgfyny .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3305,72 +3304,72 @@ GLOBAL              3.94  3 0.27</code></pre>
   padding-right: 5px;
 }
 
-#bebionaybl .gt_left {
+#gpeflgfyny .gt_left {
   text-align: left;
 }
 
-#bebionaybl .gt_center {
+#gpeflgfyny .gt_center {
   text-align: center;
 }
 
-#bebionaybl .gt_right {
+#gpeflgfyny .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bebionaybl .gt_font_normal {
+#gpeflgfyny .gt_font_normal {
   font-weight: normal;
 }
 
-#bebionaybl .gt_font_bold {
+#gpeflgfyny .gt_font_bold {
   font-weight: bold;
 }
 
-#bebionaybl .gt_font_italic {
+#gpeflgfyny .gt_font_italic {
   font-style: italic;
 }
 
-#bebionaybl .gt_super {
+#gpeflgfyny .gt_super {
   font-size: 65%;
 }
 
-#bebionaybl .gt_footnote_marks {
+#gpeflgfyny .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bebionaybl .gt_asterisk {
+#gpeflgfyny .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bebionaybl .gt_indent_1 {
+#gpeflgfyny .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bebionaybl .gt_indent_2 {
+#gpeflgfyny .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bebionaybl .gt_indent_3 {
+#gpeflgfyny .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bebionaybl .gt_indent_4 {
+#gpeflgfyny .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bebionaybl .gt_indent_5 {
+#gpeflgfyny .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bebionaybl .katex-display {
+#gpeflgfyny .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bebionaybl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gpeflgfyny div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4377,394 +4376,392 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb28-6"><a href="#cb28-6"></a><span class="an">description:</span><span class="co"> "The hazards of misunderstanding the hazard ratio."</span></span>
 <span id="cb28-7"><a href="#cb28-7"></a><span class="co">---</span></span>
 <span id="cb28-8"><a href="#cb28-8"></a></span>
-<span id="cb28-9"><a href="#cb28-9"></a>Welcome back to Stats Tips after a brief mid-year break.</span>
+<span id="cb28-9"><a href="#cb28-9"></a>In the last post we discussed some approaches to the diagnosis of non-proportional hazards for a covariate in our Cox model.</span>
 <span id="cb28-10"><a href="#cb28-10"></a></span>
-<span id="cb28-11"><a href="#cb28-11"></a>In the last post we discussed some approaches to the diagnosis of non-proportional hazards for a covariate in our Cox model.</span>
+<span id="cb28-11"><a href="#cb28-11"></a>And the big question I'm sure you're chomping at the bit to ask is "Well, what can we do about it?"</span>
 <span id="cb28-12"><a href="#cb28-12"></a></span>
-<span id="cb28-13"><a href="#cb28-13"></a>And the big question I'm sure you're chomping at the bit to ask is "Well, what can we do about it?"</span>
+<span id="cb28-13"><a href="#cb28-13"></a>Ok, relax... there are in fact several things we can do. Today we are going to consider the remediation actions we can take when we are faced with this issue in our day-to-day work. To get us started and to introduce the concepts to you, I've broken those actions down broadly into four groups:</span>
 <span id="cb28-14"><a href="#cb28-14"></a></span>
-<span id="cb28-15"><a href="#cb28-15"></a>Ok, relax... there are in fact several things we can do. Today we are going to consider the remediation actions we can take when we are faced with this issue in our day-to-day work. To get us started and to introduce the concepts to you, I've broken those actions down broadly into four groups:</span>
+<span id="cb28-15"><a href="#cb28-15"></a><span class="ss">1.  </span>Model specification adjustments.</span>
 <span id="cb28-16"><a href="#cb28-16"></a></span>
-<span id="cb28-17"><a href="#cb28-17"></a><span class="ss">1.  </span>Model specification adjustments.</span>
+<span id="cb28-17"><a href="#cb28-17"></a><span class="ss">2.  </span>Use strata (categorical variables only).</span>
 <span id="cb28-18"><a href="#cb28-18"></a></span>
-<span id="cb28-19"><a href="#cb28-19"></a><span class="ss">2.  </span>Use strata (categorical variables only).</span>
+<span id="cb28-19"><a href="#cb28-19"></a><span class="ss">3.  </span>Incorporate non-proportionality into the model (time-dependent coefficients).</span>
 <span id="cb28-20"><a href="#cb28-20"></a></span>
-<span id="cb28-21"><a href="#cb28-21"></a><span class="ss">3.  </span>Incorporate non-proportionality into the model (time-dependent coefficients).</span>
+<span id="cb28-21"><a href="#cb28-21"></a><span class="ss">    -   </span>Step functions (different HR's over different time intervals).</span>
 <span id="cb28-22"><a href="#cb28-22"></a></span>
-<span id="cb28-23"><a href="#cb28-23"></a><span class="ss">    -   </span>Step functions (different HR's over different time intervals).</span>
+<span id="cb28-23"><a href="#cb28-23"></a><span class="ss">    -   </span>Continuous time-dependent coefficients (smoothed HR over time).</span>
 <span id="cb28-24"><a href="#cb28-24"></a></span>
-<span id="cb28-25"><a href="#cb28-25"></a><span class="ss">    -   </span>Continuous time-dependent coefficients (smoothed HR over time).</span>
+<span id="cb28-25"><a href="#cb28-25"></a><span class="ss">4.  </span>Use a different type of model.</span>
 <span id="cb28-26"><a href="#cb28-26"></a></span>
-<span id="cb28-27"><a href="#cb28-27"></a><span class="ss">4.  </span>Use a different type of model.</span>
+<span id="cb28-27"><a href="#cb28-27"></a><span class="ss">    -   </span>Accelerated failure time model.</span>
 <span id="cb28-28"><a href="#cb28-28"></a></span>
-<span id="cb28-29"><a href="#cb28-29"></a><span class="ss">    -   </span>Accelerated failure time model.</span>
+<span id="cb28-29"><a href="#cb28-29"></a><span class="ss">    -   </span>Flexible parametric (Royston-Parmar) survival model.</span>
 <span id="cb28-30"><a href="#cb28-30"></a></span>
-<span id="cb28-31"><a href="#cb28-31"></a><span class="ss">    -   </span>Flexible parametric (Royston-Parmar) survival model.</span>
+<span id="cb28-31"><a href="#cb28-31"></a>In providing examples of how we might implement each of these in <span class="in">`R`</span> we will return to the <span class="in">`veteran`</span> dataset that we used in the last post, so get that ready using the code below.</span>
 <span id="cb28-32"><a href="#cb28-32"></a></span>
-<span id="cb28-33"><a href="#cb28-33"></a>In providing examples of how we might implement each of these in <span class="in">`R`</span> we will return to the <span class="in">`veteran`</span> dataset that we used in the last post, so get that ready using the code below.</span>
-<span id="cb28-34"><a href="#cb28-34"></a></span>
-<span id="cb28-37"><a href="#cb28-37"></a><span class="in">```{r}</span></span>
-<span id="cb28-38"><a href="#cb28-38"></a><span class="co">#| message: false</span></span>
-<span id="cb28-39"><a href="#cb28-39"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-40"><a href="#cb28-40"></a><span class="fu">library</span>(survival)</span>
-<span id="cb28-41"><a href="#cb28-41"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb28-42"><a href="#cb28-42"></a><span class="fu">library</span>(survminer)</span>
-<span id="cb28-43"><a href="#cb28-43"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb28-44"><a href="#cb28-44"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb28-45"><a href="#cb28-45"></a><span class="co"># Load veteran data from survival package</span></span>
-<span id="cb28-46"><a href="#cb28-46"></a>vdata1 <span class="ot">&lt;-</span>  veteran</span>
-<span id="cb28-47"><a href="#cb28-47"></a><span class="co"># Make treatment variable equal to 0,1 instead of 1,2 (not necessary, but I just like to work with the former)</span></span>
-<span id="cb28-48"><a href="#cb28-48"></a>vdata1<span class="sc">$</span>trt <span class="ot">&lt;-</span>  <span class="fu">as.numeric</span>(vdata1<span class="sc">$</span>trt) <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb28-49"><a href="#cb28-49"></a><span class="co"># Create id variable and organise columns</span></span>
-<span id="cb28-50"><a href="#cb28-50"></a>vdata1<span class="sc">$</span>id <span class="ot">&lt;-</span>  <span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(vdata1)[<span class="dv">1</span>])</span>
-<span id="cb28-51"><a href="#cb28-51"></a>vdata1 <span class="ot">&lt;-</span>  vdata1 <span class="sc">|&gt;</span> </span>
-<span id="cb28-52"><a href="#cb28-52"></a>  <span class="fu">select</span>(id, time, status, trt, age)</span>
-<span id="cb28-53"><a href="#cb28-53"></a><span class="in">```</span></span>
+<span id="cb28-35"><a href="#cb28-35"></a><span class="in">```{r}</span></span>
+<span id="cb28-36"><a href="#cb28-36"></a><span class="co">#| message: false</span></span>
+<span id="cb28-37"><a href="#cb28-37"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-38"><a href="#cb28-38"></a><span class="fu">library</span>(survival)</span>
+<span id="cb28-39"><a href="#cb28-39"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb28-40"><a href="#cb28-40"></a><span class="fu">library</span>(survminer)</span>
+<span id="cb28-41"><a href="#cb28-41"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb28-42"><a href="#cb28-42"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb28-43"><a href="#cb28-43"></a><span class="co"># Load veteran data from survival package</span></span>
+<span id="cb28-44"><a href="#cb28-44"></a>vdata1 <span class="ot">&lt;-</span>  veteran</span>
+<span id="cb28-45"><a href="#cb28-45"></a><span class="co"># Make treatment variable equal to 0,1 instead of 1,2 (not necessary, but I just like to work with the former)</span></span>
+<span id="cb28-46"><a href="#cb28-46"></a>vdata1<span class="sc">$</span>trt <span class="ot">&lt;-</span>  <span class="fu">as.numeric</span>(vdata1<span class="sc">$</span>trt) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb28-47"><a href="#cb28-47"></a><span class="co"># Create id variable and organise columns</span></span>
+<span id="cb28-48"><a href="#cb28-48"></a>vdata1<span class="sc">$</span>id <span class="ot">&lt;-</span>  <span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(vdata1)[<span class="dv">1</span>])</span>
+<span id="cb28-49"><a href="#cb28-49"></a>vdata1 <span class="ot">&lt;-</span>  vdata1 <span class="sc">|&gt;</span> </span>
+<span id="cb28-50"><a href="#cb28-50"></a>  <span class="fu">select</span>(id, time, status, trt, age)</span>
+<span id="cb28-51"><a href="#cb28-51"></a><span class="in">```</span></span>
+<span id="cb28-52"><a href="#cb28-52"></a></span>
+<span id="cb28-53"><a href="#cb28-53"></a>Let's talk about these ideas in more detail now.</span>
 <span id="cb28-54"><a href="#cb28-54"></a></span>
-<span id="cb28-55"><a href="#cb28-55"></a>Let's talk about these ideas in more detail now.</span>
+<span id="cb28-55"><a href="#cb28-55"></a><span class="fu"># Adjust Your Model Specification</span></span>
 <span id="cb28-56"><a href="#cb28-56"></a></span>
-<span id="cb28-57"><a href="#cb28-57"></a><span class="fu"># Adjust Your Model Specification</span></span>
+<span id="cb28-57"><a href="#cb28-57"></a>This is something you can explore in your model before you take any of the subsequent actions that I describe. In fact, this is not really doing anything special at all in the treatment of non-proportional hazards. All you are doing here is attempting to optimise your model specification, and that's an ideal that we should aim to achieve in every model we make.</span>
 <span id="cb28-58"><a href="#cb28-58"></a></span>
-<span id="cb28-59"><a href="#cb28-59"></a>This is something you can explore in your model before you take any of the subsequent actions that I describe. In fact, this is not really doing anything special at all in the treatment of non-proportional hazards. All you are doing here is attempting to optimise your model specification, and that's an ideal that we should aim to achieve in every model we make.</span>
+<span id="cb28-59"><a href="#cb28-59"></a>It may not be immediately intuitive, but tests for proportional hazards (PH) come after the model coefficients for the covariates have been estimated. If there is an error in the model for how the covariates are specified that can also lead to a failure of a PH test - in other words, the power of the test to detect non-proportionality is contingent on the correct specification of the model.</span>
 <span id="cb28-60"><a href="#cb28-60"></a></span>
-<span id="cb28-61"><a href="#cb28-61"></a>It may not be immediately intuitive, but tests for proportional hazards (PH) come after the model coefficients for the covariates have been estimated. If there is an error in the model for how the covariates are specified that can also lead to a failure of a PH test - in other words, the power of the test to detect non-proportionality is contingent on the correct specification of the model.</span>
+<span id="cb28-61"><a href="#cb28-61"></a>So what do I mean with all this talk of 'model specification'? Well, in the current context there are three things you can consider doing to optimise your model and facilitate PH testing success:</span>
 <span id="cb28-62"><a href="#cb28-62"></a></span>
-<span id="cb28-63"><a href="#cb28-63"></a>So what do I mean with all this talk of 'model specification'? Well, in the current context there are three things you can consider doing to optimise your model and facilitate PH testing success:</span>
+<span id="cb28-63"><a href="#cb28-63"></a><span class="ss">1.  </span>Check the functional form of your continuous covariates.</span>
 <span id="cb28-64"><a href="#cb28-64"></a></span>
-<span id="cb28-65"><a href="#cb28-65"></a><span class="ss">1.  </span>Check the functional form of your continuous covariates.</span>
+<span id="cb28-65"><a href="#cb28-65"></a><span class="ss">2.  </span>Check you haven't omitted any necessary interactions.</span>
 <span id="cb28-66"><a href="#cb28-66"></a></span>
-<span id="cb28-67"><a href="#cb28-67"></a><span class="ss">2.  </span>Check you haven't omitted any necessary interactions.</span>
+<span id="cb28-67"><a href="#cb28-67"></a><span class="ss">3.  </span>Check you haven't omitted any important variables.</span>
 <span id="cb28-68"><a href="#cb28-68"></a></span>
-<span id="cb28-69"><a href="#cb28-69"></a><span class="ss">3.  </span>Check you haven't omitted any important variables.</span>
+<span id="cb28-69"><a href="#cb28-69"></a>The first point is simply stating that when you enter a continuous covariate in a model, the model assumes the relationship of that covariate with the outcome of interest (i.e. its functional form) is linear in nature. This can often be an unrealistic assumption, but it is one that is easily checked and fixed by allowing for potential non-linearity with the inclusion of a restricted cubic spline term on your covariate (<span class="co">[</span><span class="ot">see here)</span><span class="co">](https://msni-stats-tips.netlify.app/posts/009_05apr_2024/)</span>.</span>
 <span id="cb28-70"><a href="#cb28-70"></a></span>
-<span id="cb28-71"><a href="#cb28-71"></a>The first point is simply stating that when you enter a continuous covariate in a model, the model assumes the relationship of that covariate with the outcome of interest (i.e. its functional form) is linear in nature. This can often be an unrealistic assumption, but it is one that is easily checked and fixed by allowing for potential non-linearity with the inclusion of a restricted cubic spline term on your covariate (<span class="co">[</span><span class="ot">see here)</span><span class="co">](https://msni-stats-tips.netlify.app/posts/009_05apr_2024/)</span>.</span>
+<span id="cb28-71"><a href="#cb28-71"></a>The second point is also not difficult to assess in your model. Consider whether there are any potential moderating effects of covariates on the association between any other covariate and the outcome. Test this with the inclusion of an interaction term.</span>
 <span id="cb28-72"><a href="#cb28-72"></a></span>
-<span id="cb28-73"><a href="#cb28-73"></a>The second point is also not difficult to assess in your model. Consider whether there are any potential moderating effects of covariates on the association between any other covariate and the outcome. Test this with the inclusion of an interaction term.</span>
+<span id="cb28-73"><a href="#cb28-73"></a>Unfortunately, the third point is more difficult to do anything about as with observational data we typically don't know what we don't know. And if we do know another variable would be of value to incorporate in our model, we simply may not have any information on it. So you will be a bit more hamstrung here.</span>
 <span id="cb28-74"><a href="#cb28-74"></a></span>
-<span id="cb28-75"><a href="#cb28-75"></a>Unfortunately, the third point is more difficult to do anything about as with observational data we typically don't know what we don't know. And if we do know another variable would be of value to incorporate in our model, we simply may not have any information on it. So you will be a bit more hamstrung here.</span>
+<span id="cb28-75"><a href="#cb28-75"></a>If you recall from the last post, the model fit exploring the association between <span class="in">`trt`</span> and <span class="in">`age`</span> and the risk of death, and the resulting GOF PH test from that model was:</span>
 <span id="cb28-76"><a href="#cb28-76"></a></span>
-<span id="cb28-77"><a href="#cb28-77"></a>If you recall from the last post, the model fit exploring the association between <span class="in">`trt`</span> and <span class="in">`age`</span> and the risk of death, and the resulting GOF PH test from that model was:</span>
+<span id="cb28-77"><a href="#cb28-77"></a><span class="in">`vfit1 &lt;- coxph(Surv(time, status) ~ trt + age, vdata1)`</span></span>
 <span id="cb28-78"><a href="#cb28-78"></a></span>
-<span id="cb28-79"><a href="#cb28-79"></a><span class="in">`vfit1 &lt;- coxph(Surv(time, status) ~ trt + age, vdata1)`</span></span>
-<span id="cb28-80"><a href="#cb28-80"></a></span>
-<span id="cb28-83"><a href="#cb28-83"></a><span class="in">```{r}</span></span>
-<span id="cb28-84"><a href="#cb28-84"></a><span class="co"># Fit basic model with treatment and age as the only predictors</span></span>
-<span id="cb28-85"><a href="#cb28-85"></a>vfit1 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age, vdata1)</span>
-<span id="cb28-86"><a href="#cb28-86"></a><span class="fu">tbl_regression</span>(vfit1, <span class="at">exp =</span> T)</span>
-<span id="cb28-87"><a href="#cb28-87"></a><span class="co"># Test Schoenfeld residuals</span></span>
-<span id="cb28-88"><a href="#cb28-88"></a>(sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit1))</span>
-<span id="cb28-89"><a href="#cb28-89"></a><span class="in">```</span></span>
+<span id="cb28-81"><a href="#cb28-81"></a><span class="in">```{r}</span></span>
+<span id="cb28-82"><a href="#cb28-82"></a><span class="co"># Fit basic model with treatment and age as the only predictors</span></span>
+<span id="cb28-83"><a href="#cb28-83"></a>vfit1 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age, vdata1)</span>
+<span id="cb28-84"><a href="#cb28-84"></a><span class="fu">tbl_regression</span>(vfit1, <span class="at">exp =</span> T)</span>
+<span id="cb28-85"><a href="#cb28-85"></a><span class="co"># Test Schoenfeld residuals</span></span>
+<span id="cb28-86"><a href="#cb28-86"></a>(sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit1))</span>
+<span id="cb28-87"><a href="#cb28-87"></a><span class="in">```</span></span>
+<span id="cb28-88"><a href="#cb28-88"></a></span>
+<span id="cb28-89"><a href="#cb28-89"></a>Now, what happens if we include a spline term on age?</span>
 <span id="cb28-90"><a href="#cb28-90"></a></span>
-<span id="cb28-91"><a href="#cb28-91"></a>Now, what happens if we include a spline term on age?</span>
+<span id="cb28-91"><a href="#cb28-91"></a><span class="in">`vfit2 &lt;- coxph(Surv(time, status) ~ trt + splines::ns(age,3), vdata1)`</span></span>
 <span id="cb28-92"><a href="#cb28-92"></a></span>
-<span id="cb28-93"><a href="#cb28-93"></a><span class="in">`vfit2 &lt;- coxph(Surv(time, status) ~ trt + splines::ns(age,3), vdata1)`</span></span>
-<span id="cb28-94"><a href="#cb28-94"></a></span>
-<span id="cb28-97"><a href="#cb28-97"></a><span class="in">```{r}</span></span>
-<span id="cb28-98"><a href="#cb28-98"></a><span class="co"># Refit model with spline on age</span></span>
-<span id="cb28-99"><a href="#cb28-99"></a>vfit2 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> splines<span class="sc">::</span><span class="fu">ns</span>(age,<span class="dv">3</span>), vdata1)</span>
-<span id="cb28-100"><a href="#cb28-100"></a><span class="fu">tbl_regression</span>(vfit2, <span class="at">exp =</span> T)</span>
-<span id="cb28-101"><a href="#cb28-101"></a><span class="co"># Test Schoenfeld residuals</span></span>
-<span id="cb28-102"><a href="#cb28-102"></a>(sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit2))</span>
-<span id="cb28-103"><a href="#cb28-103"></a><span class="in">```</span></span>
+<span id="cb28-95"><a href="#cb28-95"></a><span class="in">```{r}</span></span>
+<span id="cb28-96"><a href="#cb28-96"></a><span class="co"># Refit model with spline on age</span></span>
+<span id="cb28-97"><a href="#cb28-97"></a>vfit2 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> splines<span class="sc">::</span><span class="fu">ns</span>(age,<span class="dv">3</span>), vdata1)</span>
+<span id="cb28-98"><a href="#cb28-98"></a><span class="fu">tbl_regression</span>(vfit2, <span class="at">exp =</span> T)</span>
+<span id="cb28-99"><a href="#cb28-99"></a><span class="co"># Test Schoenfeld residuals</span></span>
+<span id="cb28-100"><a href="#cb28-100"></a>(sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit2))</span>
+<span id="cb28-101"><a href="#cb28-101"></a><span class="in">```</span></span>
+<span id="cb28-102"><a href="#cb28-102"></a></span>
+<span id="cb28-103"><a href="#cb28-103"></a>Well there you go - we have already made things better! Unfortunately there is no free lunch and now that you have improved the test of PH by a functional form correction, you need to contend with the complexities involved with the interpretation of spline terms. As I outlined in my previous post on the use of splines, the coefficients are not directly interpretable and so the best option is always to plot your results. We can do that here for the HR for age with a little bit of help from the <span class="in">`emmeans`</span> and <span class="in">`data.table`</span> packages:</span>
 <span id="cb28-104"><a href="#cb28-104"></a></span>
-<span id="cb28-105"><a href="#cb28-105"></a>Well there you go - we have already made things better! Unfortunately there is no free lunch and now that you have improved the test of PH by a functional form correction, you need to contend with the complexities involved with the interpretation of spline terms. As I outlined in my previous post on the use of splines, the coefficients are not directly interpretable and so the best option is always to plot your results. We can do that here for the HR for age with a little bit of help from the <span class="in">`emmeans`</span> and <span class="in">`data.table`</span> packages:</span>
-<span id="cb28-106"><a href="#cb28-106"></a></span>
-<span id="cb28-109"><a href="#cb28-109"></a><span class="in">```{r}</span></span>
-<span id="cb28-110"><a href="#cb28-110"></a><span class="co">#| message: false</span></span>
-<span id="cb28-111"><a href="#cb28-111"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-112"><a href="#cb28-112"></a><span class="fu">library</span>(emmeans)</span>
-<span id="cb28-113"><a href="#cb28-113"></a><span class="co"># Estimate hazard rate at yearly intervals</span></span>
-<span id="cb28-114"><a href="#cb28-114"></a>emm_df <span class="ot">&lt;-</span>  <span class="fu">emmeans</span>(vfit2, <span class="sc">~</span> age, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">age =</span> <span class="fu">seq</span>(<span class="dv">30</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">1</span>)), <span class="at">type =</span> <span class="st">"unlink"</span>)</span>
-<span id="cb28-115"><a href="#cb28-115"></a>emm_df <span class="ot">&lt;-</span>  <span class="fu">data.frame</span>(emm_df)</span>
-<span id="cb28-116"><a href="#cb28-116"></a><span class="co"># Calculate HR at yearly intervals by dividing each successive pair of hazard rates</span></span>
-<span id="cb28-117"><a href="#cb28-117"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb28-118"><a href="#cb28-118"></a><span class="fu">setDT</span>(emm_df)[, pred_HR <span class="sc">:</span><span class="er">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, response[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">/</span> response[<span class="sc">-</span>.N])]</span>
-<span id="cb28-119"><a href="#cb28-119"></a><span class="co"># Plot HR for age over range of age</span></span>
-<span id="cb28-120"><a href="#cb28-120"></a><span class="fu">ggplot</span>(emm_df, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> pred_HR, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb28-121"><a href="#cb28-121"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb28-122"><a href="#cb28-122"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb28-123"><a href="#cb28-123"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">1.2</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">1.2</span>, <span class="at">by =</span> <span class="fl">0.25</span>)) <span class="sc">+</span></span>
-<span id="cb28-124"><a href="#cb28-124"></a>  <span class="fu">xlab</span>(<span class="st">"Age"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Predicted HR"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Predicted HR for Age (as a function of Age)"</span>) <span class="sc">+</span></span>
-<span id="cb28-125"><a href="#cb28-125"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span>
-<span id="cb28-126"><a href="#cb28-126"></a><span class="in">```</span></span>
+<span id="cb28-107"><a href="#cb28-107"></a><span class="in">```{r}</span></span>
+<span id="cb28-108"><a href="#cb28-108"></a><span class="co">#| message: false</span></span>
+<span id="cb28-109"><a href="#cb28-109"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-110"><a href="#cb28-110"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb28-111"><a href="#cb28-111"></a><span class="co"># Estimate hazard rate at yearly intervals</span></span>
+<span id="cb28-112"><a href="#cb28-112"></a>emm_df <span class="ot">&lt;-</span>  <span class="fu">emmeans</span>(vfit2, <span class="sc">~</span> age, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">age =</span> <span class="fu">seq</span>(<span class="dv">30</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">1</span>)), <span class="at">type =</span> <span class="st">"unlink"</span>)</span>
+<span id="cb28-113"><a href="#cb28-113"></a>emm_df <span class="ot">&lt;-</span>  <span class="fu">data.frame</span>(emm_df)</span>
+<span id="cb28-114"><a href="#cb28-114"></a><span class="co"># Calculate HR at yearly intervals by dividing each successive pair of hazard rates</span></span>
+<span id="cb28-115"><a href="#cb28-115"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb28-116"><a href="#cb28-116"></a><span class="fu">setDT</span>(emm_df)[, pred_HR <span class="sc">:</span><span class="er">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, response[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">/</span> response[<span class="sc">-</span>.N])]</span>
+<span id="cb28-117"><a href="#cb28-117"></a><span class="co"># Plot HR for age over range of age</span></span>
+<span id="cb28-118"><a href="#cb28-118"></a><span class="fu">ggplot</span>(emm_df, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> pred_HR, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb28-119"><a href="#cb28-119"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb28-120"><a href="#cb28-120"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb28-121"><a href="#cb28-121"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">1.2</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">1.2</span>, <span class="at">by =</span> <span class="fl">0.25</span>)) <span class="sc">+</span></span>
+<span id="cb28-122"><a href="#cb28-122"></a>  <span class="fu">xlab</span>(<span class="st">"Age"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Predicted HR"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Predicted HR for Age (as a function of Age)"</span>) <span class="sc">+</span></span>
+<span id="cb28-123"><a href="#cb28-123"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span>
+<span id="cb28-124"><a href="#cb28-124"></a><span class="in">```</span></span>
+<span id="cb28-125"><a href="#cb28-125"></a></span>
+<span id="cb28-126"><a href="#cb28-126"></a><span class="fu"># Use Strata</span></span>
 <span id="cb28-127"><a href="#cb28-127"></a></span>
-<span id="cb28-128"><a href="#cb28-128"></a><span class="fu"># Use Strata</span></span>
+<span id="cb28-128"><a href="#cb28-128"></a>The next simplest approach to dealing with a PH violation is to stratify on the offending covariate in your model. This provides additional flexibility in allowing for proportional hazards *within* each stratum (i.e. level) of the covariate, but for that definitional reason, really only works with *categorical* variables. In this stratified Cox model, **the regression coefficients are assumed to be the same in each stratum**, but the **baseline hazard functions may be completely different**. And that is how the problem of non-proportionality is circumvented in using this method.</span>
 <span id="cb28-129"><a href="#cb28-129"></a></span>
-<span id="cb28-130"><a href="#cb28-130"></a>The next simplest approach to dealing with a PH violation is to stratify on the offending covariate in your model. This provides additional flexibility in allowing for proportional hazards *within* each stratum (i.e. level) of the covariate, but for that definitional reason, really only works with *categorical* variables. In this stratified Cox model, **the regression coefficients are assumed to be the same in each stratum**, but the **baseline hazard functions may be completely different**. And that is how the problem of non-proportionality is circumvented in using this method.</span>
+<span id="cb28-130"><a href="#cb28-130"></a>Within the <span class="in">`coxph()`</span> model call it's a simple case of specifying a <span class="in">`strata()`</span> term. Let's do that now for <span class="in">`trt`</span>:</span>
 <span id="cb28-131"><a href="#cb28-131"></a></span>
-<span id="cb28-132"><a href="#cb28-132"></a>Within the <span class="in">`coxph()`</span> model call it's a simple case of specifying a <span class="in">`strata()`</span> term. Let's do that now for <span class="in">`trt`</span>:</span>
+<span id="cb28-132"><a href="#cb28-132"></a><span class="in">`vfit3 &lt;- coxph(Surv(time, status) ~ trt + age + strata(trt), vdata1)`</span></span>
 <span id="cb28-133"><a href="#cb28-133"></a></span>
-<span id="cb28-134"><a href="#cb28-134"></a><span class="in">`vfit3 &lt;- coxph(Surv(time, status) ~ trt + age + strata(trt), vdata1)`</span></span>
-<span id="cb28-135"><a href="#cb28-135"></a></span>
-<span id="cb28-138"><a href="#cb28-138"></a><span class="in">```{r}</span></span>
-<span id="cb28-139"><a href="#cb28-139"></a>vfit3 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">strata</span>(trt), vdata1)</span>
-<span id="cb28-140"><a href="#cb28-140"></a><span class="fu">tbl_regression</span>(vfit3, <span class="at">exp =</span> T)</span>
-<span id="cb28-141"><a href="#cb28-141"></a><span class="in">```</span></span>
+<span id="cb28-136"><a href="#cb28-136"></a><span class="in">```{r}</span></span>
+<span id="cb28-137"><a href="#cb28-137"></a>vfit3 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">strata</span>(trt), vdata1)</span>
+<span id="cb28-138"><a href="#cb28-138"></a><span class="fu">tbl_regression</span>(vfit3, <span class="at">exp =</span> T)</span>
+<span id="cb28-139"><a href="#cb28-139"></a><span class="in">```</span></span>
+<span id="cb28-140"><a href="#cb28-140"></a></span>
+<span id="cb28-141"><a href="#cb28-141"></a>Hang on - what happened to the coefficient/HR for <span class="in">`trt`</span>?? Well, this is the BIG downside to this approach. By stratifying on a covariate, you no longer get any information returned about that covariate. So this method is really only fine if your offending variable isn't a primary exposure of interest and you are just adjusting for it in the model. Otherwise you are somewhat shooting yourself in the foot if you actually want to know what that effect estimate is.</span>
 <span id="cb28-142"><a href="#cb28-142"></a></span>
-<span id="cb28-143"><a href="#cb28-143"></a>Hang on - what happened to the coefficient/HR for <span class="in">`trt`</span>?? Well, this is the BIG downside to this approach. By stratifying on a covariate, you no longer get any information returned about that covariate. So this method is really only fine if your offending variable isn't a primary exposure of interest and you are just adjusting for it in the model. Otherwise you are somewhat shooting yourself in the foot if you actually want to know what that effect estimate is.</span>
+<span id="cb28-143"><a href="#cb28-143"></a><span class="fu"># Incorporate Non-Proportionality into the Model</span></span>
 <span id="cb28-144"><a href="#cb28-144"></a></span>
-<span id="cb28-145"><a href="#cb28-145"></a><span class="fu"># Incorporate Non-Proportionality into the Model</span></span>
+<span id="cb28-145"><a href="#cb28-145"></a>In this approach we use time-varying (-dependent) coefficients. In other words we allow the HR to vary over time for the offending covariate, thus negating any need for the assumption of PH in the first place. There are two variants on these methodological theme - in the first instance we can define time periods where the HR looks relatively stable within each period but different across periods, and estimate different HR's accordingly. These are called step functions. Alternatively, we can estimate a more continuous (smoothed) HR for the offending covariate over time. This provides more flexibility but at the cost of more complexity.</span>
 <span id="cb28-146"><a href="#cb28-146"></a></span>
-<span id="cb28-147"><a href="#cb28-147"></a>In this approach we use time-varying (-dependent) coefficients. In other words we allow the HR to vary over time for the offending covariate, thus negating any need for the assumption of PH in the first place. There are two variants on these methodological theme - in the first instance we can define time periods where the HR looks relatively stable within each period but different across periods, and estimate different HR's accordingly. These are called step functions. Alternatively, we can estimate a more continuous (smoothed) HR for the offending covariate over time. This provides more flexibility but at the cost of more complexity.</span>
+<span id="cb28-147"><a href="#cb28-147"></a><span class="fu">## Step functions</span></span>
 <span id="cb28-148"><a href="#cb28-148"></a></span>
-<span id="cb28-149"><a href="#cb28-149"></a><span class="fu">## Step functions</span></span>
+<span id="cb28-149"><a href="#cb28-149"></a>To help decide how we might define time periods for our <span class="in">`trt`</span> variable to estimate different HR's within, it is helpful to inspect the output of our <span class="in">`cox.zph()`</span> plot, so let's revisit that now.</span>
 <span id="cb28-150"><a href="#cb28-150"></a></span>
-<span id="cb28-151"><a href="#cb28-151"></a>To help decide how we might define time periods for our <span class="in">`trt`</span> variable to estimate different HR's within, it is helpful to inspect the output of our <span class="in">`cox.zph()`</span> plot, so let's revisit that now.</span>
-<span id="cb28-152"><a href="#cb28-152"></a></span>
-<span id="cb28-155"><a href="#cb28-155"></a><span class="in">```{r}</span></span>
-<span id="cb28-156"><a href="#cb28-156"></a>sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit1)</span>
-<span id="cb28-157"><a href="#cb28-157"></a><span class="fu">plot</span>(sch_res[<span class="dv">1</span>], <span class="at">hr =</span> T) <span class="co"># trt</span></span>
-<span id="cb28-158"><a href="#cb28-158"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">1</span>, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span>
-<span id="cb28-159"><a href="#cb28-159"></a><span class="in">```</span></span>
+<span id="cb28-153"><a href="#cb28-153"></a><span class="in">```{r}</span></span>
+<span id="cb28-154"><a href="#cb28-154"></a>sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit1)</span>
+<span id="cb28-155"><a href="#cb28-155"></a><span class="fu">plot</span>(sch_res[<span class="dv">1</span>], <span class="at">hr =</span> T) <span class="co"># trt</span></span>
+<span id="cb28-156"><a href="#cb28-156"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">1</span>, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb28-157"><a href="#cb28-157"></a><span class="in">```</span></span>
+<span id="cb28-158"><a href="#cb28-158"></a></span>
+<span id="cb28-159"><a href="#cb28-159"></a>The decision is ultimately arbitrary but I would probably divide this into two periods splitting time at about <span class="in">`100`</span> days. My thinking on this is that the HR is larger within that first <span class="in">`100`</span> days and then gradually declines thereafter. While it also appears non-monotonic (increasing and decreasing) in that early period, we can still aim to obtain an averaged effect over that time and then contrast that to the later period (this bit is not an exact science).</span>
 <span id="cb28-160"><a href="#cb28-160"></a></span>
-<span id="cb28-161"><a href="#cb28-161"></a>The decision is ultimately arbitrary but I would probably divide this into two periods splitting time at about <span class="in">`100`</span> days. My thinking on this is that the HR is larger within that first <span class="in">`100`</span> days and then gradually declines thereafter. While it also appears non-monotonic (increasing and decreasing) in that early period, we can still aim to obtain an averaged effect over that time and then contrast that to the later period (this bit is not an exact science).</span>
+<span id="cb28-161"><a href="#cb28-161"></a>To estimate this model we return to our trusty <span class="in">`survSplit()`</span> function to split time for each individual at the desired points (here <span class="in">`100`</span> days) and then create an interaction term between the offending covariate and the time strata. We do this like so:</span>
 <span id="cb28-162"><a href="#cb28-162"></a></span>
-<span id="cb28-163"><a href="#cb28-163"></a>To estimate this model we return to our trusty <span class="in">`survSplit()`</span> function to split time for each individual at the desired points (here <span class="in">`100`</span> days) and then create an interaction term between the offending covariate and the time strata. We do this like so:</span>
+<span id="cb28-163"><a href="#cb28-163"></a><span class="in">`vfit4 &lt;- coxph(Surv(tstart, time, status) ~ age + trt:strata(tgroup), data = vdata2)`</span></span>
 <span id="cb28-164"><a href="#cb28-164"></a></span>
-<span id="cb28-165"><a href="#cb28-165"></a><span class="in">`vfit4 &lt;- coxph(Surv(tstart, time, status) ~ age + trt:strata(tgroup), data = vdata2)`</span></span>
-<span id="cb28-166"><a href="#cb28-166"></a></span>
-<span id="cb28-169"><a href="#cb28-169"></a><span class="in">```{r}</span></span>
-<span id="cb28-170"><a href="#cb28-170"></a><span class="co"># Create new df in CP form with splits at 100 days</span></span>
-<span id="cb28-171"><a href="#cb28-171"></a>vdata2 <span class="ot">&lt;-</span> <span class="fu">survSplit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span>., vdata1, <span class="at">cut =</span> <span class="dv">100</span>, <span class="at">episode =</span> <span class="st">"tgroup"</span>)</span>
-<span id="cb28-172"><a href="#cb28-172"></a><span class="co"># Cox model with stepped time-dependent coefficients</span></span>
-<span id="cb28-173"><a href="#cb28-173"></a>vfit4 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(tstart, time, status) <span class="sc">~</span> age <span class="sc">+</span> trt<span class="sc">:</span><span class="fu">strata</span>(tgroup), <span class="at">data =</span> vdata2)</span>
-<span id="cb28-174"><a href="#cb28-174"></a><span class="fu">tbl_regression</span>(vfit4, <span class="at">exp =</span> T)</span>
-<span id="cb28-175"><a href="#cb28-175"></a><span class="in">```</span></span>
+<span id="cb28-167"><a href="#cb28-167"></a><span class="in">```{r}</span></span>
+<span id="cb28-168"><a href="#cb28-168"></a><span class="co"># Create new df in CP form with splits at 100 days</span></span>
+<span id="cb28-169"><a href="#cb28-169"></a>vdata2 <span class="ot">&lt;-</span> <span class="fu">survSplit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span>., vdata1, <span class="at">cut =</span> <span class="dv">100</span>, <span class="at">episode =</span> <span class="st">"tgroup"</span>)</span>
+<span id="cb28-170"><a href="#cb28-170"></a><span class="co"># Cox model with stepped time-dependent coefficients</span></span>
+<span id="cb28-171"><a href="#cb28-171"></a>vfit4 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(tstart, time, status) <span class="sc">~</span> age <span class="sc">+</span> trt<span class="sc">:</span><span class="fu">strata</span>(tgroup), <span class="at">data =</span> vdata2)</span>
+<span id="cb28-172"><a href="#cb28-172"></a><span class="fu">tbl_regression</span>(vfit4, <span class="at">exp =</span> T)</span>
+<span id="cb28-173"><a href="#cb28-173"></a><span class="in">```</span></span>
+<span id="cb28-174"><a href="#cb28-174"></a></span>
+<span id="cb28-175"><a href="#cb28-175"></a>So, in parameterising the model this way we estimate an average HR for the 'effect' of <span class="in">`trt`</span> to be <span class="in">`~ 1.46`</span> within the first <span class="in">`100`</span> day period and and an average HR of <span class="in">`~ 0.49`</span> thereafter. That fits in fairly nicely with what we see in the above plot.</span>
 <span id="cb28-176"><a href="#cb28-176"></a></span>
-<span id="cb28-177"><a href="#cb28-177"></a>So, in parameterising the model this way we estimate an average HR for the 'effect' of <span class="in">`trt`</span> to be <span class="in">`~ 1.46`</span> within the first <span class="in">`100`</span> day period and and an average HR of <span class="in">`~ 0.49`</span> thereafter. That fits in fairly nicely with what we see in the above plot.</span>
+<span id="cb28-177"><a href="#cb28-177"></a>The related test of PH gives:</span>
 <span id="cb28-178"><a href="#cb28-178"></a></span>
-<span id="cb28-179"><a href="#cb28-179"></a>The related test of PH gives:</span>
-<span id="cb28-180"><a href="#cb28-180"></a></span>
-<span id="cb28-183"><a href="#cb28-183"></a><span class="in">```{r}</span></span>
-<span id="cb28-184"><a href="#cb28-184"></a><span class="fu">cox.zph</span>(vfit4)</span>
-<span id="cb28-185"><a href="#cb28-185"></a><span class="in">```</span></span>
+<span id="cb28-181"><a href="#cb28-181"></a><span class="in">```{r}</span></span>
+<span id="cb28-182"><a href="#cb28-182"></a><span class="fu">cox.zph</span>(vfit4)</span>
+<span id="cb28-183"><a href="#cb28-183"></a><span class="in">```</span></span>
+<span id="cb28-184"><a href="#cb28-184"></a></span>
+<span id="cb28-185"><a href="#cb28-185"></a>Section 4.1 of the <span class="co">[</span><span class="ot">time-dependent vignette</span><span class="co">](https://cran.r-project.org/web/packages/survival/vignettes/timedep.pdf)</span> provides another example of the use of step functions and would be worth some of your time to read.</span>
 <span id="cb28-186"><a href="#cb28-186"></a></span>
-<span id="cb28-187"><a href="#cb28-187"></a>Section 4.1 of the <span class="co">[</span><span class="ot">time-dependent vignette</span><span class="co">](https://cran.r-project.org/web/packages/survival/vignettes/timedep.pdf)</span> provides another example of the use of step functions and would be worth some of your time to read.</span>
+<span id="cb28-187"><a href="#cb28-187"></a><span class="fu">## Continuous time-dependent coefficients</span></span>
 <span id="cb28-188"><a href="#cb28-188"></a></span>
-<span id="cb28-189"><a href="#cb28-189"></a><span class="fu">## Continuous time-dependent coefficients</span></span>
+<span id="cb28-189"><a href="#cb28-189"></a>In evolving the step function approach we can think of chopping up time into smaller and smaller periods, to the point where we essentially end up estimating a continuous HR function over time. Of course, we don't do this by manually splitting our data - that would be an impossible task. Luckily the <span class="in">`coxph()`</span> function has the *time-transform* argument built into it, which I touched on briefly in the last post (more information can be found in Section 4.2 of the above vignette). This is our secret weapon in specifying time-dependent coefficients in the Cox model.</span>
 <span id="cb28-190"><a href="#cb28-190"></a></span>
-<span id="cb28-191"><a href="#cb28-191"></a>In evolving the step function approach we can think of chopping up time into smaller and smaller periods, to the point where we essentially end up estimating a continuous HR function over time. Of course, we don't do this by manually splitting our data - that would be an impossible task. Luckily the <span class="in">`coxph()`</span> function has the *time-transform* argument built into it, which I touched on briefly in the last post (more information can be found in Section 4.2 of the above vignette). This is our secret weapon in specifying time-dependent coefficients in the Cox model.</span>
+<span id="cb28-191"><a href="#cb28-191"></a>There are as many time transforms (functions of time) to select from as there are that you can think of - the choice is essentially endless. The general formulation of the time transform argument - <span class="in">`tt()`</span> within a <span class="in">`coxph()`</span> call (and using our model as an example) can be coded as:</span>
 <span id="cb28-192"><a href="#cb28-192"></a></span>
-<span id="cb28-193"><a href="#cb28-193"></a>There are as many time transforms (functions of time) to select from as there are that you can think of - the choice is essentially endless. The general formulation of the time transform argument - <span class="in">`tt()`</span> within a <span class="in">`coxph()`</span> call (and using our model as an example) can be coded as:</span>
+<span id="cb28-193"><a href="#cb28-193"></a><span class="in">`coxph(Surv(time, status) ~ trt + age + tt(trt), tt = function(x,t,...) x * t, vdata1)`</span></span>
 <span id="cb28-194"><a href="#cb28-194"></a></span>
-<span id="cb28-195"><a href="#cb28-195"></a><span class="in">`coxph(Surv(time, status) ~ trt + age + tt(trt), tt = function(x,t,...) x * t, vdata1)`</span></span>
+<span id="cb28-195"><a href="#cb28-195"></a>This represents a covariate-time interaction where we assume that the association between the covariate and the risk of the event is moderated as a linear function of time. As mentioned there are many other functions you could select, which you could then test in comparison to other functions and select the more appropriate model accordingly. Alternatively, you could just save yourself the effort and specify the most flexible time transform possible - one that involves fitting a restricted cubic spline to the interaction term. To do this we can use the <span class="in">`nsk()`</span> function within the <span class="in">`tt()`</span> argument and a general formulation of this model can be coded as:</span>
 <span id="cb28-196"><a href="#cb28-196"></a></span>
-<span id="cb28-197"><a href="#cb28-197"></a>This represents a covariate-time interaction where we assume that the association between the covariate and the risk of the event is moderated as a linear function of time. As mentioned there are many other functions you could select, which you could then test in comparison to other functions and select the more appropriate model accordingly. Alternatively, you could just save yourself the effort and specify the most flexible time transform possible - one that involves fitting a restricted cubic spline to the interaction term. To do this we can use the <span class="in">`nsk()`</span> function within the <span class="in">`tt()`</span> argument and a general formulation of this model can be coded as:</span>
+<span id="cb28-197"><a href="#cb28-197"></a><span class="in">`coxph(Surv(time, status) ~ trt + age + tt(trt), tt = function(x, t, ...) x * nsk(t, df = 3), vdata1)`</span></span>
 <span id="cb28-198"><a href="#cb28-198"></a></span>
-<span id="cb28-199"><a href="#cb28-199"></a><span class="in">`coxph(Surv(time, status) ~ trt + age + tt(trt), tt = function(x, t, ...) x * nsk(t, df = 3), vdata1)`</span></span>
+<span id="cb28-199"><a href="#cb28-199"></a>If we choose this option we are once again faced with the dilemma of interpreting model coefficients in the presence of spline terms. Let's fit this model and look at the output:</span>
 <span id="cb28-200"><a href="#cb28-200"></a></span>
-<span id="cb28-201"><a href="#cb28-201"></a>If we choose this option we are once again faced with the dilemma of interpreting model coefficients in the presence of spline terms. Let's fit this model and look at the output:</span>
+<span id="cb28-201"><a href="#cb28-201"></a><span class="in">`vfit5 &lt;- coxph(Surv(time, status) ~ trt + age + tt(trt), tt = function(x, t, ...) x * nsk(t, df = 3), vdata1)`</span></span>
 <span id="cb28-202"><a href="#cb28-202"></a></span>
-<span id="cb28-203"><a href="#cb28-203"></a><span class="in">`vfit5 &lt;- coxph(Surv(time, status) ~ trt + age + tt(trt), tt = function(x, t, ...) x * nsk(t, df = 3), vdata1)`</span></span>
-<span id="cb28-204"><a href="#cb28-204"></a></span>
-<span id="cb28-207"><a href="#cb28-207"></a><span class="in">```{r}</span></span>
-<span id="cb28-208"><a href="#cb28-208"></a><span class="co">#| message: false</span></span>
-<span id="cb28-209"><a href="#cb28-209"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-210"><a href="#cb28-210"></a><span class="co"># Cox model with continuous time-dependent coefficient</span></span>
-<span id="cb28-211"><a href="#cb28-211"></a>vfit5 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">tt</span>(trt), <span class="at">tt =</span> <span class="cf">function</span>(x, t, ...) x <span class="sc">*</span> <span class="fu">nsk</span>(t, <span class="at">df =</span> <span class="dv">3</span>), vdata1)</span>
-<span id="cb28-212"><a href="#cb28-212"></a><span class="fu">tbl_regression</span>(vfit5, <span class="at">exp =</span> T)</span>
-<span id="cb28-213"><a href="#cb28-213"></a><span class="in">```</span></span>
+<span id="cb28-205"><a href="#cb28-205"></a><span class="in">```{r}</span></span>
+<span id="cb28-206"><a href="#cb28-206"></a><span class="co">#| message: false</span></span>
+<span id="cb28-207"><a href="#cb28-207"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-208"><a href="#cb28-208"></a><span class="co"># Cox model with continuous time-dependent coefficient</span></span>
+<span id="cb28-209"><a href="#cb28-209"></a>vfit5 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">tt</span>(trt), <span class="at">tt =</span> <span class="cf">function</span>(x, t, ...) x <span class="sc">*</span> <span class="fu">nsk</span>(t, <span class="at">df =</span> <span class="dv">3</span>), vdata1)</span>
+<span id="cb28-210"><a href="#cb28-210"></a><span class="fu">tbl_regression</span>(vfit5, <span class="at">exp =</span> T)</span>
+<span id="cb28-211"><a href="#cb28-211"></a><span class="in">```</span></span>
+<span id="cb28-212"><a href="#cb28-212"></a></span>
+<span id="cb28-213"><a href="#cb28-213"></a>Yep, we can't easily interpret those coefficients for <span class="in">`trt`</span>, and how the commensurate HR varies over time. Coefficients produced by models using simpler functions of time may be more amenable to direct interpretation but this is the trade-off when we choose splines to allow maximal flexibility in functional form estimation. As usual, however, we can plot these model results to assist us in visualising how the HR varies in a time-dependent manner. Unfortunately (yes, I know - there always seems to be a catch), we have to use the equivalent "first-principles" specification of the model that I introduced you to in the last post, to facilitate this. We can't easily plot the results of a model containing a time-transform function. Instead, we first split our data at every event and then estimate the model using the same spline formulation as above. Let's see what the equivalent model estimated from the counting process formulation of the equivalent single-row/person dataset, gives us:</span>
 <span id="cb28-214"><a href="#cb28-214"></a></span>
-<span id="cb28-215"><a href="#cb28-215"></a>Yep, we can't easily interpret those coefficients for <span class="in">`trt`</span>, and how the commensurate HR varies over time. Coefficients produced by models using simpler functions of time may be more amenable to direct interpretation but this is the trade-off when we choose splines to allow maximal flexibility in functional form estimation. As usual, however, we can plot these model results to assist us in visualising how the HR varies in a time-dependent manner. Unfortunately (yes, I know - there always seems to be a catch), we have to use the equivalent "first-principles" specification of the model that I introduced you to in the last post, to facilitate this. We can't easily plot the results of a model containing a time-transform function. Instead, we first split our data at every event and then estimate the model using the same spline formulation as above. Let's see what the equivalent model estimated from the counting process formulation of the equivalent single-row/person dataset, gives us:</span>
+<span id="cb28-215"><a href="#cb28-215"></a><span class="in">`vfit6 &lt;- coxph(Surv(tstart, time, status) ~ trt + age + trt:nsk(time, df = 3), vdata3)`</span></span>
 <span id="cb28-216"><a href="#cb28-216"></a></span>
-<span id="cb28-217"><a href="#cb28-217"></a><span class="in">`vfit6 &lt;- coxph(Surv(tstart, time, status) ~ trt + age + trt:nsk(time, df = 3), vdata3)`</span></span>
-<span id="cb28-218"><a href="#cb28-218"></a></span>
-<span id="cb28-221"><a href="#cb28-221"></a><span class="in">```{r}</span></span>
-<span id="cb28-222"><a href="#cb28-222"></a><span class="co"># Vector of unique event times</span></span>
-<span id="cb28-223"><a href="#cb28-223"></a>event_times <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="fu">with</span>(vdata1, time[status <span class="sc">==</span> <span class="dv">1</span>])))</span>
-<span id="cb28-224"><a href="#cb28-224"></a><span class="co"># Create new df in CP form with splits at every event time</span></span>
-<span id="cb28-225"><a href="#cb28-225"></a>vdata3 <span class="ot">&lt;-</span> <span class="fu">survSplit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span>., vdata1, <span class="at">cut =</span> event_times)</span>
-<span id="cb28-226"><a href="#cb28-226"></a><span class="co"># Fit Cox model with splined trt:time interaction (current times)</span></span>
-<span id="cb28-227"><a href="#cb28-227"></a>vfit6 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(tstart, time, status) <span class="sc">~</span> trt <span class="sc">+</span> age <span class="sc">+</span> trt<span class="sc">:</span><span class="fu">nsk</span>(time, <span class="at">df =</span> <span class="dv">3</span>), vdata3)</span>
-<span id="cb28-228"><a href="#cb28-228"></a><span class="fu">tbl_regression</span>(vfit6, <span class="at">exp =</span> T)</span>
-<span id="cb28-229"><a href="#cb28-229"></a><span class="in">```</span></span>
+<span id="cb28-219"><a href="#cb28-219"></a><span class="in">```{r}</span></span>
+<span id="cb28-220"><a href="#cb28-220"></a><span class="co"># Vector of unique event times</span></span>
+<span id="cb28-221"><a href="#cb28-221"></a>event_times <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="fu">with</span>(vdata1, time[status <span class="sc">==</span> <span class="dv">1</span>])))</span>
+<span id="cb28-222"><a href="#cb28-222"></a><span class="co"># Create new df in CP form with splits at every event time</span></span>
+<span id="cb28-223"><a href="#cb28-223"></a>vdata3 <span class="ot">&lt;-</span> <span class="fu">survSplit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span>., vdata1, <span class="at">cut =</span> event_times)</span>
+<span id="cb28-224"><a href="#cb28-224"></a><span class="co"># Fit Cox model with splined trt:time interaction (current times)</span></span>
+<span id="cb28-225"><a href="#cb28-225"></a>vfit6 <span class="ot">&lt;-</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(tstart, time, status) <span class="sc">~</span> trt <span class="sc">+</span> age <span class="sc">+</span> trt<span class="sc">:</span><span class="fu">nsk</span>(time, <span class="at">df =</span> <span class="dv">3</span>), vdata3)</span>
+<span id="cb28-226"><a href="#cb28-226"></a><span class="fu">tbl_regression</span>(vfit6, <span class="at">exp =</span> T)</span>
+<span id="cb28-227"><a href="#cb28-227"></a><span class="in">```</span></span>
+<span id="cb28-228"><a href="#cb28-228"></a></span>
+<span id="cb28-229"><a href="#cb28-229"></a>We see that the model output is identical comparing both <span class="in">`vfit5`</span> and <span class="in">`vfit6`</span>. This is entirely expected seeing the time-transform function splits each person's single-row data at all event times in the background as part of the estimation process in <span class="in">`vfit5`</span> (we just don't see it). But that is exactly what we have replicated when we apply <span class="in">`trt:nsk(time, df = 3)`</span> to <span class="in">`vfit6`</span> in the manually split dataset.</span>
 <span id="cb28-230"><a href="#cb28-230"></a></span>
-<span id="cb28-231"><a href="#cb28-231"></a>We see that the model output is identical comparing both <span class="in">`vfit5`</span> and <span class="in">`vfit6`</span>. This is entirely expected seeing the time-transform function splits each person's single-row data at all event times in the background as part of the estimation process in <span class="in">`vfit5`</span> (we just don't see it). But that is exactly what we have replicated when we apply <span class="in">`trt:nsk(time, df = 3)`</span> to <span class="in">`vfit6`</span> in the manually split dataset.</span>
+<span id="cb28-231"><a href="#cb28-231"></a>One final thing to note is that we can't use <span class="in">`cox.zph()`</span> on models with <span class="in">`tt()`</span> terms, and that is a design choice by the package author.</span>
 <span id="cb28-232"><a href="#cb28-232"></a></span>
-<span id="cb28-233"><a href="#cb28-233"></a>One final thing to note is that we can't use <span class="in">`cox.zph()`</span> on models with <span class="in">`tt()`</span> terms, and that is a design choice by the package author.</span>
+<span id="cb28-233"><a href="#cb28-233"></a>PH test on <span class="in">`vfit5`</span> gives:</span>
 <span id="cb28-234"><a href="#cb28-234"></a></span>
-<span id="cb28-235"><a href="#cb28-235"></a>PH test on <span class="in">`vfit5`</span> gives:</span>
-<span id="cb28-236"><a href="#cb28-236"></a></span>
-<span id="cb28-239"><a href="#cb28-239"></a><span class="in">```{r}</span></span>
-<span id="cb28-240"><a href="#cb28-240"></a><span class="co"># cox.zph(vfit5)</span></span>
-<span id="cb28-241"><a href="#cb28-241"></a><span class="fu">print</span>(<span class="st">"Error in cox.zph(vfit5) : function not defined for models with tt() terms"</span>)</span>
-<span id="cb28-242"><a href="#cb28-242"></a><span class="in">```</span></span>
+<span id="cb28-237"><a href="#cb28-237"></a><span class="in">```{r}</span></span>
+<span id="cb28-238"><a href="#cb28-238"></a><span class="co"># cox.zph(vfit5)</span></span>
+<span id="cb28-239"><a href="#cb28-239"></a><span class="fu">print</span>(<span class="st">"Error in cox.zph(vfit5) : function not defined for models with tt() terms"</span>)</span>
+<span id="cb28-240"><a href="#cb28-240"></a><span class="in">```</span></span>
+<span id="cb28-241"><a href="#cb28-241"></a></span>
+<span id="cb28-242"><a href="#cb28-242"></a>And on <span class="in">`vfit6`</span>:</span>
 <span id="cb28-243"><a href="#cb28-243"></a></span>
-<span id="cb28-244"><a href="#cb28-244"></a>And on <span class="in">`vfit6`</span>:</span>
-<span id="cb28-245"><a href="#cb28-245"></a></span>
-<span id="cb28-248"><a href="#cb28-248"></a><span class="in">```{r}</span></span>
-<span id="cb28-249"><a href="#cb28-249"></a><span class="fu">cox.zph</span>(vfit6)</span>
-<span id="cb28-250"><a href="#cb28-250"></a><span class="in">```</span></span>
+<span id="cb28-246"><a href="#cb28-246"></a><span class="in">```{r}</span></span>
+<span id="cb28-247"><a href="#cb28-247"></a><span class="fu">cox.zph</span>(vfit6)</span>
+<span id="cb28-248"><a href="#cb28-248"></a><span class="in">```</span></span>
+<span id="cb28-249"><a href="#cb28-249"></a></span>
+<span id="cb28-250"><a href="#cb28-250"></a><span class="fu">### Plot time-varying HR</span></span>
 <span id="cb28-251"><a href="#cb28-251"></a></span>
-<span id="cb28-252"><a href="#cb28-252"></a><span class="fu">### Plot time-varying HR</span></span>
+<span id="cb28-252"><a href="#cb28-252"></a>Now let's get back to plotting the HR for <span class="in">`trt`</span> as a function of time. The code to do this is shown below, but to explain in words:</span>
 <span id="cb28-253"><a href="#cb28-253"></a></span>
-<span id="cb28-254"><a href="#cb28-254"></a>Now let's get back to plotting the HR for <span class="in">`trt`</span> as a function of time. The code to do this is shown below, but to explain in words:</span>
+<span id="cb28-254"><a href="#cb28-254"></a><span class="ss">1.  </span>We start by creating a new dataframe based on a grid of observation times spanning <span class="in">`1000`</span> days, a fixed value of <span class="in">`1`</span> for <span class="in">`trt`</span>, and a 'placeholder' value of <span class="in">`0`</span> for <span class="in">`age`</span> (we set this to <span class="in">`0`</span> because the reference is <span class="in">`0`</span> for all covariates in the model and we only want to predict the HR for a one-unit increase in <span class="in">`trt`</span> - not for any additional 'effect' of <span class="in">`age`</span>).</span>
 <span id="cb28-255"><a href="#cb28-255"></a></span>
-<span id="cb28-256"><a href="#cb28-256"></a><span class="ss">1.  </span>We start by creating a new dataframe based on a grid of observation times spanning <span class="in">`1000`</span> days, a fixed value of <span class="in">`1`</span> for <span class="in">`trt`</span>, and a 'placeholder' value of <span class="in">`0`</span> for <span class="in">`age`</span> (we set this to <span class="in">`0`</span> because the reference is <span class="in">`0`</span> for all covariates in the model and we only want to predict the HR for a one-unit increase in <span class="in">`trt`</span> - not for any additional 'effect' of <span class="in">`age`</span>).</span>
+<span id="cb28-256"><a href="#cb28-256"></a><span class="ss">2.  </span>We then pass that new data to the <span class="in">`predict()`</span> function asking to predict <span class="in">`type = "risk"`</span> for <span class="in">`trt`</span> at the specified value of <span class="in">`1`</span>, at each new observation time - this effectively estimates the HR at each new observation time.</span>
 <span id="cb28-257"><a href="#cb28-257"></a></span>
-<span id="cb28-258"><a href="#cb28-258"></a><span class="ss">2.  </span>We then pass that new data to the <span class="in">`predict()`</span> function asking to predict <span class="in">`type = "risk"`</span> for <span class="in">`trt`</span> at the specified value of <span class="in">`1`</span>, at each new observation time - this effectively estimates the HR at each new observation time.</span>
+<span id="cb28-258"><a href="#cb28-258"></a><span class="ss">3.  </span>We then plot those predictions.</span>
 <span id="cb28-259"><a href="#cb28-259"></a></span>
-<span id="cb28-260"><a href="#cb28-260"></a><span class="ss">3.  </span>We then plot those predictions.</span>
-<span id="cb28-261"><a href="#cb28-261"></a></span>
-<span id="cb28-262"><a href="#cb28-262"></a>::: callout-note</span>
-<span id="cb28-263"><a href="#cb28-263"></a>You may be wondering why I am plotting the HR on a log scale. The reason is that coefficients from the Cox model are *estimated on the log-hazard scale*, a linear scale in which the estimates have (asymptotically) normal distributions. Plotting HR's on the same additive scale can result in misleading visual impressions of the magnitude of effect variation. Thus, it is in general better practice to display exponentiated effect estimates such as the HR on their native multiplicative scale and this can be achieved with a log-transform of the scale axis.</span>
-<span id="cb28-264"><a href="#cb28-264"></a>:::</span>
-<span id="cb28-265"><a href="#cb28-265"></a></span>
-<span id="cb28-268"><a href="#cb28-268"></a><span class="in">```{r}</span></span>
-<span id="cb28-269"><a href="#cb28-269"></a><span class="co">#| message: false</span></span>
-<span id="cb28-270"><a href="#cb28-270"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-271"><a href="#cb28-271"></a><span class="co"># Create newdat df</span></span>
-<span id="cb28-272"><a href="#cb28-272"></a>tdata <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">0</span>, <span class="at">time =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">5</span>))</span>
-<span id="cb28-273"><a href="#cb28-273"></a><span class="co"># Predict HR </span></span>
-<span id="cb28-274"><a href="#cb28-274"></a>yhat <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit6, <span class="at">newdata =</span> tdata, <span class="at">se.fit =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">"risk"</span>, <span class="at">reference =</span> <span class="st">"zero"</span>)</span>
-<span id="cb28-275"><a href="#cb28-275"></a>tdata<span class="sc">$</span>fit <span class="ot">&lt;-</span>  yhat<span class="sc">$</span>fit</span>
-<span id="cb28-276"><a href="#cb28-276"></a><span class="co"># Plot</span></span>
-<span id="cb28-277"><a href="#cb28-277"></a><span class="fu">ggplot</span>(tdata, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> fit)) <span class="sc">+</span> </span>
-<span id="cb28-278"><a href="#cb28-278"></a>  <span class="fu">geom_line</span>(<span class="at">col =</span> <span class="st">'#F8766D'</span>) <span class="sc">+</span></span>
-<span id="cb28-279"><a href="#cb28-279"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">400</span>, <span class="at">by =</span> <span class="dv">50</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
-<span id="cb28-280"><a href="#cb28-280"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log"</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb28-281"><a href="#cb28-281"></a>  <span class="fu">xlab</span>(<span class="st">"Observation Time"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"HR for Treatment"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Cox Model - Time-varying HR for Treatment"</span>) <span class="sc">+</span></span>
-<span id="cb28-282"><a href="#cb28-282"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>) </span>
-<span id="cb28-283"><a href="#cb28-283"></a><span class="in">```</span></span>
+<span id="cb28-260"><a href="#cb28-260"></a>::: callout-note</span>
+<span id="cb28-261"><a href="#cb28-261"></a>You may be wondering why I am plotting the HR on a log scale. The reason is that coefficients from the Cox model are *estimated on the log-hazard scale*, a linear scale in which the estimates have (asymptotically) normal distributions. Plotting HR's on the same additive scale can result in misleading visual impressions of the magnitude of effect variation. Thus, it is in general better practice to display exponentiated effect estimates such as the HR on their native multiplicative scale and this can be achieved with a log-transform of the scale axis.</span>
+<span id="cb28-262"><a href="#cb28-262"></a>:::</span>
+<span id="cb28-263"><a href="#cb28-263"></a></span>
+<span id="cb28-266"><a href="#cb28-266"></a><span class="in">```{r}</span></span>
+<span id="cb28-267"><a href="#cb28-267"></a><span class="co">#| message: false</span></span>
+<span id="cb28-268"><a href="#cb28-268"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-269"><a href="#cb28-269"></a><span class="co"># Create newdat df</span></span>
+<span id="cb28-270"><a href="#cb28-270"></a>tdata <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">0</span>, <span class="at">time =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">5</span>))</span>
+<span id="cb28-271"><a href="#cb28-271"></a><span class="co"># Predict HR </span></span>
+<span id="cb28-272"><a href="#cb28-272"></a>yhat <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit6, <span class="at">newdata =</span> tdata, <span class="at">se.fit =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">"risk"</span>, <span class="at">reference =</span> <span class="st">"zero"</span>)</span>
+<span id="cb28-273"><a href="#cb28-273"></a>tdata<span class="sc">$</span>fit <span class="ot">&lt;-</span>  yhat<span class="sc">$</span>fit</span>
+<span id="cb28-274"><a href="#cb28-274"></a><span class="co"># Plot</span></span>
+<span id="cb28-275"><a href="#cb28-275"></a><span class="fu">ggplot</span>(tdata, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> fit)) <span class="sc">+</span> </span>
+<span id="cb28-276"><a href="#cb28-276"></a>  <span class="fu">geom_line</span>(<span class="at">col =</span> <span class="st">'#F8766D'</span>) <span class="sc">+</span></span>
+<span id="cb28-277"><a href="#cb28-277"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">400</span>, <span class="at">by =</span> <span class="dv">50</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
+<span id="cb28-278"><a href="#cb28-278"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log"</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb28-279"><a href="#cb28-279"></a>  <span class="fu">xlab</span>(<span class="st">"Observation Time"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"HR for Treatment"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Cox Model - Time-varying HR for Treatment"</span>) <span class="sc">+</span></span>
+<span id="cb28-280"><a href="#cb28-280"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>) </span>
+<span id="cb28-281"><a href="#cb28-281"></a><span class="in">```</span></span>
+<span id="cb28-282"><a href="#cb28-282"></a></span>
+<span id="cb28-283"><a href="#cb28-283"></a>In the above plot I have decided to truncate observation time at <span class="in">`400`</span> days, to make the x-axis appear less compressed (and given nothing much interesting happens after that). The plot suggests that the HR for <span class="in">`trt`</span> initially increases, reaches a maximum at about <span class="in">`40`</span> days and then gradually declines. We can replot the Schoenfeld residuals and associated smoothing function (below) as a means to contrast the functional forms for this time-varying effect. It is a little difficult to directly compare them due to some differences in the axis scaling, but we obtain the general impression that both plots display a similar time-varying form for the HR of <span class="in">`trt`</span>. This gives us confidence that the time-varying HR we have estimated is not an unreasonable result.</span>
 <span id="cb28-284"><a href="#cb28-284"></a></span>
-<span id="cb28-285"><a href="#cb28-285"></a>In the above plot I have decided to truncate observation time at <span class="in">`400`</span> days, to make the x-axis appear less compressed (and given nothing much interesting happens after that). The plot suggests that the HR for <span class="in">`trt`</span> initially increases, reaches a maximum at about <span class="in">`40`</span> days and then gradually declines. We can replot the Schoenfeld residuals and associated smoothing function (below) as a means to contrast the functional forms for this time-varying effect. It is a little difficult to directly compare them due to some differences in the axis scaling, but we obtain the general impression that both plots display a similar time-varying form for the HR of <span class="in">`trt`</span>. This gives us confidence that the time-varying HR we have estimated is not an unreasonable result.</span>
-<span id="cb28-286"><a href="#cb28-286"></a></span>
-<span id="cb28-289"><a href="#cb28-289"></a><span class="in">```{r}</span></span>
-<span id="cb28-290"><a href="#cb28-290"></a>sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit1)</span>
-<span id="cb28-291"><a href="#cb28-291"></a><span class="fu">plot</span>(sch_res[<span class="dv">1</span>], <span class="at">hr =</span> T) <span class="co"># trt</span></span>
-<span id="cb28-292"><a href="#cb28-292"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">1</span>, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span>
-<span id="cb28-293"><a href="#cb28-293"></a><span class="in">```</span></span>
+<span id="cb28-287"><a href="#cb28-287"></a><span class="in">```{r}</span></span>
+<span id="cb28-288"><a href="#cb28-288"></a>sch_res <span class="ot">&lt;-</span>  <span class="fu">cox.zph</span>(vfit1)</span>
+<span id="cb28-289"><a href="#cb28-289"></a><span class="fu">plot</span>(sch_res[<span class="dv">1</span>], <span class="at">hr =</span> T) <span class="co"># trt</span></span>
+<span id="cb28-290"><a href="#cb28-290"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">1</span>, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb28-291"><a href="#cb28-291"></a><span class="in">```</span></span>
+<span id="cb28-292"><a href="#cb28-292"></a></span>
+<span id="cb28-293"><a href="#cb28-293"></a><span class="fu">### Estimate HR at times of interest</span></span>
 <span id="cb28-294"><a href="#cb28-294"></a></span>
-<span id="cb28-295"><a href="#cb28-295"></a><span class="fu">### Estimate HR at times of interest</span></span>
+<span id="cb28-295"><a href="#cb28-295"></a>We can take this further and actually calculate HR's (and their 95% C.I.'s) at desired times of interest. Say we want to know the HR for <span class="in">`trt`</span> at <span class="in">`5`</span>, <span class="in">`40`</span>, <span class="in">`100`</span> and <span class="in">`400`</span> days. We basically follow the same steps as above in terms of predicting, but instead of <span class="in">`type = "risk"`</span> we specify <span class="in">`type = "lp"`</span> which calculates the "linear predictor" or the log hazard ratio. We do this so we can *add/subtract* <span class="in">`1.96`</span> times the standard error, then exponentiating the results to obtain the upper and lower 95% confidence limits. The code is shown below:</span>
 <span id="cb28-296"><a href="#cb28-296"></a></span>
-<span id="cb28-297"><a href="#cb28-297"></a>We can take this further and actually calculate HR's (and their 95% C.I.'s) at desired times of interest. Say we want to know the HR for <span class="in">`trt`</span> at <span class="in">`5`</span>, <span class="in">`40`</span>, <span class="in">`100`</span> and <span class="in">`400`</span> days. We basically follow the same steps as above in terms of predicting, but instead of <span class="in">`type = "risk"`</span> we specify <span class="in">`type = "lp"`</span> which calculates the "linear predictor" or the log hazard ratio. We do this so we can *add/subtract* <span class="in">`1.96`</span> times the standard error, then exponentiating the results to obtain the upper and lower 95% confidence limits. The code is shown below:</span>
-<span id="cb28-298"><a href="#cb28-298"></a></span>
-<span id="cb28-301"><a href="#cb28-301"></a><span class="in">```{r}</span></span>
-<span id="cb28-302"><a href="#cb28-302"></a><span class="co"># Create newdat df with times of interest to predict at</span></span>
-<span id="cb28-303"><a href="#cb28-303"></a>tdata2 <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">0</span>, <span class="at">time =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">400</span>))</span>
-<span id="cb28-304"><a href="#cb28-304"></a><span class="co"># Predict HR and plot</span></span>
-<span id="cb28-305"><a href="#cb28-305"></a>yhat <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit6, <span class="at">newdata =</span> tdata2, <span class="at">se.fit =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">"lp"</span>, <span class="at">reference =</span> <span class="st">"zero"</span>)</span>
-<span id="cb28-306"><a href="#cb28-306"></a><span class="co"># Calculate HR's and 95% CI's</span></span>
-<span id="cb28-307"><a href="#cb28-307"></a>estimates <span class="ot">&lt;-</span>  <span class="fu">data.frame</span>(<span class="at">Time =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">400</span>),</span>
-<span id="cb28-308"><a href="#cb28-308"></a>                         <span class="at">HR =</span> <span class="fu">exp</span>(yhat<span class="sc">$</span>fit), </span>
-<span id="cb28-309"><a href="#cb28-309"></a>                         <span class="st">`</span><span class="at">Lower CI</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">exp</span>(yhat<span class="sc">$</span>fit <span class="sc">-</span> (<span class="fl">1.96</span><span class="sc">*</span>yhat<span class="sc">$</span>se.fit)),</span>
-<span id="cb28-310"><a href="#cb28-310"></a>                         <span class="st">`</span><span class="at">Upper CI</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">exp</span>(yhat<span class="sc">$</span>fit <span class="sc">+</span> (<span class="fl">1.96</span><span class="sc">*</span>yhat<span class="sc">$</span>se.fit)))</span>
-<span id="cb28-311"><a href="#cb28-311"></a>estimates <span class="sc">|&gt;</span> </span>
-<span id="cb28-312"><a href="#cb28-312"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
-<span id="cb28-313"><a href="#cb28-313"></a><span class="in">```</span></span>
+<span id="cb28-299"><a href="#cb28-299"></a><span class="in">```{r}</span></span>
+<span id="cb28-300"><a href="#cb28-300"></a><span class="co"># Create newdat df with times of interest to predict at</span></span>
+<span id="cb28-301"><a href="#cb28-301"></a>tdata2 <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">0</span>, <span class="at">time =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">400</span>))</span>
+<span id="cb28-302"><a href="#cb28-302"></a><span class="co"># Predict HR and plot</span></span>
+<span id="cb28-303"><a href="#cb28-303"></a>yhat <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit6, <span class="at">newdata =</span> tdata2, <span class="at">se.fit =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">"lp"</span>, <span class="at">reference =</span> <span class="st">"zero"</span>)</span>
+<span id="cb28-304"><a href="#cb28-304"></a><span class="co"># Calculate HR's and 95% CI's</span></span>
+<span id="cb28-305"><a href="#cb28-305"></a>estimates <span class="ot">&lt;-</span>  <span class="fu">data.frame</span>(<span class="at">Time =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">400</span>),</span>
+<span id="cb28-306"><a href="#cb28-306"></a>                         <span class="at">HR =</span> <span class="fu">exp</span>(yhat<span class="sc">$</span>fit), </span>
+<span id="cb28-307"><a href="#cb28-307"></a>                         <span class="st">`</span><span class="at">Lower CI</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">exp</span>(yhat<span class="sc">$</span>fit <span class="sc">-</span> (<span class="fl">1.96</span><span class="sc">*</span>yhat<span class="sc">$</span>se.fit)),</span>
+<span id="cb28-308"><a href="#cb28-308"></a>                         <span class="st">`</span><span class="at">Upper CI</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">exp</span>(yhat<span class="sc">$</span>fit <span class="sc">+</span> (<span class="fl">1.96</span><span class="sc">*</span>yhat<span class="sc">$</span>se.fit)))</span>
+<span id="cb28-309"><a href="#cb28-309"></a>estimates <span class="sc">|&gt;</span> </span>
+<span id="cb28-310"><a href="#cb28-310"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb28-311"><a href="#cb28-311"></a><span class="in">```</span></span>
+<span id="cb28-312"><a href="#cb28-312"></a></span>
+<span id="cb28-313"><a href="#cb28-313"></a><span class="fu"># Use a Different Type of Model</span></span>
 <span id="cb28-314"><a href="#cb28-314"></a></span>
-<span id="cb28-315"><a href="#cb28-315"></a><span class="fu"># Use a Different Type of Model</span></span>
+<span id="cb28-315"><a href="#cb28-315"></a>The final broad approach to dealing with the problem of non-proportional hazards is to forego the Cox model entirely and use a different type of model. The two options I will discuss here fall into the category of <span class="co">[</span><span class="ot">parametric survival models</span><span class="co">](https://msni-stats-tips.netlify.app/posts/021_01nov_2024/#parametric-exponential-weibull-log-normal-etc)</span> - these differ from the Cox model in that the baseline hazard is fully specified according to a known statistical distribution, rather than being estimated empirically as in the case of the semi-parametric Cox.</span>
 <span id="cb28-316"><a href="#cb28-316"></a></span>
-<span id="cb28-317"><a href="#cb28-317"></a>The final broad approach to dealing with the problem of non-proportional hazards is to forego the Cox model entirely and use a different type of model. The two options I will discuss here fall into the category of <span class="co">[</span><span class="ot">parametric survival models</span><span class="co">](https://msni-stats-tips.netlify.app/posts/021_01nov_2024/#parametric-exponential-weibull-log-normal-etc)</span> - these differ from the Cox model in that the baseline hazard is fully specified according to a known statistical distribution, rather than being estimated empirically as in the case of the semi-parametric Cox.</span>
+<span id="cb28-317"><a href="#cb28-317"></a><span class="fu">## Accelerated failure time model</span></span>
 <span id="cb28-318"><a href="#cb28-318"></a></span>
-<span id="cb28-319"><a href="#cb28-319"></a><span class="fu">## Accelerated failure time model</span></span>
+<span id="cb28-319"><a href="#cb28-319"></a>Accelerated failure time (AFT) models provide an alternative parameterisation to their PH counterparts. Whereas a PH model assumes that the 'effect' of a covariate is to **multiply the hazard** by some constant, an AFT model assumes that the 'effect' of a covariate is to **multiply the time** to the event by some constant - in other words, accelerate or decelerate survival time. Rather than a HR, one calculates a Time Ratio (TR), with a TR <span class="sc">\&gt;</span> <span class="in">`1`</span> indicating that the covariate accelerates survival time (longer survival) and a TR <span class="sc">\&lt;</span> <span class="in">`1`</span> indicating that the covariate decelerates survival time (shorter survival).</span>
 <span id="cb28-320"><a href="#cb28-320"></a></span>
-<span id="cb28-321"><a href="#cb28-321"></a>Accelerated failure time (AFT) models provide an alternative parameterisation to their PH counterparts. Whereas a PH model assumes that the 'effect' of a covariate is to **multiply the hazard** by some constant, an AFT model assumes that the 'effect' of a covariate is to **multiply the time** to the event by some constant - in other words, accelerate or decelerate survival time. Rather than a HR, one calculates a Time Ratio (TR), with a TR <span class="sc">\&gt;</span> <span class="in">`1`</span> indicating that the covariate accelerates survival time (longer survival) and a TR <span class="sc">\&lt;</span> <span class="in">`1`</span> indicating that the covariate decelerates survival time (shorter survival).</span>
+<span id="cb28-321"><a href="#cb28-321"></a>Fitting an AFT survival model can be achieved in <span class="in">`R`</span> using the <span class="co">[</span><span class="ot">`survreg()`</span><span class="co">](https://www.rdocumentation.org/packages/survival/versions/3.8-3/topics/survreg)</span> function in the <span class="in">`survival`</span> package. The standard distributions one can select to model survival times include the weibull, exponential (a special case of the weibull distribution), gaussian, logistic, lognormal, and loglogistic. It is important to note that the weibull and exponential distributions have both a PH and an AFT interpretation, so it is therefore NOT theoretically sound to select one of these distributions - even in the AFT parameterisation - as an alternative to the Cox model when you already know that the PH assumption has been violated. When we want to consider an AFT model as an alternative for failed PH, we should select a distribution that has exclusively AFT properties, and the lognormal seems to be a reasonable place to start.</span>
 <span id="cb28-322"><a href="#cb28-322"></a></span>
-<span id="cb28-323"><a href="#cb28-323"></a>Fitting an AFT survival model can be achieved in <span class="in">`R`</span> using the <span class="co">[</span><span class="ot">`survreg()`</span><span class="co">](https://www.rdocumentation.org/packages/survival/versions/3.8-3/topics/survreg)</span> function in the <span class="in">`survival`</span> package. The standard distributions one can select to model survival times include the weibull, exponential (a special case of the weibull distribution), gaussian, logistic, lognormal, and loglogistic. It is important to note that the weibull and exponential distributions have both a PH and an AFT interpretation, so it is therefore NOT theoretically sound to select one of these distributions - even in the AFT parameterisation - as an alternative to the Cox model when you already know that the PH assumption has been violated. When we want to consider an AFT model as an alternative for failed PH, we should select a distribution that has exclusively AFT properties, and the lognormal seems to be a reasonable place to start.</span>
+<span id="cb28-323"><a href="#cb28-323"></a>To be honest I have never had need to fit one of these models and so I have little experience in their application - I'm not providing a worked example for that reason. But that doesn't mean you shouldn't consider them if the need should arise. There are many advantages that parametric survival models have over the Cox model and some of these are outlined in my <span class="co">[</span><span class="ot">previous post</span><span class="co">](https://msni-stats-tips.netlify.app/posts/021_01nov_2024/#parametric-exponential-weibull-log-normal-etc)</span>. A notable disadvantage, however, is the need to actually select a survival distribution and this requires some idea of what you think the baseline hazard should look like - something that isn't always easy to know. Therefore, when I decide to move beyond the Cox model, I tend to go straight to Royston-Parmar models, which I believe incorporate the best of both semi-parametric and parametric survival models. Let's take a look at them now.</span>
 <span id="cb28-324"><a href="#cb28-324"></a></span>
-<span id="cb28-325"><a href="#cb28-325"></a>To be honest I have never had need to fit one of these models and so I have little experience in their application - I'm not providing a worked example for that reason. But that doesn't mean you shouldn't consider them if the need should arise. There are many advantages that parametric survival models have over the Cox model and some of these are outlined in my <span class="co">[</span><span class="ot">previous post</span><span class="co">](https://msni-stats-tips.netlify.app/posts/021_01nov_2024/#parametric-exponential-weibull-log-normal-etc)</span>. A notable disadvantage, however, is the need to actually select a survival distribution and this requires some idea of what you think the baseline hazard should look like - something that isn't always easy to know. Therefore, when I decide to move beyond the Cox model, I tend to go straight to Royston-Parmar models, which I believe incorporate the best of both semi-parametric and parametric survival models. Let's take a look at them now.</span>
+<span id="cb28-325"><a href="#cb28-325"></a><span class="fu">## Flexible parametric (Royston-Parmar) survival model</span></span>
 <span id="cb28-326"><a href="#cb28-326"></a></span>
-<span id="cb28-327"><a href="#cb28-327"></a><span class="fu">## Flexible parametric (Royston-Parmar) survival model</span></span>
+<span id="cb28-327"><a href="#cb28-327"></a>I suspect flexible parametric survival (also known as Royston-Parmar <span class="sc">\[</span>RP<span class="sc">\]</span>) models are both underutilised and underrated in the statistical and research communities. But I think they are great and I am trying to incorporate them more into any survival work that I do. Unfortunately there are not a lot of online resources out there on RP models but <span class="co">[</span><span class="ot">here</span><span class="co">](https://journals.sagepub.com/doi/pdf/10.1177/1536867x0900900206)</span>, <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.tandfonline.com/doi/full/10.1080/03610918.2019.1634201#d1e333)</span>, <span class="co">[</span><span class="ot">here</span><span class="co">](https://pclambert.net/pdf/Stata2024_Germany_Paul_Lambert.pdf)</span> and <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.pauldickman.com/pdf/talk-milan-mar2023.pdf)</span> are good places to start.</span>
 <span id="cb28-328"><a href="#cb28-328"></a></span>
-<span id="cb28-329"><a href="#cb28-329"></a>I suspect flexible parametric survival (also known as Royston-Parmar <span class="sc">\[</span>RP<span class="sc">\]</span>) models are both underutilised and underrated in the statistical and research communities. But I think they are great and I am trying to incorporate them more into any survival work that I do. Unfortunately there are not a lot of online resources out there on RP models but <span class="co">[</span><span class="ot">here</span><span class="co">](https://journals.sagepub.com/doi/pdf/10.1177/1536867x0900900206)</span>, <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.tandfonline.com/doi/full/10.1080/03610918.2019.1634201#d1e333)</span>, <span class="co">[</span><span class="ot">here</span><span class="co">](https://pclambert.net/pdf/Stata2024_Germany_Paul_Lambert.pdf)</span> and <span class="co">[</span><span class="ot">here</span><span class="co">](https://www.pauldickman.com/pdf/talk-milan-mar2023.pdf)</span> are good places to start.</span>
+<span id="cb28-329"><a href="#cb28-329"></a>The basis of the RP model is the use of a restricted cubic spline to model the log cumulative baseline hazard function. This provides as much flexibility as the Cox model in the estimation of the baseline hazard while still being fully specified (and not being constrained to a specific distribution as in the standard parametric modelling approach). The immediate benefits are clear - we don't need to worry about choosing a particular distribution for our survival times (advantage of the Cox model), yet we can easily predict any survival quantity we want (advantage of the parametric model), explicitly because the model returns the shape of the (unassumed) baseline hazard function. It has been said that "...if all you are interested in is the HR, than the Cox model is for you" (I just can't remember where). Parametric models can do this and more, making the estimation of not only the HR but additional survival quantities such as survival functions, hazard functions, restricted mean survival times, etc, relatively straightforward. Now, having said all of that I'm not meaning to imply that we should never use the Cox model, but sometimes it's just helpful to know that there are other options available available to use.</span>
 <span id="cb28-330"><a href="#cb28-330"></a></span>
-<span id="cb28-331"><a href="#cb28-331"></a>The basis of the RP model is the use of a restricted cubic spline to model the log cumulative baseline hazard function. This provides as much flexibility as the Cox model in the estimation of the baseline hazard while still being fully specified (and not being constrained to a specific distribution as in the standard parametric modelling approach). The immediate benefits are clear - we don't need to worry about choosing a particular distribution for our survival times (advantage of the Cox model), yet we can easily predict any survival quantity we want (advantage of the parametric model), explicitly because the model returns the shape of the (unassumed) baseline hazard function. It has been said that "...if all you are interested in is the HR, than the Cox model is for you" (I just can't remember where). Parametric models can do this and more, making the estimation of not only the HR but additional survival quantities such as survival functions, hazard functions, restricted mean survival times, etc, relatively straightforward. Now, having said all of that I'm not meaning to imply that we should never use the Cox model, but sometimes it's just helpful to know that there are other options available available to use.</span>
+<span id="cb28-331"><a href="#cb28-331"></a>I tend to do most of RP modelling work in <span class="in">`Stata`</span> using the <span class="co">[</span><span class="ot">`stpm3`</span><span class="co">](https://pclambert.net/software/stpm3.html)</span> function, but the equivalent go to package in <span class="in">`R`</span> is <span class="co">[</span><span class="ot">`rstpm2`</span><span class="co">](https://cran.r-project.org/web/packages/rstpm2/index.html)</span>. Some time ago I performed an analysis in both environments and ended up with the same results, so I think you should be fine using the latter if you don't have access to <span class="in">`Stata`</span>. Ok, enough talking - let's actually run an RP model incorporating a time-varying effect for our <span class="in">`trt`</span> variable.</span>
 <span id="cb28-332"><a href="#cb28-332"></a></span>
-<span id="cb28-333"><a href="#cb28-333"></a>I tend to do most of RP modelling work in <span class="in">`Stata`</span> using the <span class="co">[</span><span class="ot">`stpm3`</span><span class="co">](https://pclambert.net/software/stpm3.html)</span> function, but the equivalent go to package in <span class="in">`R`</span> is <span class="co">[</span><span class="ot">`rstpm2`</span><span class="co">](https://cran.r-project.org/web/packages/rstpm2/index.html)</span>. Some time ago I performed an analysis in both environments and ended up with the same results, so I think you should be fine using the latter if you don't have access to <span class="in">`Stata`</span>. Ok, enough talking - let's actually run an RP model incorporating a time-varying effect for our <span class="in">`trt`</span> variable.</span>
+<span id="cb28-333"><a href="#cb28-333"></a>The specification of the <span class="in">`stpm2`</span> model is relatively straightforward, but there are two spline terms that you need to set the degrees of freedom (<span class="in">`df`</span>) for. The first is the log cumulative baseline hazard function which determines the overall shape of the baseline hazard - essentially the foundation of the model upon which all estimation is based. This is done with the primary <span class="in">`df`</span> argument. Then if we have a covariate that fails PH testing and want to incorporate a time-varying effect for it, we do that with the <span class="in">`tvc`</span> argument. In models that incorporate splines in any context, there is always the question of "How wiggly do I make them?" and that is determined by the <span class="in">`df`</span>. I tend to follow the advice published in this <span class="co">[</span><span class="ot">paper</span><span class="co">](https://www.tandfonline.com/doi/full/10.1080/03610918.2019.1634201#d1e333)</span> by some of the experts in this modelling framework:</span>
 <span id="cb28-334"><a href="#cb28-334"></a></span>
-<span id="cb28-335"><a href="#cb28-335"></a>The specification of the <span class="in">`stpm2`</span> model is relatively straightforward, but there are two spline terms that you need to set the degrees of freedom (<span class="in">`df`</span>) for. The first is the log cumulative baseline hazard function which determines the overall shape of the baseline hazard - essentially the foundation of the model upon which all estimation is based. This is done with the primary <span class="in">`df`</span> argument. Then if we have a covariate that fails PH testing and want to incorporate a time-varying effect for it, we do that with the <span class="in">`tvc`</span> argument. In models that incorporate splines in any context, there is always the question of "How wiggly do I make them?" and that is determined by the <span class="in">`df`</span>. I tend to follow the advice published in this <span class="co">[</span><span class="ot">paper</span><span class="co">](https://www.tandfonline.com/doi/full/10.1080/03610918.2019.1634201#d1e333)</span> by some of the experts in this modelling framework:</span>
+<span id="cb28-335"><a href="#cb28-335"></a>"Our usual starting point is to use 5 degrees of freedom for the baseline and 3 degrees of freedom for any time-dependent effects. This is likely to capture most complex shapes. We would then inspect the AIC and BIC for a selection of models with more and less degrees of freedom to see if we had strong evidence of needing a more simple or more complex model."</span>
 <span id="cb28-336"><a href="#cb28-336"></a></span>
-<span id="cb28-337"><a href="#cb28-337"></a>"Our usual starting point is to use 5 degrees of freedom for the baseline and 3 degrees of freedom for any time-dependent effects. This is likely to capture most complex shapes. We would then inspect the AIC and BIC for a selection of models with more and less degrees of freedom to see if we had strong evidence of needing a more simple or more complex model."</span>
+<span id="cb28-337"><a href="#cb28-337"></a>Based on this, for our model at hand I have ended up specifying <span class="in">`df = 3`</span> on both the baseline and the time-dependent effect for <span class="in">`trt`</span>:</span>
 <span id="cb28-338"><a href="#cb28-338"></a></span>
-<span id="cb28-339"><a href="#cb28-339"></a>Based on this, for our model at hand I have ended up specifying <span class="in">`df = 3`</span> on both the baseline and the time-dependent effect for <span class="in">`trt`</span>:</span>
+<span id="cb28-339"><a href="#cb28-339"></a><span class="in">`vfit7 &lt;- stpm2(Surv(time, status) ~ trt + age, data = vdata1, df = 3, tvc = list(trt = 3))`</span></span>
 <span id="cb28-340"><a href="#cb28-340"></a></span>
-<span id="cb28-341"><a href="#cb28-341"></a><span class="in">`vfit7 &lt;- stpm2(Surv(time, status) ~ trt + age, data = vdata1, df = 3, tvc = list(trt = 3))`</span></span>
+<span id="cb28-341"><a href="#cb28-341"></a>Unfortunately <span class="in">`tbl_regression()`</span> does not play nicely with <span class="in">`rstpm2`</span> so I will just have to show you the raw model output as is (forgive the ugliness):</span>
 <span id="cb28-342"><a href="#cb28-342"></a></span>
-<span id="cb28-343"><a href="#cb28-343"></a>Unfortunately <span class="in">`tbl_regression()`</span> does not play nicely with <span class="in">`rstpm2`</span> so I will just have to show you the raw model output as is (forgive the ugliness):</span>
-<span id="cb28-344"><a href="#cb28-344"></a></span>
-<span id="cb28-347"><a href="#cb28-347"></a><span class="in">```{r}</span></span>
-<span id="cb28-348"><a href="#cb28-348"></a><span class="co">#| message: false</span></span>
-<span id="cb28-349"><a href="#cb28-349"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-350"><a href="#cb28-350"></a><span class="co"># RP model with time-varying effect on trt</span></span>
-<span id="cb28-351"><a href="#cb28-351"></a><span class="fu">library</span>(rstpm2)</span>
-<span id="cb28-352"><a href="#cb28-352"></a>vfit7 <span class="ot">&lt;-</span> <span class="fu">stpm2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age, <span class="at">data =</span> vdata1, <span class="at">df =</span> <span class="dv">3</span>, <span class="at">tvc =</span> <span class="fu">list</span>(<span class="at">trt =</span> <span class="dv">3</span>))</span>
-<span id="cb28-353"><a href="#cb28-353"></a><span class="fu">summary</span>(vfit7)</span>
-<span id="cb28-354"><a href="#cb28-354"></a><span class="in">```</span></span>
+<span id="cb28-345"><a href="#cb28-345"></a><span class="in">```{r}</span></span>
+<span id="cb28-346"><a href="#cb28-346"></a><span class="co">#| message: false</span></span>
+<span id="cb28-347"><a href="#cb28-347"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-348"><a href="#cb28-348"></a><span class="co"># RP model with time-varying effect on trt</span></span>
+<span id="cb28-349"><a href="#cb28-349"></a><span class="fu">library</span>(rstpm2)</span>
+<span id="cb28-350"><a href="#cb28-350"></a>vfit7 <span class="ot">&lt;-</span> <span class="fu">stpm2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> trt <span class="sc">+</span> age, <span class="at">data =</span> vdata1, <span class="at">df =</span> <span class="dv">3</span>, <span class="at">tvc =</span> <span class="fu">list</span>(<span class="at">trt =</span> <span class="dv">3</span>))</span>
+<span id="cb28-351"><a href="#cb28-351"></a><span class="fu">summary</span>(vfit7)</span>
+<span id="cb28-352"><a href="#cb28-352"></a><span class="in">```</span></span>
+<span id="cb28-353"><a href="#cb28-353"></a></span>
+<span id="cb28-354"><a href="#cb28-354"></a>This is no easier to interpret than other model with spline terms included and as usual it is better if we plot the model results. Prediction following <span class="in">`stpm2`</span> is a little different to that for the Cox model but essentially does the same thing. We first specify a new dataframe to predict on and then use the <span class="in">`exposed`</span> argument to show the difference in the covariate values that we want to estimate an effect for.</span>
 <span id="cb28-355"><a href="#cb28-355"></a></span>
-<span id="cb28-356"><a href="#cb28-356"></a>This is no easier to interpret than other model with spline terms included and as usual it is better if we plot the model results. Prediction following <span class="in">`stpm2`</span> is a little different to that for the Cox model but essentially does the same thing. We first specify a new dataframe to predict on and then use the <span class="in">`exposed`</span> argument to show the difference in the covariate values that we want to estimate an effect for.</span>
-<span id="cb28-357"><a href="#cb28-357"></a></span>
-<span id="cb28-360"><a href="#cb28-360"></a><span class="in">```{r}</span></span>
-<span id="cb28-361"><a href="#cb28-361"></a><span class="co">#| message: false</span></span>
-<span id="cb28-362"><a href="#cb28-362"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-363"><a href="#cb28-363"></a><span class="co"># Predict HR</span></span>
-<span id="cb28-364"><a href="#cb28-364"></a><span class="co"># Note that it doesn't matter what we set the age values to in this case as there is no interaction between trt and age (i.e. the HR for trt is the same regardless of age). But we need to specify something otherwise predict will complain.</span></span>
-<span id="cb28-365"><a href="#cb28-365"></a>pred_hrs <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit7, <span class="at">type =</span> <span class="st">"hr"</span>,</span>
-<span id="cb28-366"><a href="#cb28-366"></a>                    <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">time =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="at">trt =</span> <span class="dv">0</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
-<span id="cb28-367"><a href="#cb28-367"></a>                    <span class="at">exposed =</span> <span class="cf">function</span>(data) <span class="fu">transform</span>(data, <span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
-<span id="cb28-368"><a href="#cb28-368"></a>                    <span class="at">full =</span> <span class="cn">TRUE</span>, <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb28-369"><a href="#cb28-369"></a><span class="co"># Now plot</span></span>
-<span id="cb28-370"><a href="#cb28-370"></a><span class="fu">ggplot</span>(pred_hrs, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> Estimate)) <span class="sc">+</span> </span>
-<span id="cb28-371"><a href="#cb28-371"></a>  <span class="fu">geom_line</span>(<span class="at">col =</span> <span class="st">'#00BFC4'</span>) <span class="sc">+</span> </span>
-<span id="cb28-372"><a href="#cb28-372"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">400</span>, <span class="at">by =</span> <span class="dv">50</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
-<span id="cb28-373"><a href="#cb28-373"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log"</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb28-374"><a href="#cb28-374"></a>  <span class="fu">xlab</span>(<span class="st">"Observation Time"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"HR for Treatment"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"RP Model - Time-varying HR for Treatment"</span>) <span class="sc">+</span></span>
-<span id="cb28-375"><a href="#cb28-375"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>) </span>
-<span id="cb28-376"><a href="#cb28-376"></a><span class="in">```</span></span>
+<span id="cb28-358"><a href="#cb28-358"></a><span class="in">```{r}</span></span>
+<span id="cb28-359"><a href="#cb28-359"></a><span class="co">#| message: false</span></span>
+<span id="cb28-360"><a href="#cb28-360"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-361"><a href="#cb28-361"></a><span class="co"># Predict HR</span></span>
+<span id="cb28-362"><a href="#cb28-362"></a><span class="co"># Note that it doesn't matter what we set the age values to in this case as there is no interaction between trt and age (i.e. the HR for trt is the same regardless of age). But we need to specify something otherwise predict will complain.</span></span>
+<span id="cb28-363"><a href="#cb28-363"></a>pred_hrs <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit7, <span class="at">type =</span> <span class="st">"hr"</span>,</span>
+<span id="cb28-364"><a href="#cb28-364"></a>                    <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">time =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1000</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="at">trt =</span> <span class="dv">0</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
+<span id="cb28-365"><a href="#cb28-365"></a>                    <span class="at">exposed =</span> <span class="cf">function</span>(data) <span class="fu">transform</span>(data, <span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
+<span id="cb28-366"><a href="#cb28-366"></a>                    <span class="at">full =</span> <span class="cn">TRUE</span>, <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb28-367"><a href="#cb28-367"></a><span class="co"># Now plot</span></span>
+<span id="cb28-368"><a href="#cb28-368"></a><span class="fu">ggplot</span>(pred_hrs, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> Estimate)) <span class="sc">+</span> </span>
+<span id="cb28-369"><a href="#cb28-369"></a>  <span class="fu">geom_line</span>(<span class="at">col =</span> <span class="st">'#00BFC4'</span>) <span class="sc">+</span> </span>
+<span id="cb28-370"><a href="#cb28-370"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">400</span>, <span class="at">by =</span> <span class="dv">50</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
+<span id="cb28-371"><a href="#cb28-371"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log"</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb28-372"><a href="#cb28-372"></a>  <span class="fu">xlab</span>(<span class="st">"Observation Time"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"HR for Treatment"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"RP Model - Time-varying HR for Treatment"</span>) <span class="sc">+</span></span>
+<span id="cb28-373"><a href="#cb28-373"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>) </span>
+<span id="cb28-374"><a href="#cb28-374"></a><span class="in">```</span></span>
+<span id="cb28-375"><a href="#cb28-375"></a></span>
+<span id="cb28-376"><a href="#cb28-376"></a>This looks quite similar to the plot for the Cox model above. As we did for the Cox model, let's estimate the HR from the RP model at the same times of interest.</span>
 <span id="cb28-377"><a href="#cb28-377"></a></span>
-<span id="cb28-378"><a href="#cb28-378"></a>This looks quite similar to the plot for the Cox model above. As we did for the Cox model, let's estimate the HR from the RP model at the same times of interest.</span>
-<span id="cb28-379"><a href="#cb28-379"></a></span>
-<span id="cb28-382"><a href="#cb28-382"></a><span class="in">```{r}</span></span>
-<span id="cb28-383"><a href="#cb28-383"></a><span class="co"># Calculate HR's and 95% CI's</span></span>
-<span id="cb28-384"><a href="#cb28-384"></a>estimates <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit7, <span class="at">type =</span> <span class="st">"hr"</span>,</span>
-<span id="cb28-385"><a href="#cb28-385"></a>                    <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">time =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">400</span>), <span class="at">trt =</span> <span class="dv">0</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
-<span id="cb28-386"><a href="#cb28-386"></a>                    <span class="at">exposed =</span> <span class="cf">function</span>(data) <span class="fu">transform</span>(data, <span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
-<span id="cb28-387"><a href="#cb28-387"></a>                    <span class="at">full =</span> <span class="cn">TRUE</span>, <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb28-388"><a href="#cb28-388"></a><span class="co"># Select relevant columns and rename</span></span>
-<span id="cb28-389"><a href="#cb28-389"></a>estimates <span class="ot">&lt;-</span>  estimates <span class="sc">|&gt;</span> </span>
-<span id="cb28-390"><a href="#cb28-390"></a>  <span class="fu">select</span>(time, Estimate, lower, upper) <span class="sc">|&gt;</span> </span>
-<span id="cb28-391"><a href="#cb28-391"></a>  <span class="fu">rename</span>(<span class="at">Time =</span> time,</span>
-<span id="cb28-392"><a href="#cb28-392"></a>         <span class="at">HR =</span> Estimate,</span>
-<span id="cb28-393"><a href="#cb28-393"></a>         <span class="st">`</span><span class="at">Lower CI</span><span class="st">`</span> <span class="ot">=</span> lower,</span>
-<span id="cb28-394"><a href="#cb28-394"></a>         <span class="st">`</span><span class="at">Upper CI</span><span class="st">`</span> <span class="ot">=</span> upper)</span>
-<span id="cb28-395"><a href="#cb28-395"></a>estimates <span class="sc">|&gt;</span> </span>
-<span id="cb28-396"><a href="#cb28-396"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
-<span id="cb28-397"><a href="#cb28-397"></a><span class="in">```</span></span>
+<span id="cb28-380"><a href="#cb28-380"></a><span class="in">```{r}</span></span>
+<span id="cb28-381"><a href="#cb28-381"></a><span class="co"># Calculate HR's and 95% CI's</span></span>
+<span id="cb28-382"><a href="#cb28-382"></a>estimates <span class="ot">&lt;-</span> <span class="fu">predict</span>(vfit7, <span class="at">type =</span> <span class="st">"hr"</span>,</span>
+<span id="cb28-383"><a href="#cb28-383"></a>                    <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">time =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">40</span>, <span class="dv">100</span>, <span class="dv">400</span>), <span class="at">trt =</span> <span class="dv">0</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
+<span id="cb28-384"><a href="#cb28-384"></a>                    <span class="at">exposed =</span> <span class="cf">function</span>(data) <span class="fu">transform</span>(data, <span class="at">trt =</span> <span class="dv">1</span>, <span class="at">age =</span> <span class="dv">20</span>), <span class="co"># age value = placeholder</span></span>
+<span id="cb28-385"><a href="#cb28-385"></a>                    <span class="at">full =</span> <span class="cn">TRUE</span>, <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb28-386"><a href="#cb28-386"></a><span class="co"># Select relevant columns and rename</span></span>
+<span id="cb28-387"><a href="#cb28-387"></a>estimates <span class="ot">&lt;-</span>  estimates <span class="sc">|&gt;</span> </span>
+<span id="cb28-388"><a href="#cb28-388"></a>  <span class="fu">select</span>(time, Estimate, lower, upper) <span class="sc">|&gt;</span> </span>
+<span id="cb28-389"><a href="#cb28-389"></a>  <span class="fu">rename</span>(<span class="at">Time =</span> time,</span>
+<span id="cb28-390"><a href="#cb28-390"></a>         <span class="at">HR =</span> Estimate,</span>
+<span id="cb28-391"><a href="#cb28-391"></a>         <span class="st">`</span><span class="at">Lower CI</span><span class="st">`</span> <span class="ot">=</span> lower,</span>
+<span id="cb28-392"><a href="#cb28-392"></a>         <span class="st">`</span><span class="at">Upper CI</span><span class="st">`</span> <span class="ot">=</span> upper)</span>
+<span id="cb28-393"><a href="#cb28-393"></a>estimates <span class="sc">|&gt;</span> </span>
+<span id="cb28-394"><a href="#cb28-394"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb28-395"><a href="#cb28-395"></a><span class="in">```</span></span>
+<span id="cb28-396"><a href="#cb28-396"></a></span>
+<span id="cb28-397"><a href="#cb28-397"></a>For interest and before we wrap this up, let's superimpose the time-varying HR curves from both the Cox and RP models to enable a more direct comparison.</span>
 <span id="cb28-398"><a href="#cb28-398"></a></span>
-<span id="cb28-399"><a href="#cb28-399"></a>For interest and before we wrap this up, let's superimpose the time-varying HR curves from both the Cox and RP models to enable a more direct comparison.</span>
-<span id="cb28-400"><a href="#cb28-400"></a></span>
-<span id="cb28-403"><a href="#cb28-403"></a><span class="in">```{r}</span></span>
-<span id="cb28-404"><a href="#cb28-404"></a><span class="co">#| message: false</span></span>
-<span id="cb28-405"><a href="#cb28-405"></a><span class="co">#| warning: false</span></span>
-<span id="cb28-406"><a href="#cb28-406"></a><span class="co"># Tidy RP pred output</span></span>
-<span id="cb28-407"><a href="#cb28-407"></a>pred_hrs <span class="ot">&lt;-</span>  pred_hrs <span class="sc">|&gt;</span> </span>
-<span id="cb28-408"><a href="#cb28-408"></a>  <span class="fu">select</span>(time, Estimate) <span class="sc">|&gt;</span> </span>
-<span id="cb28-409"><a href="#cb28-409"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb28-410"><a href="#cb28-410"></a>  <span class="fu">mutate</span>(<span class="at">Model =</span> <span class="st">"Royston-Parmar"</span>)</span>
-<span id="cb28-411"><a href="#cb28-411"></a><span class="co"># Tidy Cox pred output</span></span>
-<span id="cb28-412"><a href="#cb28-412"></a>tdata <span class="ot">&lt;-</span>  tdata <span class="sc">|&gt;</span> </span>
-<span id="cb28-413"><a href="#cb28-413"></a>  <span class="fu">select</span>(time, fit) <span class="sc">|&gt;</span> </span>
-<span id="cb28-414"><a href="#cb28-414"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb28-415"><a href="#cb28-415"></a>  <span class="fu">rename</span>(<span class="at">Estimate =</span> fit) <span class="sc">|&gt;</span> </span>
-<span id="cb28-416"><a href="#cb28-416"></a>  <span class="fu">mutate</span>(<span class="at">Model =</span> <span class="st">"Cox"</span>)</span>
-<span id="cb28-417"><a href="#cb28-417"></a><span class="co"># Merge both sets of predictions</span></span>
-<span id="cb28-418"><a href="#cb28-418"></a>preds_rp_cox <span class="ot">&lt;-</span>  <span class="fu">rbind</span>(pred_hrs, tdata) <span class="sc">|&gt;</span> </span>
-<span id="cb28-419"><a href="#cb28-419"></a>  <span class="fu">arrange</span>(time)</span>
-<span id="cb28-420"><a href="#cb28-420"></a><span class="co"># Plot</span></span>
-<span id="cb28-421"><a href="#cb28-421"></a><span class="fu">ggplot</span>(preds_rp_cox, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> Estimate, <span class="at">color =</span> Model)) <span class="sc">+</span> </span>
-<span id="cb28-422"><a href="#cb28-422"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb28-423"><a href="#cb28-423"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">400</span>, <span class="at">by =</span> <span class="dv">50</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
-<span id="cb28-424"><a href="#cb28-424"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log"</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb28-425"><a href="#cb28-425"></a>  <span class="fu">xlab</span>(<span class="st">"Observation Time"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"HR for Treatment"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Time-varying HR for Treatment"</span>) <span class="sc">+</span></span>
-<span id="cb28-426"><a href="#cb28-426"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
-<span id="cb28-427"><a href="#cb28-427"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"bottom"</span>)</span>
-<span id="cb28-428"><a href="#cb28-428"></a><span class="in">```</span></span>
+<span id="cb28-401"><a href="#cb28-401"></a><span class="in">```{r}</span></span>
+<span id="cb28-402"><a href="#cb28-402"></a><span class="co">#| message: false</span></span>
+<span id="cb28-403"><a href="#cb28-403"></a><span class="co">#| warning: false</span></span>
+<span id="cb28-404"><a href="#cb28-404"></a><span class="co"># Tidy RP pred output</span></span>
+<span id="cb28-405"><a href="#cb28-405"></a>pred_hrs <span class="ot">&lt;-</span>  pred_hrs <span class="sc">|&gt;</span> </span>
+<span id="cb28-406"><a href="#cb28-406"></a>  <span class="fu">select</span>(time, Estimate) <span class="sc">|&gt;</span> </span>
+<span id="cb28-407"><a href="#cb28-407"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb28-408"><a href="#cb28-408"></a>  <span class="fu">mutate</span>(<span class="at">Model =</span> <span class="st">"Royston-Parmar"</span>)</span>
+<span id="cb28-409"><a href="#cb28-409"></a><span class="co"># Tidy Cox pred output</span></span>
+<span id="cb28-410"><a href="#cb28-410"></a>tdata <span class="ot">&lt;-</span>  tdata <span class="sc">|&gt;</span> </span>
+<span id="cb28-411"><a href="#cb28-411"></a>  <span class="fu">select</span>(time, fit) <span class="sc">|&gt;</span> </span>
+<span id="cb28-412"><a href="#cb28-412"></a>  <span class="fu">slice</span>(<span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb28-413"><a href="#cb28-413"></a>  <span class="fu">rename</span>(<span class="at">Estimate =</span> fit) <span class="sc">|&gt;</span> </span>
+<span id="cb28-414"><a href="#cb28-414"></a>  <span class="fu">mutate</span>(<span class="at">Model =</span> <span class="st">"Cox"</span>)</span>
+<span id="cb28-415"><a href="#cb28-415"></a><span class="co"># Merge both sets of predictions</span></span>
+<span id="cb28-416"><a href="#cb28-416"></a>preds_rp_cox <span class="ot">&lt;-</span>  <span class="fu">rbind</span>(pred_hrs, tdata) <span class="sc">|&gt;</span> </span>
+<span id="cb28-417"><a href="#cb28-417"></a>  <span class="fu">arrange</span>(time)</span>
+<span id="cb28-418"><a href="#cb28-418"></a><span class="co"># Plot</span></span>
+<span id="cb28-419"><a href="#cb28-419"></a><span class="fu">ggplot</span>(preds_rp_cox, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> Estimate, <span class="at">color =</span> Model)) <span class="sc">+</span> </span>
+<span id="cb28-420"><a href="#cb28-420"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb28-421"><a href="#cb28-421"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">400</span>, <span class="at">by =</span> <span class="dv">50</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
+<span id="cb28-422"><a href="#cb28-422"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log"</span>, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb28-423"><a href="#cb28-423"></a>  <span class="fu">xlab</span>(<span class="st">"Observation Time"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"HR for Treatment"</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Time-varying HR for Treatment"</span>) <span class="sc">+</span></span>
+<span id="cb28-424"><a href="#cb28-424"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb28-425"><a href="#cb28-425"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"bottom"</span>)</span>
+<span id="cb28-426"><a href="#cb28-426"></a><span class="in">```</span></span>
+<span id="cb28-427"><a href="#cb28-427"></a></span>
+<span id="cb28-428"><a href="#cb28-428"></a>Ok, not perfectly congruent, but they both show a similar pattern in that there is an initial increase and then gradual decline in the 'effect' of <span class="in">`trt`</span> over time. Keep in mind that semi- and fully-parametric models are quite different modelling frameworks so the fact that we some concordance in the output gives us more confidence in establishing the validity of our results. I like RP models so much that I will aim to make them the subject of one of these blog posts in the not too distant future.</span>
 <span id="cb28-429"><a href="#cb28-429"></a></span>
-<span id="cb28-430"><a href="#cb28-430"></a>Ok, not perfectly congruent, but they both show a similar pattern in that there is an initial increase and then gradual decline in the 'effect' of <span class="in">`trt`</span> over time. Keep in mind that semi- and fully-parametric models are quite different modelling frameworks so the fact that we some concordance in the output gives us more confidence in establishing the validity of our results. I like RP models so much that I will aim to make them the subject of one of these blog posts in the not too distant future.</span>
+<span id="cb28-430"><a href="#cb28-430"></a><span class="fu"># Wrap-Up</span></span>
 <span id="cb28-431"><a href="#cb28-431"></a></span>
-<span id="cb28-432"><a href="#cb28-432"></a><span class="fu"># Wrap-Up</span></span>
-<span id="cb28-433"><a href="#cb28-433"></a></span>
-<span id="cb28-434"><a href="#cb28-434"></a>Ok - I'm sure you would agree that you need a break. My apologies if you feel like I've made you run the mental equivalent of a marathon in these last two posts. As you can now see, there is a lot one can potentially cover following the violation of what might appear to be a very simple assumption. Damn you - proportional hazards! Hopefully this has given you some of both knowledge and coding tools that you can put to use when next faced with this common problem in your survival analysis endeavours.</span>
+<span id="cb28-432"><a href="#cb28-432"></a>Ok - I'm sure you would agree that you need a break. My apologies if you feel like I've made you run the mental equivalent of a marathon in these last two posts. As you can now see, there is a lot one can potentially cover following the violation of what might appear to be a very simple assumption. Damn you - proportional hazards! Hopefully this has given you some of both knowledge and coding tools that you can put to use when next faced with this common problem in your survival analysis endeavours.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
