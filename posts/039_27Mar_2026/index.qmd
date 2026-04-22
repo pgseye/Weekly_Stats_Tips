@@ -32,10 +32,10 @@ So even if **all null hypotheses are true**, there is a `64%` chance you will de
 
 But this framing already hides several important subtleties:
 
--   Tests are rarely independent
--   Not all analyses have the same inferential goal
--   Not all errors are equally costly
--   Not all tests belong to the same “family”
+- Tests are rarely independent
+- Not all analyses have the same inferential goal
+- Not all errors are equally costly
+- Not all tests belong to the same “family”
 
 Understanding these nuances is key to making sensible decisions.
 
@@ -53,11 +53,11 @@ $$ \text{FWER} = P(\text{one or more false positives}) $$
 
 It is important to keep in mind that the FWER control is strict and conservative - think of it as a "zero-tolerance" approach. The FWER is appropriate when *any* false positive across your entire set of tests would be highly problematic. In other words by controlling the FWER at 0.05, you are saying there is only a `5%` chance that any of your significant results are actually false. Common methods of FWER correction include:
 
--   Bonferroni correction
--   Tukey's procedure
--   Holm (step-down) procedure
--   Hochberg (step-up) procedure
--   Dunnett's correction
+- Bonferroni correction
+- Tukey's procedure
+- Holm (step-down) procedure
+- Hochberg (step-up) procedure
+- Dunnett's correction
 
 ### False Discovery Rate (FDR)
 
@@ -67,8 +67,8 @@ $$ \text{FDR} = E\left( \frac{\text{false positives}}{\text{total positives}} \r
 
 In contrast to the FWER, the FDR control is less stringent and more powerful when many tests are performed and some true effects are expected. This is the expected proportion of false discoveries among all the results you declare significant. If you control the FDR at `0.05`, you are saying that, on average, `5%` of your "hits" will be false alarms, while the other `95%` are likely real. Common methods of FDR correction include:
 
--   Benjamini–Hochberg (BH)
--   Benjamini–Yekutieli (BY)
+- Benjamini–Hochberg (BH)
+- Benjamini–Yekutieli (BY)
 
 If the differences still aren't clear, let me give you a ChatGPT inspired analogy:
 
@@ -154,11 +154,11 @@ So please don't blindly apply a Bonferroni correction to your next set of loosel
 
 If you have made the decision to employ a multiple testing procedure in your work, you need to explain that in your methods. Good reporting should include:
 
--   A clear definition of the family of tests
--   The error rate being controlled (FWER, FDR, or none)
--   The adjustment method used
--   Both adjusted and unadjusted p-values (when helpful)
--   Emphasis on effect sizes and confidence intervals
+- A clear definition of the family of tests
+- The error rate being controlled (FWER, FDR, or none)
+- The adjustment method used
+- Both adjusted and unadjusted p-values (when helpful)
+- Emphasis on effect sizes and confidence intervals
 
 If you've made the decision NOT to employ a multiple testing procedure - that is ok too. Remember that p-values do not exist in isolation - they are part of a broader inferential narrative. Here I will directly quote once again from the Althouse viewpoint:
 
@@ -184,10 +184,10 @@ If you can clearly explain *why* you did (or did not) adjust for multiple testin
 
 I don't normally include references but I thought for this topic a few might be helpful if you are interested in reading more. Until next month...
 
--   Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289–300.
--   Rothman, K. J. (1990). No adjustments are needed for multiple comparisons. *Epidemiology*, 1(1), 43–46.
--   Bender, R., & Lange, S. (2001). Adjusting for multiple testing—when and how? *Journal of Clinical Epidemiology*, 54(4), 343–349.
--   Greenland, S., Senn, S. J., Rothman, K. J., et al. (2016). Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. *European Journal of Epidemiology*, 31, 337–350.
--   Hochberg, Y., & Tamhane, A. C. (1987). *Multiple Comparison Procedures*. Wiley.
+- Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289–300.
+- Rothman, K. J. (1990). No adjustments are needed for multiple comparisons. *Epidemiology*, 1(1), 43–46.
+- Bender, R., & Lange, S. (2001). Adjusting for multiple testing—when and how? *Journal of Clinical Epidemiology*, 54(4), 343–349.
+- Greenland, S., Senn, S. J., Rothman, K. J., et al. (2016). Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. *European Journal of Epidemiology*, 31, 337–350.
+- Hochberg, Y., & Tamhane, A. C. (1987). *Multiple Comparison Procedures*. Wiley.
 
 ------------------------------------------------------------------------
